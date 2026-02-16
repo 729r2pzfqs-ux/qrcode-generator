@@ -257,20 +257,41 @@
         </div>
     </footer>
 
-    <!-- Load QRCode library -->
-    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <!-- Load QRCode library with fallback -->
+    <script src="https://unpkg.com/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <script>
+        // Fallback if first CDN fails
+        if (typeof QRCode === 'undefined') {
+            var s = document.createElement('script');
+            s.src = 'https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js';
+            document.body.appendChild(s);
+        }
+    </script>
     <script>
         // Wait for everything to load
         window.addEventListener('load', function() {
             lucide.createIcons();
-            initQR();
+            // Retry until QRCode is available
+            var attempts = 0;
+            function tryInit() {
+                if (typeof QRCode !== 'undefined') {
+                    initQR();
+                } else if (attempts < 20) {
+                    attempts++;
+                    setTimeout(tryInit, 200);
+                } else {
+                    console.error('QRCode library failed to load');
+                    document.getElementById('qrCanvas').outerHTML = '<p class="text-red-500">Failed to load. Please refresh.</p>';
+                }
+            }
+            tryInit();
         });
 
         let currentType = 'url';
 
         function initQR() {
-            // Generate initial QR
-            setTimeout(generateQR, 100);
+            // Generate initial QR immediately
+            generateQR();
 
             // Tab buttons
             document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -316,9 +337,13 @@
 
         function generateQR() {
             const canvas = document.getElementById('qrCanvas');
-            if (!canvas || typeof QRCode === 'undefined') {
+            if (!canvas) {
+                console.error('Canvas not found');
+                return;
+            }
+            if (typeof QRCode === 'undefined') {
                 console.log('Waiting for QRCode library...');
-                setTimeout(generateQR, 100);
+                setTimeout(generateQR, 200);
                 return;
             }
 
@@ -327,14 +352,28 @@
             const bgColor = document.getElementById('bgColor').value;
             const errorLevel = document.getElementById('errorLevel').value;
 
-            QRCode.toCanvas(canvas, data, {
-                width: 280,
-                margin: 2,
-                color: { dark: color, light: bgColor },
-                errorCorrectionLevel: errorLevel
-            }, function(error) {
-                if (error) console.error('QR Error:', error);
-            });
+            try {
+                QRCode.toCanvas(canvas, data, {
+                    width: 280,
+                    margin: 2,
+                    color: { dark: color, light: bgColor },
+                    errorCorrectionLevel: errorLevel
+                }, function(error) {
+                    if (error) {
+                        console.error('QR Error:', error);
+                        // Show error in canvas area
+                        const ctx = canvas.getContext('2d');
+                        ctx.fillStyle = '#f8f8f8';
+                        ctx.fillRect(0, 0, 280, 280);
+                        ctx.fillStyle = '#666';
+                        ctx.font = '14px Inter';
+                        ctx.textAlign = 'center';
+                        ctx.fillText('Error generating QR', 140, 140);
+                    }
+                });
+            } catch (e) {
+                console.error('QR Exception:', e);
+            }
         }
 
         function downloadPNG() {
