@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://qrcode.win/sitemap.xml
+Sitemap: https://qrcodes.win/sitemap.xml
