@@ -233,7 +233,8 @@
                             <p class="text-xs text-gray-400 mt-4 text-center">Scan with any smartphone camera</p>
                         </div>
                         <div class="flex gap-3 mt-4">
-                            <button id="downloadPNG" class="btn-primary flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><i data-lucide="download" class="w-4 h-4"></i> Download PNG</button>
+                            <button id="downloadPNG" class="btn-primary flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><i data-lucide="download" class="w-4 h-4"></i> PNG</button>
+                            <button id="downloadSVG" class="btn-success flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><i data-lucide="download" class="w-4 h-4"></i> SVG</button>
                         </div>
                     </div>
                 </div>
@@ -281,6 +282,7 @@
             });
 
             document.getElementById('downloadPNG').addEventListener('click', downloadPNG);
+            document.getElementById('downloadSVG').addEventListener('click', downloadSVG);
         });
 
         function selectType(type) {
@@ -354,6 +356,38 @@
                 link.href = img.src;
                 link.click();
             }
+        }
+
+        function downloadSVG() {
+            const container = document.getElementById('qrcode');
+            const canvas = container.querySelector('canvas');
+            if (!canvas) return;
+            
+            const size = parseInt(document.getElementById('qrSize').value) || 256;
+            const ctx = canvas.getContext('2d');
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+            const color = document.getElementById('qrColor').value;
+            const bgColor = document.getElementById('bgColor').value;
+            
+            let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${canvas.width} ${canvas.height}">`;
+            svg += `<rect width="100%" height="100%" fill="${bgColor}"/>`;
+            
+            for (let y = 0; y < canvas.height; y++) {
+                for (let x = 0; x < canvas.width; x++) {
+                    const i = (y * canvas.width + x) * 4;
+                    if (data[i] < 128) {
+                        svg += `<rect x="${x}" y="${y}" width="1" height="1" fill="${color}"/>`;
+                    }
+                }
+            }
+            svg += '</svg>';
+            
+            const blob = new Blob([svg], {type: 'image/svg+xml'});
+            const link = document.createElement('a');
+            link.download = 'qrcode.svg';
+            link.href = URL.createObjectURL(blob);
+            link.click();
         }
 
         function debounce(func, wait) {
