@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://qrcodes.win/</loc></url>
-<url><loc>https://qrcodes.win/es/</loc></url>
-<url><loc>https://qrcodes.win/de/</loc></url>
-<url><loc>https://qrcodes.win/fr/</loc></url>
-<url><loc>https://qrcodes.win/pt/</loc></url>
-<url><loc>https://qrcodes.win/zh/</loc></url>
-<url><loc>https://qrcodes.win/ja/</loc></url>
-<url><loc>https://qrcodes.win/ar/</loc></url>
-<url><loc>https://qrcodes.win/hi/</loc></url>
-<url><loc>https://qrcodes.win/ru/</loc></url>
-<url><loc>https://qrcodes.win/tr/</loc></url>
+  <url><loc>https://qrcodes.win/</loc><priority>1.0</priority></url>
+  <url><loc>https://qrcodes.win/wifi/</loc><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/vcard/</loc><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/menu/</loc><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/whatsapp/</loc><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/es/</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/de/</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/fr/</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/pt/</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/zh/</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ja/</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ar/</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/hi/</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ru/</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/tr/</loc><priority>0.8</priority></url>
 </urlset>

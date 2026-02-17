@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vCard QR Code Generator | Digital Business Card QR</title>
+    <meta name="description" content="Create a QR code for your business card. People scan it to instantly save your contact info - name, phone, email, company. Free vCard QR generator.">
+    
+    <link rel="canonical" href="https://qrcodes.win/vcard/">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    
+    <meta property="og:title" content="vCard QR Code Generator | Digital Business Card">
+    <meta property="og:description" content="Create a QR code that saves your contact info instantly. Perfect for business cards and networking.">
+    <meta property="og:url" content="https://qrcodes.win/vcard/">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is a vCard QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A vCard QR code contains contact information (name, phone, email, company) that can be scanned and saved directly to a phone's contacts. It's like a digital business card."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I add a QR code to my business card?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Generate your vCard QR code here, download it, and add it to your business card design. When people scan it, your contact info is instantly saved to their phone."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #059669 0%, #10B981 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .input-field { border: 2px solid #e5e7eb; }
+        .input-field:focus { border-color: #059669; outline: none; box-shadow: 0 0 0 3px rgba(5,150,105,0.1); }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                    <i data-lucide="qr-code" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../" class="text-white/80 hover:text-white text-sm">← All QR Types</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center text-white mb-8">
+                <div class="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 text-sm mb-4">
+                    <i data-lucide="contact" class="w-4 h-4"></i>
+                    <span>vCard QR Code Generator</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">Digital Business Card<br>QR Code</h1>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto">Create a QR code that saves your contact info instantly. Perfect for business cards, name badges, and networking events.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass rounded-2xl p-6 shadow-xl">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="user" class="w-5 h-5 text-emerald-600"></i>
+                        Contact Information
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                                <input type="text" id="firstName" placeholder="John" class="input-field w-full rounded-xl px-4 py-2.5 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                                <input type="text" id="lastName" placeholder="Smith" class="input-field w-full rounded-xl px-4 py-2.5 text-sm">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Job Title</label>
+                            <input type="text" id="title" placeholder="Marketing Manager" class="input-field w-full rounded-xl px-4 py-2.5 text-sm">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                            <input type="text" id="company" placeholder="Acme Inc." class="input-field w-full rounded-xl px-4 py-2.5 text-sm">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
+                            <input type="tel" id="phone" placeholder="+1 555 123 4567" class="input-field w-full rounded-xl px-4 py-2.5 text-sm">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" placeholder="john@company.com" class="input-field w-full rounded-xl px-4 py-2.5 text-sm">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Website</label>
+                            <input type="url" id="website" placeholder="https://company.com" class="input-field w-full rounded-xl px-4 py-2.5 text-sm">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                            <input type="text" id="address" placeholder="123 Main St, City" class="input-field w-full rounded-xl px-4 py-2.5 text-sm">
+                        </div>
+                        
+                        <button onclick="generateVCardQR()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="qr-code" class="w-5 h-5"></i>
+                            Generate vCard QR Code
+                        </button>
+                    </div>
+                </div>
+
+                <div class="glass rounded-2xl p-6 shadow-xl flex flex-col">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="scan" class="w-5 h-5 text-emerald-600"></i>
+                        Your vCard QR Code
+                    </h2>
+                    
+                    <div class="flex-1 flex items-center justify-center">
+                        <div id="qrcode" class="bg-white p-4 rounded-xl shadow-inner border-2 border-dashed border-gray-200">
+                            <div class="w-48 h-48 flex items-center justify-center text-gray-400">
+                                <div class="text-center">
+                                    <i data-lucide="contact" class="w-12 h-12 mx-auto mb-2 opacity-50"></i>
+                                    <p class="text-sm">Enter your details<br>to generate QR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-gray-700 font-semibold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="download" class="w-5 h-5"></i>
+                        Download PNG
+                    </button>
+                </div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="mt-12 grid md:grid-cols-3 gap-6">
+                <div class="glass rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="zap" class="w-6 h-6 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Instant Save</h3>
+                    <p class="text-gray-600 text-sm">Contact info saved to phone in seconds</p>
+                </div>
+                <div class="glass rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="check-circle" class="w-6 h-6 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">No Typos</h3>
+                    <p class="text-gray-600 text-sm">Eliminates manual entry errors</p>
+                </div>
+                <div class="glass rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="leaf" class="w-6 h-6 text-emerald-600"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Eco-Friendly</h3>
+                    <p class="text-gray-600 text-sm">Reduce paper business cards</p>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-8 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">What is a vCard QR code?</summary>
+                        <p class="mt-2 text-gray-600">A vCard QR code contains contact information (name, phone, email, company) that can be scanned and saved directly to a phone's contacts. It's like a digital business card.</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">How do I add it to my business card?</summary>
+                        <p class="mt-2 text-gray-600">Download the QR code and add it to your business card design in any graphics software. When people scan it, your contact info is instantly saved to their phone.</p>
+                    </details>
+                    <details class="pb-4">
+                        <summary class="font-semibold cursor-pointer">Does it work without internet?</summary>
+                        <p class="mt-2 text-gray-600">Yes! All the contact info is encoded in the QR code itself. No internet connection needed to save the contact.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 px-4 text-center text-white/60 text-sm">
+        <p>© 2026 QRCodes.win - Free QR Code Generator</p>
+        <div class="mt-2 flex justify-center gap-4">
+            <a href="../" class="hover:text-white">Home</a>
+            <a href="../wifi/" class="hover:text-white">WiFi QR</a>
+            <a href="../menu/" class="hover:text-white">Menu QR</a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        function generateVCardQR() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const phone = document.getElementById('phone').value;
+            
+            if (!firstName || !lastName) {
+                alert('Please enter at least first and last name');
+                return;
+            }
+            
+            const title = document.getElementById('title').value;
+            const company = document.getElementById('company').value;
+            const email = document.getElementById('email').value;
+            const website = document.getElementById('website').value;
+            const address = document.getElementById('address').value;
+            
+            // vCard 3.0 format
+            let vcard = `BEGIN:VCARD
+VERSION:3.0
+N:${lastName};${firstName};;;
+FN:${firstName} ${lastName}`;
+            
+            if (title) vcard += `\nTITLE:${title}`;
+            if (company) vcard += `\nORG:${company}`;
+            if (phone) vcard += `\nTEL:${phone}`;
+            if (email) vcard += `\nEMAIL:${email}`;
+            if (website) vcard += `\nURL:${website}`;
+            if (address) vcard += `\nADR:;;${address};;;;`;
+            
+            vcard += `\nEND:VCARD`;
+            
+            const container = document.getElementById('qrcode');
+            container.innerHTML = '';
+            
+            new QRCode(container, {
+                text: vcard,
+                width: 200,
+                height: 200,
+                colorDark: '#064e3b',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.M
+            });
+            
+            document.getElementById('downloadBtn').disabled = false;
+        }
+        
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'vcard-qr-code.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            }
+        }
+    </script>
+</body>
+</html>
