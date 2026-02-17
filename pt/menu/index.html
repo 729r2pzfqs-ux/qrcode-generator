@@ -35,7 +35,7 @@
                 <p class="text-white/80 text-lg">Cardápio digital sem contato para restaurantes.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
-                <div class="glass rounded-2xl p-6 shadow-xl">
+                <div class="w-full glass rounded-2xl p-6 shadow-xl">
                     <h2 class="text-xl font-bold mb-6">Link do Cardápio</h2>
                     <div class="space-y-4">
                         <div>
@@ -46,7 +46,7 @@
                         <button onclick="generateMenuQR()" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-xl">Gerar QR Cardápio</button>
                     </div>
                 </div>
-                <div class="glass rounded-2xl p-6 shadow-xl flex flex-col">
+                <div class="w-full glass rounded-2xl p-6 shadow-xl flex flex-col">
                     <h2 class="text-xl font-bold mb-6">Seu QR Cardápio</h2>
                     <div class="flex-1 flex items-center justify-center"><div id="qrcode" class="bg-white p-4 rounded-xl border-2 border-dashed border-gray-200"><div class="w-48 h-48 flex items-center justify-center text-gray-400"><p class="text-sm text-center">Digite URL<br>para gerar</p></div></div></div>
                     <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 text-gray-700 font-semibold py-3 rounded-xl">Baixar PNG</button>
