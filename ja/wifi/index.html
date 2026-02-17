@@ -60,6 +60,77 @@
                 <div class="glass rounded-xl p-4 text-center"><div class="text-2xl mb-2">🏨</div><h3 class="font-semibold text-sm">ホテル</h3></div>
                 <div class="glass rounded-xl p-4 text-center"><div class="text-2xl mb-2">🏢</div><h3 class="font-semibold text-sm">オフィス</h3></div>
             </div>
+        
+            <!-- How It Works -->
+            <div class="mt-12 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold text-center mb-8">WiFi QRコードの仕組み</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="edit-3" class="w-8 h-8 text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">1. 詳細を入力</h3>
+                        <p class="text-gray-600 text-sm">WiFi名とパスワードを入力</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="qr-code" class="w-8 h-8 text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">2. 生成して印刷</h3>
+                        <p class="text-gray-600 text-sm">QRコードをダウンロードして表示</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="smartphone" class="w-8 h-8 text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">3. スキャンして接続</h3>
+                        <p class="text-gray-600 text-sm">ゲストがスキャンして即座に接続</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Use Cases -->
+            <div class="mt-8 grid md:grid-cols-4 gap-4">
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">🏠</div>
+                    <h3 class="font-semibold text-sm">自宅</h3>
+                    <p class="text-xs text-gray-500">訪問者と共有</p>
+                </div>
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">☕</div>
+                    <h3 class="font-semibold text-sm">カフェ</h3>
+                    <p class="text-xs text-gray-500">お客様WiFi</p>
+                </div>
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">🏨</div>
+                    <h3 class="font-semibold text-sm">ホテル</h3>
+                    <p class="text-xs text-gray-500">客室</p>
+                </div>
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">🏢</div>
+                    <h3 class="font-semibold text-sm">オフィス</h3>
+                    <p class="text-xs text-gray-500">会議室</p>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-8 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">よくある質問</h2>
+                <div class="space-y-4">
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">WiFi QRコードの作り方は？</summary>
+                        <p class="mt-2 text-gray-600">ネットワーク名、パスワード、セキュリティタイプを入力。生成してダウンロード。スキャンした人は自動接続。</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">パスワードを共有して安全ですか？</summary>
+                        <p class="mt-2 text-gray-600">はい、パスワードはQRに埋め込まれています。保存しません。スキャンした人だけが接続できます。</p>
+                    </details>
+                    <details class="pb-4">
+                        <summary class="font-semibold cursor-pointer">どのセキュリティを選ぶべき？</summary>
+                        <p class="mt-2 text-gray-600">ほとんどのネットワークはWPA/WPA2を使用。ルーターの設定を確認してください。</p>
+                    </details>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="py-8 px-4 text-center text-white/60 text-sm"><p>© 2026 QRCodes.win - 無料QRコード生成</p></footer>
