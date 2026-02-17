@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi二维码生成器 | 分享密码</title>
+    <meta name="description" content="创建二维码即时分享您的WiFi密码。适用于家庭、咖啡馆、酒店和办公室。免费生成器。">
+    <link rel="canonical" href="https://qrcodes.win/zh/wifi/">
+    <link rel="alternate" hreflang="en" href="https://qrcodes.win/wifi/">
+    <link rel="alternate" hreflang="zh" href="https://qrcodes.win/zh/wifi/">
+    <link rel="icon" href="../../favicon.ico" sizes="32x32">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../../qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>* { font-family: 'Noto Sans SC', 'Inter', sans-serif; } body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; } .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); } .input-field { border: 2px solid #e5e7eb; } .input-field:focus { border-color: #667eea; outline: none; box-shadow: 0 0 0 3px rgba(102,126,234,0.1); }</style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4"><div class="max-w-4xl mx-auto flex items-center justify-between"><a href="../" class="flex items-center gap-2 text-white"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><i data-lucide="qr-code" class="w-6 h-6"></i></div><span class="text-xl font-bold">QRCodes.win</span></a><a href="../" class="text-white/80 hover:text-white text-sm">← 所有类型</a></div></header>
+    <main class="px-4 pb-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center text-white mb-8">
+                <div class="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 text-sm mb-4"><i data-lucide="wifi" class="w-4 h-4"></i><span>WiFi二维码生成器</span></div>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">WiFi二维码<br>免费生成</h1>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto">创建一个二维码，让访客即时连接您的WiFi。无需输入密码。</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass rounded-2xl p-6 shadow-xl">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2"><i data-lucide="wifi" class="w-5 h-5 text-indigo-600"></i>网络详情</h2>
+                    <div class="space-y-4">
+                        <div><label class="block text-sm font-medium text-gray-700 mb-2">网络名称 (SSID) *</label><input type="text" id="ssid" placeholder="我的WiFi" class="input-field w-full rounded-xl px-4 py-3"></div>
+                        <div><label class="block text-sm font-medium text-gray-700 mb-2">密码 *</label><input type="text" id="password" placeholder="您的密码" class="input-field w-full rounded-xl px-4 py-3"></div>
+                        <div><label class="block text-sm font-medium text-gray-700 mb-2">安全类型</label><select id="security" class="input-field w-full rounded-xl px-4 py-3"><option value="WPA">WPA/WPA2/WPA3</option><option value="WEP">WEP</option><option value="nopass">无密码</option></select></div>
+                        <div class="flex items-center gap-2"><input type="checkbox" id="hidden" class="w-4 h-4"><label for="hidden" class="text-sm text-gray-700">隐藏网络</label></div>
+                        <button onclick="generateWiFiQR()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 rounded-xl transition-all flex items-center justify-center gap-2"><i data-lucide="qr-code" class="w-5 h-5"></i>生成二维码</button>
+                    </div>
+                </div>
+                <div class="glass rounded-2xl p-6 shadow-xl flex flex-col">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2"><i data-lucide="scan" class="w-5 h-5 text-indigo-600"></i>您的WiFi二维码</h2>
+                    <div class="flex-1 flex items-center justify-center"><div id="qrcode" class="bg-white p-4 rounded-xl shadow-inner border-2 border-dashed border-gray-200"><div class="w-48 h-48 flex items-center justify-center text-gray-400"><div class="text-center"><i data-lucide="wifi" class="w-12 h-12 mx-auto mb-2 opacity-50"></i><p class="text-sm">输入详情<br>生成二维码</p></div></div></div></div>
+                    <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-gray-700 font-semibold py-3 rounded-xl transition-all flex items-center justify-center gap-2"><i data-lucide="download" class="w-5 h-5"></i>下载PNG</button>
+                </div>
+            </div>
+            <div class="mt-12 grid md:grid-cols-4 gap-4">
+                <div class="glass rounded-xl p-4 text-center"><div class="text-2xl mb-2">🏠</div><h3 class="font-semibold text-sm">家庭</h3></div>
+                <div class="glass rounded-xl p-4 text-center"><div class="text-2xl mb-2">☕</div><h3 class="font-semibold text-sm">咖啡馆</h3></div>
+                <div class="glass rounded-xl p-4 text-center"><div class="text-2xl mb-2">🏨</div><h3 class="font-semibold text-sm">酒店</h3></div>
+                <div class="glass rounded-xl p-4 text-center"><div class="text-2xl mb-2">🏢</div><h3 class="font-semibold text-sm">办公室</h3></div>
+            </div>
+        </div>
+    </main>
+    <footer class="py-8 px-4 text-center text-white/60 text-sm"><p>© 2026 QRCodes.win - 免费二维码生成器</p></footer>
+    <script>lucide.createIcons();function generateWiFiQR(){const ssid=document.getElementById('ssid').value;const password=document.getElementById('password').value;const security=document.getElementById('security').value;const hidden=document.getElementById('hidden').checked;if(!ssid){alert('请输入网络名称');return;}const wifiString=`WIFI:T:${security};S:${ssid};P:${password};H:${hidden};;`;const container=document.getElementById('qrcode');container.innerHTML='';new QRCode(container,{text:wifiString,width:200,height:200,colorDark:'#4f46e5',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});document.getElementById('downloadBtn').disabled=false;}function downloadQR(){const canvas=document.querySelector('#qrcode canvas');if(canvas){const link=document.createElement('a');link.download='wifi-qr-code.png';link.href=canvas.toDataURL('image/png');link.click();}}</script>
+</body>
+</html>
