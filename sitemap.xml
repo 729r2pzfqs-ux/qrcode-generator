@@ -8,14 +8,18 @@
   <url><loc>https://qrcodes.win/instagram/</loc><priority>0.9</priority></url>
   <url><loc>https://qrcodes.win/location/</loc><priority>0.9</priority></url>
   <url><loc>https://qrcodes.win/app/</loc><priority>0.9</priority></url>
-  <url><loc>https://qrcodes.win/es/</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/de/</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/fr/</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/pt/</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/zh/</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/ja/</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/ar/</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/hi/</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/ru/</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/tr/</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/blog/</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/blog/how-to-create-qr-code.html</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/blog/wifi-qr-code-guide.html</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/blog/qr-code-for-business.html</loc><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/es/</loc><priority>0.7</priority></url>
+  <url><loc>https://qrcodes.win/de/</loc><priority>0.7</priority></url>
+  <url><loc>https://qrcodes.win/fr/</loc><priority>0.7</priority></url>
+  <url><loc>https://qrcodes.win/pt/</loc><priority>0.7</priority></url>
+  <url><loc>https://qrcodes.win/zh/</loc><priority>0.7</priority></url>
+  <url><loc>https://qrcodes.win/ja/</loc><priority>0.7</priority></url>
+  <url><loc>https://qrcodes.win/ar/</loc><priority>0.7</priority></url>
+  <url><loc>https://qrcodes.win/hi/</loc><priority>0.7</priority></url>
+  <url><loc>https://qrcodes.win/ru/</loc><priority>0.7</priority></url>
+  <url><loc>https://qrcodes.win/tr/</loc><priority>0.7</priority></url>
 </urlset>
