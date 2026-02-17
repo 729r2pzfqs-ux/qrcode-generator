@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp QR कोड जनरेटर | चैट लिंक बनाएं</title>
+    <meta name="description" content="WhatsApp चैट को सीधे खोलने वाले QR कोड बनाएं। बिजनेस कार्ड, स्टोर और कस्टमर सपोर्ट के लिए परफेक्ट। मुफ्त।">
+    <link rel="canonical" href="https://qrcodes.win/hi/whatsapp/">
+    <link rel="icon" href="../../favicon.ico" sizes="32x32">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../../qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>* { font-family: 'Noto Sans Devanagari', sans-serif; } body { background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); min-height: 100vh; } .glass { background: rgba(255,255,255,0.95); } .input-field { border: 2px solid #e5e7eb; } .input-field:focus { border-color: #25D366; outline: none; }</style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4"><div class="max-w-4xl mx-auto flex items-center justify-between"><a href="../" class="flex items-center gap-2 text-white"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><i data-lucide="qr-code" class="w-6 h-6"></i></div><span class="text-xl font-bold">QRCodes.win</span></a><a href="../" class="text-white/80 hover:text-white text-sm">← सभी प्रकार</a></div></header>
+    <main class="px-4 pb-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center text-white mb-8">
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">WhatsApp<br>QR कोड</h1>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto">WhatsApp चैट को सीधे खोलने वाले QR कोड बनाएं।</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass rounded-2xl p-6 shadow-xl">
+                    <h2 class="text-xl font-bold mb-6">WhatsApp विवरण</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">फ़ोन नंबर *</label>
+                            <div class="flex gap-2">
+                                <select id="countryCode" class="input-field rounded-xl px-3 py-3 w-24"><option value="91">+91</option><option value="1">+1</option></select>
+                                <input type="tel" id="phone" placeholder="98765 43210" class="input-field flex-1 rounded-xl px-4 py-3">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">पूर्व-भरा संदेश (वैकल्पिक)</label>
+                            <textarea id="message" rows="3" placeholder="नमस्ते! मैंने आपका QR कोड स्कैन किया..." class="input-field w-full rounded-xl px-4 py-3 resize-none"></textarea>
+                        </div>
+                        <button onclick="generateWhatsAppQR()" class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-xl">WhatsApp QR बनाएं</button>
+                    </div>
+                </div>
+                <div class="glass rounded-2xl p-6 shadow-xl flex flex-col">
+                    <h2 class="text-xl font-bold mb-6">आपका WhatsApp QR कोड</h2>
+                    <div class="flex-1 flex items-center justify-center"><div id="qrcode" class="bg-white p-4 rounded-xl border-2 border-dashed border-gray-200"><div class="w-48 h-48 flex items-center justify-center text-gray-400"><p class="text-sm text-center">नंबर दर्ज करें<br>QR बनाने के लिए</p></div></div></div>
+                    <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 text-gray-700 font-semibold py-3 rounded-xl">PNG डाउनलोड</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="py-8 px-4 text-center text-white/60 text-sm"><p>© 2026 QRCodes.win</p></footer>
+    <script>lucide.createIcons();function generateWhatsAppQR(){const cc=document.getElementById('countryCode').value;const phone=document.getElementById('phone').value.replace(/\D/g,'');const msg=document.getElementById('message').value;if(!phone){alert('कृपया फ़ोन नंबर दर्ज करें');return;}let url=`https://wa.me/${cc}${phone}`;if(msg)url+=`?text=${encodeURIComponent(msg)}`;const container=document.getElementById('qrcode');container.innerHTML='';new QRCode(container,{text:url,width:200,height:200,colorDark:'#075e54',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});document.getElementById('downloadBtn').disabled=false;}function downloadQR(){const canvas=document.querySelector('#qrcode canvas');if(canvas){const link=document.createElement('a');link.download='whatsapp-qr-code.png';link.href=canvas.toDataURL('image/png');link.click();}}</script>
+</body>
+</html>
