@@ -58,6 +58,57 @@
                     <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 text-gray-700 font-semibold py-3 rounded-xl">PNG İndir</button>
                 </div>
             </div>
+        
+            <!-- How It Works -->
+            <div class="mt-12 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold text-center mb-8">WhatsApp QR Kodları Nasıl Çalışır</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="scan" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">1. Müşteri Tarar</h3>
+                        <p class="text-gray-600 text-sm">Telefon kamerasıyla QR kodunuzu tarıyorlar</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="message-circle" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">2. WhatsApp Açılır</h3>
+                        <p class="text-gray-600 text-sm">Numaranız ve hazır mesajla sohbet açılır</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="send" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">3. Size Mesaj Atarlar</h3>
+                        <p class="text-gray-600 text-sm">Tek dokunuşla gönder - numaranızı kaydetmelerine gerek yok</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-8 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">Sıkça Sorulan Sorular</h2>
+                <div class="space-y-4">
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">Müşterilerin numaramı kaydetmesi gerekiyor mu?</summary>
+                        <p class="mt-2 text-gray-600">Hayır! WhatsApp QR kodları wa.me bağlantıları kullanır, numaranızı kaydetmeden sohbet başlatabilirler.</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">WhatsApp Business ile çalışır mı?</summary>
+                        <p class="mt-2 text-gray-600">Evet! QR kodlar hem normal WhatsApp hem de WhatsApp Business ile çalışır.</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">İyi bir hazır mesaj nedir?</summary>
+                        <p class="mt-2 text-gray-600">Kısa ve öz tutun. Örnekler: "Merhaba! Sipariş vermek istiyorum" veya "Merhaba, bir sorum var..."</p>
+                    </details>
+                    <details class="pb-4">
+                        <summary class="font-semibold cursor-pointer">Telefon numaram güvende mi?</summary>
+                        <p class="mt-2 text-gray-600">Numaranız QR kodda şifrelenmiştir. Numaranızı saklamıyoruz. Sadece QR'ı tarayanlar görebilir.</p>
+                    </details>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="py-8 px-4 text-center text-white/60 text-sm"><p>© 2026 QRCodes.win</p></footer>

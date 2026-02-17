@@ -58,6 +58,57 @@
                     <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 text-gray-700 font-semibold py-3 rounded-xl">PNGダウンロード</button>
                 </div>
             </div>
+        
+            <!-- How It Works -->
+            <div class="mt-12 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold text-center mb-8">WhatsApp QRコードの仕組み</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="scan" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">1. お客様がスキャン</h3>
+                        <p class="text-gray-600 text-sm">スマホのカメラでQRコードをスキャン</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="message-circle" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">2. WhatsAppが開く</h3>
+                        <p class="text-gray-600 text-sm">あなたの番号と定型メッセージでチャットが開きます</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="send" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">3. メッセージを送信</h3>
+                        <p class="text-gray-600 text-sm">ワンタップで送信 - 番号を保存する必要なし</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-8 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">よくある質問</h2>
+                <div class="space-y-4">
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">お客様は私の番号を保存する必要がありますか？</summary>
+                        <p class="mt-2 text-gray-600">いいえ！WhatsApp QRコードはwa.meリンクを使用し、番号を保存せずにチャットを開始できます。</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">WhatsApp Businessでも使えますか？</summary>
+                        <p class="mt-2 text-gray-600">はい！QRコードは通常のWhatsAppとWhatsApp Businessの両方で機能します。</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">良い定型メッセージとは？</summary>
+                        <p class="mt-2 text-gray-600">短く簡潔に。例：「こんにちは！注文したいです」や「こんにちは、質問があります...」</p>
+                    </details>
+                    <details class="pb-4">
+                        <summary class="font-semibold cursor-pointer">電話番号は安全ですか？</summary>
+                        <p class="mt-2 text-gray-600">番号はQRコードに埋め込まれています。番号は保存しません。QRをスキャンした人だけが見れます。</p>
+                    </details>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="py-8 px-4 text-center text-white/60 text-sm"><p>© 2026 QRCodes.win</p></footer>

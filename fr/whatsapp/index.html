@@ -58,6 +58,57 @@
                     <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 text-gray-700 font-semibold py-3 rounded-xl">Télécharger PNG</button>
                 </div>
             </div>
+        
+            <!-- How It Works -->
+            <div class="mt-12 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold text-center mb-8">Comment Fonctionnent les QR WhatsApp</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="scan" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">1. Le Client Scanne</h3>
+                        <p class="text-gray-600 text-sm">Ils scannent votre QR avec leur appareil photo</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="message-circle" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">2. WhatsApp S'ouvre</h3>
+                        <p class="text-gray-600 text-sm">Le chat s'ouvre avec votre numéro et message prédéfini</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="send" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">3. Ils Vous Écrivent</h3>
+                        <p class="text-gray-600 text-sm">Un clic pour envoyer - sans enregistrer votre numéro</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-8 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">Questions Fréquentes</h2>
+                <div class="space-y-4">
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">Les clients doivent-ils avoir mon numéro enregistré?</summary>
+                        <p class="mt-2 text-gray-600">Non! Les QR WhatsApp utilisent des liens wa.me permettant à quiconque de démarrer une conversation sans enregistrer votre numéro.</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">Ça marche avec WhatsApp Business?</summary>
+                        <p class="mt-2 text-gray-600">Oui! Les codes QR fonctionnent avec WhatsApp normal et WhatsApp Business.</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">Quel message prédéfini est bon?</summary>
+                        <p class="mt-2 text-gray-600">Gardez-le court et direct. Exemples: "Bonjour! Je voudrais commander" ou "Bonjour, j'ai une question sur..."</p>
+                    </details>
+                    <details class="pb-4">
+                        <summary class="font-semibold cursor-pointer">Mon numéro est-il sécurisé?</summary>
+                        <p class="mt-2 text-gray-600">Votre numéro est encodé dans le QR. Nous ne stockons pas votre numéro. Seuls ceux qui scannent votre QR le verront.</p>
+                    </details>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="py-8 px-4 text-center text-white/60 text-sm"><p>© 2026 QRCodes.win</p></footer>

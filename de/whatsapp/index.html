@@ -63,6 +63,57 @@
                     <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-gray-700 font-semibold py-3 rounded-xl transition-all flex items-center justify-center gap-2"><i data-lucide="download" class="w-5 h-5"></i>PNG Herunterladen</button>
                 </div>
             </div>
+        
+            <!-- How It Works -->
+            <div class="mt-12 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold text-center mb-8">So Funktionieren WhatsApp QR-Codes</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="scan" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">1. Kunde Scannt</h3>
+                        <p class="text-gray-600 text-sm">Sie scannen Ihren QR-Code mit der Handykamera</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="message-circle" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">2. WhatsApp Öffnet Sich</h3>
+                        <p class="text-gray-600 text-sm">Chat öffnet sich mit Ihrer Nummer und vorgefertigter Nachricht</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="send" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">3. Sie Schreiben Ihnen</h3>
+                        <p class="text-gray-600 text-sm">Ein Tippen zum Senden - ohne Ihre Nummer zu speichern</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-8 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">Häufig Gestellte Fragen</h2>
+                <div class="space-y-4">
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">Müssen Kunden meine Nummer gespeichert haben?</summary>
+                        <p class="mt-2 text-gray-600">Nein! WhatsApp QR-Codes verwenden wa.me-Links, die es jedem ermöglichen, einen Chat mit Ihnen zu starten, ohne Ihre Nummer zu speichern.</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">Funktioniert das mit WhatsApp Business?</summary>
+                        <p class="mt-2 text-gray-600">Ja! WhatsApp QR-Codes funktionieren sowohl mit normalem WhatsApp als auch mit WhatsApp Business.</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">Was ist eine gute vorgefertigte Nachricht?</summary>
+                        <p class="mt-2 text-gray-600">Halten Sie es kurz und handlungsorientiert. Beispiele: "Hallo! Ich möchte bestellen" oder "Hallo, ich habe eine Frage zu..."</p>
+                    </details>
+                    <details class="pb-4">
+                        <summary class="font-semibold cursor-pointer">Ist meine Telefonnummer sicher?</summary>
+                        <p class="mt-2 text-gray-600">Ihre Nummer ist im QR-Code kodiert. Wir speichern Ihre Nummer nicht. Nur Personen, die Ihren QR-Code scannen, sehen sie.</p>
+                    </details>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="py-8 px-4 text-center text-white/60 text-sm"><p>© 2026 QRCodes.win - Kostenloser QR-Code Generator</p></footer>

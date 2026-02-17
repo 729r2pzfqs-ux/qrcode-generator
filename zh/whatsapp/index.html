@@ -58,6 +58,57 @@
                     <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 text-gray-700 font-semibold py-3 rounded-xl">下载PNG</button>
                 </div>
             </div>
+        
+            <!-- How It Works -->
+            <div class="mt-12 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold text-center mb-8">WhatsApp 二维码如何工作</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="scan" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">1. 客户扫描</h3>
+                        <p class="text-gray-600 text-sm">他们用手机相机扫描您的二维码</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="message-circle" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">2. WhatsApp 打开</h3>
+                        <p class="text-gray-600 text-sm">聊天窗口打开，显示您的号码和预设消息</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="send" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">3. 他们发送消息</h3>
+                        <p class="text-gray-600 text-sm">一键发送 - 无需保存您的号码</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-8 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">常见问题</h2>
+                <div class="space-y-4">
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">客户需要保存我的号码吗？</summary>
+                        <p class="mt-2 text-gray-600">不需要！WhatsApp 二维码使用 wa.me 链接，任何人都可以开始聊天而无需保存您的号码。</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">这适用于 WhatsApp Business 吗？</summary>
+                        <p class="mt-2 text-gray-600">是的！二维码适用于普通 WhatsApp 和 WhatsApp Business。</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">什么是好的预设消息？</summary>
+                        <p class="mt-2 text-gray-600">保持简短。例如："您好！我想下订单"或"您好，我有一个问题..."</p>
+                    </details>
+                    <details class="pb-4">
+                        <summary class="font-semibold cursor-pointer">我的电话号码安全吗？</summary>
+                        <p class="mt-2 text-gray-600">您的号码被编码在二维码中。我们不存储您的号码。只有扫描您二维码的人才能看到它。</p>
+                    </details>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="py-8 px-4 text-center text-white/60 text-sm"><p>© 2026 QRCodes.win</p></footer>
