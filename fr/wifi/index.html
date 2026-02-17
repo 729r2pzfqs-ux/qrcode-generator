@@ -17,7 +17,19 @@
     <style>* { font-family: 'Inter', sans-serif; } body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; } .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); } .input-field { border: 2px solid #e5e7eb; } .input-field:focus { border-color: #667eea; outline: none; box-shadow: 0 0 0 3px rgba(102,126,234,0.1); }</style>
 </head>
 <body class="text-gray-900">
-    <header class="py-6 px-4"><div class="max-w-4xl mx-auto flex items-center justify-between"><a href="../" class="flex items-center gap-2 text-white"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><i data-lucide="qr-code" class="w-6 h-6"></i></div><span class="text-xl font-bold">QRCodes.win</span></a><a href="../" class="text-white/80 hover:text-white text-sm">← Tous les types</a></div></header>
+    <header class="py-6 px-4"><div class="max-w-4xl mx-auto flex items-center justify-between"><a href="../" class="flex items-center gap-2 text-white"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><i data-lucide="qr-code" class="w-6 h-6"></i></div><span class="text-xl font-bold">QRCodes.win</span></a><a href="../" class="text-white/80 hover:text-white text-sm">← Tous les types</a><select onchange="window.location.href=this.value" class="bg-white/20 text-white text-sm rounded-lg px-3 py-2 outline-none cursor-pointer border border-white/30">
+                <option value="../../wifi/" class="text-gray-800">English</option>
+<option value="../../es/wifi/" class="text-gray-800">Español</option>
+<option value="../../de/wifi/" class="text-gray-800">Deutsch</option>
+<option value="../../fr/wifi/" selected class="text-gray-800">Français</option>
+<option value="../../pt/wifi/" class="text-gray-800">Português</option>
+<option value="../../zh/wifi/" class="text-gray-800">中文</option>
+<option value="../../ja/wifi/" class="text-gray-800">日本語</option>
+<option value="../../ar/wifi/" class="text-gray-800">العربية</option>
+<option value="../../hi/wifi/" class="text-gray-800">हिन्दी</option>
+<option value="../../ru/wifi/" class="text-gray-800">Русский</option>
+<option value="../../tr/wifi/" class="text-gray-800">Türkçe</option>
+            </select></div></header>
     <main class="px-4 pb-12">
         <div class="max-w-4xl mx-auto">
             <div class="text-center text-white mb-8">

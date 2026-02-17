@@ -15,7 +15,19 @@
     <style>* { font-family: 'Noto Sans SC', sans-serif; } body { background: linear-gradient(135deg, #059669 0%, #047857 100%); min-height: 100vh; } .glass { background: rgba(255,255,255,0.95); } .input-field { border: 2px solid #e5e7eb; } .input-field:focus { border-color: #059669; outline: none; }</style>
 </head>
 <body class="text-gray-900">
-    <header class="py-6 px-4"><div class="max-w-4xl mx-auto flex items-center justify-between"><a href="../" class="flex items-center gap-2 text-white"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><i data-lucide="qr-code" class="w-6 h-6"></i></div><span class="text-xl font-bold">QRCodes.win</span></a><a href="../" class="text-white/80 hover:text-white text-sm">← 所有类型</a></div></header>
+    <header class="py-6 px-4"><div class="max-w-4xl mx-auto flex items-center justify-between"><a href="../" class="flex items-center gap-2 text-white"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><i data-lucide="qr-code" class="w-6 h-6"></i></div><span class="text-xl font-bold">QRCodes.win</span></a><a href="../" class="text-white/80 hover:text-white text-sm">← 所有类型</a><select onchange="window.location.href=this.value" class="bg-white/20 text-white text-sm rounded-lg px-3 py-2 outline-none cursor-pointer border border-white/30">
+                <option value="../../vcard/" class="text-gray-800">English</option>
+<option value="../../es/vcard/" class="text-gray-800">Español</option>
+<option value="../../de/vcard/" class="text-gray-800">Deutsch</option>
+<option value="../../fr/vcard/" class="text-gray-800">Français</option>
+<option value="../../pt/vcard/" class="text-gray-800">Português</option>
+<option value="../../zh/vcard/" selected class="text-gray-800">中文</option>
+<option value="../../ja/vcard/" class="text-gray-800">日本語</option>
+<option value="../../ar/vcard/" class="text-gray-800">العربية</option>
+<option value="../../hi/vcard/" class="text-gray-800">हिन्दी</option>
+<option value="../../ru/vcard/" class="text-gray-800">Русский</option>
+<option value="../../tr/vcard/" class="text-gray-800">Türkçe</option>
+            </select></div></header>
     <main class="px-4 pb-12">
         <div class="max-w-4xl mx-auto">
             <div class="text-center text-white mb-8">
