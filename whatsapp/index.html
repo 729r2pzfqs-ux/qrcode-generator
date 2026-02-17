@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp QR Code Generator | Create WhatsApp Link QR</title>
+    <meta name="description" content="Generate QR codes that open WhatsApp chat. Perfect for business cards, stores, and customer support. Include pre-filled messages. Free WhatsApp QR maker.">
+    
+    <link rel="canonical" href="https://qrcodes.win/whatsapp/">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    
+    <meta property="og:title" content="WhatsApp QR Code Generator">
+    <meta property="og:description" content="Create QR codes that open a WhatsApp chat directly. Include pre-filled messages.">
+    <meta property="og:url" content="https://qrcodes.win/whatsapp/">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I create a WhatsApp QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Enter your phone number with country code (e.g., +1 for USA) and optionally a pre-filled message. The QR code will open WhatsApp with a chat to your number when scanned."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do customers need my number saved to contact me?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No! WhatsApp QR codes use wa.me links which allow anyone to start a chat with you without saving your number first."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .input-field { border: 2px solid #e5e7eb; }
+        .input-field:focus { border-color: #25D366; outline: none; box-shadow: 0 0 0 3px rgba(37,211,102,0.1); }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                    <i data-lucide="qr-code" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../" class="text-white/80 hover:text-white text-sm">← All QR Types</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center text-white mb-8">
+                <div class="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 text-sm mb-4">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp QR Code Generator</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">WhatsApp QR Code<br>Generator</h1>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto">Create QR codes that open a WhatsApp chat directly. Perfect for business cards, storefronts, packaging, and customer support.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass rounded-2xl p-6 shadow-xl">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="phone" class="w-5 h-5 text-green-600"></i>
+                        WhatsApp Details
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                            <div class="flex gap-2">
+                                <select id="countryCode" class="input-field rounded-xl px-3 py-3 w-24">
+                                    <option value="1">+1</option>
+                                    <option value="44">+44</option>
+                                    <option value="49">+49</option>
+                                    <option value="33">+33</option>
+                                    <option value="34">+34</option>
+                                    <option value="39">+39</option>
+                                    <option value="55">+55</option>
+                                    <option value="52">+52</option>
+                                    <option value="91">+91</option>
+                                    <option value="86">+86</option>
+                                    <option value="81">+81</option>
+                                    <option value="82">+82</option>
+                                    <option value="61">+61</option>
+                                    <option value="971">+971</option>
+                                    <option value="966">+966</option>
+                                    <option value="90">+90</option>
+                                    <option value="7">+7</option>
+                                    <option value="358">+358</option>
+                                    <option value="46">+46</option>
+                                    <option value="47">+47</option>
+                                </select>
+                                <input type="tel" id="phone" placeholder="555 123 4567" class="input-field flex-1 rounded-xl px-4 py-3">
+                            </div>
+                            <p class="text-xs text-gray-500 mt-2">Enter number without leading zero</p>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Pre-filled Message (optional)</label>
+                            <textarea id="message" rows="3" placeholder="Hi! I scanned your QR code and would like to..." class="input-field w-full rounded-xl px-4 py-3 resize-none"></textarea>
+                            <p class="text-xs text-gray-500 mt-2">This message will appear when they open the chat</p>
+                        </div>
+                        
+                        <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+                            <h3 class="font-semibold text-green-800 text-sm mb-2">💡 Great for:</h3>
+                            <ul class="text-sm text-green-700 space-y-1">
+                                <li>• Business cards & flyers</li>
+                                <li>• Store windows & counters</li>
+                                <li>• Product packaging</li>
+                                <li>• Customer support</li>
+                            </ul>
+                        </div>
+                        
+                        <button onclick="generateWhatsAppQR()" class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="qr-code" class="w-5 h-5"></i>
+                            Generate WhatsApp QR Code
+                        </button>
+                    </div>
+                </div>
+
+                <div class="glass rounded-2xl p-6 shadow-xl flex flex-col">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="scan" class="w-5 h-5 text-green-600"></i>
+                        Your WhatsApp QR Code
+                    </h2>
+                    
+                    <div class="flex-1 flex items-center justify-center">
+                        <div id="qrcode" class="bg-white p-4 rounded-xl shadow-inner border-2 border-dashed border-gray-200">
+                            <div class="w-48 h-48 flex items-center justify-center text-gray-400">
+                                <div class="text-center">
+                                    <i data-lucide="message-circle" class="w-12 h-12 mx-auto mb-2 opacity-50"></i>
+                                    <p class="text-sm">Enter phone number<br>to generate QR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="previewLink" class="mt-4 text-center text-sm text-gray-500 hidden">
+                        <a href="#" id="waLink" target="_blank" class="text-green-600 hover:underline">Test your WhatsApp link →</a>
+                    </div>
+                    
+                    <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-4 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-gray-700 font-semibold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="download" class="w-5 h-5"></i>
+                        Download PNG
+                    </button>
+                </div>
+            </div>
+
+            <!-- How It Works -->
+            <div class="mt-12 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold text-center mb-8">How WhatsApp QR Codes Work</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="scan" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">1. Customer Scans</h3>
+                        <p class="text-gray-600 text-sm">They scan your QR with their phone camera</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="message-circle" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">2. WhatsApp Opens</h3>
+                        <p class="text-gray-600 text-sm">Chat opens with your number & pre-filled message</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="send" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">3. They Message You</h3>
+                        <p class="text-gray-600 text-sm">One tap to send - no need to save your number</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-8 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">Do customers need my number saved to contact me?</summary>
+                        <p class="mt-2 text-gray-600">No! WhatsApp QR codes use wa.me links which allow anyone to start a chat with you without saving your number first.</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">Does this work with WhatsApp Business?</summary>
+                        <p class="mt-2 text-gray-600">Yes! WhatsApp QR codes work with both regular WhatsApp and WhatsApp Business accounts.</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">What's a good pre-filled message?</summary>
+                        <p class="mt-2 text-gray-600">Keep it short and actionable. Examples: "Hi! I'd like to place an order" or "Hello, I have a question about..." The customer can edit before sending.</p>
+                    </details>
+                    <details class="pb-4">
+                        <summary class="font-semibold cursor-pointer">Is my phone number safe?</summary>
+                        <p class="mt-2 text-gray-600">Your number is encoded in the QR code to create the WhatsApp link. We don't store your number. Only people who scan your QR code will see it.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 px-4 text-center text-white/60 text-sm">
+        <p>© 2026 QRCodes.win - Free QR Code Generator</p>
+        <div class="mt-2 flex justify-center gap-4">
+            <a href="../" class="hover:text-white">Home</a>
+            <a href="../wifi/" class="hover:text-white">WiFi QR</a>
+            <a href="../vcard/" class="hover:text-white">vCard QR</a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        function generateWhatsAppQR() {
+            const countryCode = document.getElementById('countryCode').value;
+            const phone = document.getElementById('phone').value.replace(/\D/g, '');
+            const message = document.getElementById('message').value;
+            
+            if (!phone) {
+                alert('Please enter your phone number');
+                return;
+            }
+            
+            // Build WhatsApp URL
+            let waUrl = `https://wa.me/${countryCode}${phone}`;
+            if (message) {
+                waUrl += `?text=${encodeURIComponent(message)}`;
+            }
+            
+            const container = document.getElementById('qrcode');
+            container.innerHTML = '';
+            
+            new QRCode(container, {
+                text: waUrl,
+                width: 200,
+                height: 200,
+                colorDark: '#075e54',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            // Show test link
+            document.getElementById('waLink').href = waUrl;
+            document.getElementById('previewLink').classList.remove('hidden');
+            
+            document.getElementById('downloadBtn').disabled = false;
+        }
+        
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'whatsapp-qr-code.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            }
+        }
+    </script>
+</body>
+</html>
