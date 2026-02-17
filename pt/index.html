@@ -30,7 +30,81 @@
     <section class="gradient-bg px-4 pt-8 pb-16"><div class="max-w-3xl mx-auto text-center"><h1 class="text-3xl md:text-4xl font-bold text-white mb-3">Gerador de QR Code Grátis</h1><p class="text-lg text-white/80">Crie QR codes personalizados em segundos. Sem cadastro.</p></div></section>
     <main class="px-4 -mt-8 pb-16"><div class="max-w-4xl mx-auto"><div class="card p-6 md:p-8"><div class="flex flex-col lg:flex-row gap-8 qr-section"><div class="flex-1"><div class="tab-scroll flex gap-2 mb-6"><button class="tab-btn tab-active px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="url"><i data-lucide="link" class="w-4 h-4"></i> URL</button><button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="text"><i data-lucide="type" class="w-4 h-4"></i> Texto</button><button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="wifi"><i data-lucide="wifi" class="w-4 h-4"></i> WiFi</button><button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="email"><i data-lucide="mail" class="w-4 h-4"></i> Email</button><button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="phone"><i data-lucide="phone" class="w-4 h-4"></i> Telefone</button></div><div id="inputFields"><div id="input-url" class="input-group"><label class="block text-sm font-semibold text-gray-700 mb-2">URL do site</label><input type="url" id="urlInput" class="input-field w-full px-4 py-3 rounded-xl" placeholder="https://exemplo.com.br" value="https://exemplo.com.br"></div><div id="input-text" class="input-group hidden"><label class="block text-sm font-semibold text-gray-700 mb-2">Seu texto</label><textarea id="textInput" class="input-field w-full px-4 py-3 rounded-xl resize-none" rows="4" placeholder="Digite qualquer texto..."></textarea></div><div id="input-wifi" class="input-group hidden space-y-4"><div><label class="block text-sm font-semibold text-gray-700 mb-2">Nome da rede (SSID)</label><input type="text" id="wifiSSID" class="input-field w-full px-4 py-3 rounded-xl" placeholder="MinhaRede"></div><div><label class="block text-sm font-semibold text-gray-700 mb-2">Senha</label><input type="text" id="wifiPass" class="input-field w-full px-4 py-3 rounded-xl" placeholder="senha123"></div><div><label class="block text-sm font-semibold text-gray-700 mb-2">Tipo de segurança</label><select id="wifiSec" class="input-field w-full px-4 py-3 rounded-xl"><option value="WPA">WPA/WPA2</option><option value="WEP">WEP</option><option value="nopass">Sem senha</option></select></div></div><div id="input-email" class="input-group hidden space-y-4"><div><label class="block text-sm font-semibold text-gray-700 mb-2">Endereço de email</label><input type="email" id="emailAddr" class="input-field w-full px-4 py-3 rounded-xl" placeholder="ola@exemplo.com.br"></div><div><label class="block text-sm font-semibold text-gray-700 mb-2">Assunto (opcional)</label><input type="text" id="emailSubj" class="input-field w-full px-4 py-3 rounded-xl" placeholder="Olá!"></div><div><label class="block text-sm font-semibold text-gray-700 mb-2">Mensagem (opcional)</label><textarea id="emailBody" class="input-field w-full px-4 py-3 rounded-xl resize-none" rows="3" placeholder="Sua mensagem..."></textarea></div></div><div id="input-phone" class="input-group hidden"><label class="block text-sm font-semibold text-gray-700 mb-2">Número de telefone</label><input type="tel" id="phoneInput" class="input-field w-full px-4 py-3 rounded-xl" placeholder="+5511999999999"></div></div><div class="mt-6 pt-6 border-t border-gray-200"><h3 class="text-sm font-bold text-gray-700 mb-4 flex items-center gap-2"><i data-lucide="palette" class="w-4 h-4"></i> Personalizar</h3><div class="grid grid-cols-2 md:grid-cols-4 gap-4"><div><label class="block text-xs font-medium text-gray-500 mb-2">Cor QR</label><input type="color" id="qrColor" class="color-picker" value="#000000"></div><div><label class="block text-xs font-medium text-gray-500 mb-2">Fundo</label><input type="color" id="bgColor" class="color-picker" value="#FFFFFF"></div><div><label class="block text-xs font-medium text-gray-500 mb-2">Tamanho</label><select id="qrSize" class="input-field w-full px-3 py-3 rounded-xl text-sm"><option value="200">200px</option><option value="300" selected>300px</option><option value="400">400px</option><option value="500">500px</option></select></div><div><label class="block text-xs font-medium text-gray-500 mb-2">Correção</label><select id="errorLevel" class="input-field w-full px-3 py-3 rounded-xl text-sm"><option value="L">Baixa</option><option value="M" selected>Média</option><option value="Q">Alta</option><option value="H">Máxima</option></select></div></div></div></div><div class="lg:w-80 qr-preview-container"><div class="qr-preview p-6 flex flex-col items-center"><div id="qrcode"></div><p class="text-xs text-gray-400 mt-4">Escaneie com a câmera do celular</p></div><div class="flex gap-3 mt-4"><button id="downloadPNG" class="btn-primary flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><i data-lucide="download" class="w-4 h-4"></i> PNG</button><button id="downloadSVG" class="btn-success flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><i data-lucide="download" class="w-4 h-4"></i> SVG</button></div></div></div></div></div></main>
     <section class="px-4 py-16 bg-gray-50"><div class="max-w-5xl mx-auto"><h2 class="text-2xl font-bold text-center text-gray-900 mb-10">Por que usar nosso gerador?</h2><div class="grid md:grid-cols-3 gap-6"><div class="card p-6"><div class="icon-box bg-indigo-100 mb-4"><i data-lucide="zap" class="w-6 h-6 text-indigo-600"></i></div><h3 class="text-lg font-bold text-gray-900 mb-2">Geração instantânea</h3><p class="text-gray-600 text-sm">Crie QR codes em milissegundos. Sem espera.</p></div><div class="card p-6"><div class="icon-box bg-green-100 mb-4"><i data-lucide="shield-check" class="w-6 h-6 text-green-600"></i></div><h3 class="text-lg font-bold text-gray-900 mb-2">100% Privado</h3><p class="text-gray-600 text-sm">Tudo é processado localmente no seu navegador.</p></div><div class="card p-6"><div class="icon-box bg-purple-100 mb-4"><i data-lucide="palette" class="w-6 h-6 text-purple-600"></i></div><h3 class="text-lg font-bold text-gray-900 mb-2">Totalmente personalizável</h3><p class="text-gray-600 text-sm">Cores, tamanhos e níveis de correção ajustáveis.</p></div></div></div></section>
-    <footer class="py-8 px-4 border-t border-gray-200 bg-white"><div class="max-w-5xl mx-auto text-center text-gray-500 text-sm"><p>© 2026 Gerador de QR Code — Criador de QR Grátis Online</p></div></footer>
+    
+    <!-- Popular QR Code Types -->
+    <section class="px-4 py-16 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl font-bold text-center text-gray-900 mb-4">Tipos de Códigos QR Populares</h2>
+            <p class="text-center text-gray-600 mb-10">Geradores especializados para casos de uso comuns</p>
+            <div class="grid md:grid-cols-4 gap-6">
+                <a href="../wifi/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-200 transition-colors">
+                        <i data-lucide="wifi" class="w-8 h-8 text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Código QR WiFi</h3>
+                    <p class="text-gray-600 text-sm">Compartilhe sua senha instantaneamente</p>
+                </a>
+                <a href="../vcard/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
+                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-200 transition-colors">
+                        <i data-lucide="contact" class="w-8 h-8 text-emerald-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Código QR vCard</h3>
+                    <p class="text-gray-600 text-sm">Cartão de visita digital</p>
+                </a>
+                <a href="../menu/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
+                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-200 transition-colors">
+                        <i data-lucide="utensils" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Código QR Menu</h3>
+                    <p class="text-gray-600 text-sm">Menu sem contato para restaurantes</p>
+                </a>
+                <a href="../whatsapp/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
+                        <i data-lucide="message-circle" class="w-8 h-8 text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">QR WhatsApp</h3>
+                    <p class="text-gray-600 text-sm">Abra um chat instantaneamente</p>
+                </a>
+                <a href="../instagram/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
+                    <div class="w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-200 transition-colors">
+                        <i data-lucide="instagram" class="w-8 h-8 text-pink-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">QR Instagram</h3>
+                    <p class="text-gray-600 text-sm">Link para seu perfil</p>
+                </a>
+                <a href="../location/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
+                        <i data-lucide="map-pin" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">QR Localização</h3>
+                    <p class="text-gray-600 text-sm">Direções do Google Maps</p>
+                </a>
+                <a href="../app/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
+                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-gray-200 transition-colors">
+                        <i data-lucide="smartphone" class="w-8 h-8 text-gray-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">QR App Store</h3>
+                    <p class="text-gray-600 text-sm">Downloads iOS e Android</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 px-4 border-t border-gray-200 bg-gray-50">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-4 mb-4 text-sm">
+                <a href="../wifi/" class="text-gray-600 hover:text-indigo-600">Código QR WiFi</a>
+                <a href="../vcard/" class="text-gray-600 hover:text-indigo-600">Código QR vCard</a>
+                <a href="../menu/" class="text-gray-600 hover:text-indigo-600">Código QR Menu</a>
+                <a href="../whatsapp/" class="text-gray-600 hover:text-indigo-600">QR WhatsApp</a>
+                <a href="../instagram/" class="text-gray-600 hover:text-indigo-600">QR Instagram</a>
+                <a href="../location/" class="text-gray-600 hover:text-indigo-600">QR Localização</a>
+                <a href="../app/" class="text-gray-600 hover:text-indigo-600">QR App Store</a>
+                <a href="./blog/" class="text-gray-600 hover:text-indigo-600 font-medium">Blog</a>
+            </div>
+            <p class="text-center text-gray-500 text-sm">© 2026 QRCodes.win — Gerador de Códigos QR Grátis</p>
+        </div>
+    </footer>
     
 
 <script src="../qrcode.min.js"></script>
