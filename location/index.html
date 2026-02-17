@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location QR Code Generator | Google Maps QR Code</title>
+    <meta name="description" content="Create QR codes for locations and addresses. Opens Google Maps with directions. Perfect for event invitations, business locations, and meetups.">
+    
+    <link rel="canonical" href="https://qrcodes.win/location/">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    
+    <meta property="og:title" content="Location QR Code Generator | Google Maps QR">
+    <meta property="og:description" content="Create QR codes that open Google Maps with directions to any location.">
+    <meta property="og:url" content="https://qrcodes.win/location/">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #4285F4 0%, #34A853 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .input-field { border: 2px solid #e5e7eb; }
+        .input-field:focus { border-color: #4285F4; outline: none; box-shadow: 0 0 0 3px rgba(66,133,244,0.1); }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                    <i data-lucide="qr-code" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../" class="text-white/80 hover:text-white text-sm">← All QR Types</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center text-white mb-8">
+                <div class="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 text-sm mb-4">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    <span>Location QR Code Generator</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">Location & Maps<br>QR Code</h1>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto">Create QR codes that open Google Maps with directions. Perfect for event invitations, business locations, and meetup spots.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass rounded-2xl p-6 shadow-xl">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-blue-600"></i>
+                        Location Details
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Method</label>
+                            <div class="flex gap-2">
+                                <button onclick="setMethod('address')" id="btnAddress" class="flex-1 py-2 px-4 rounded-lg bg-blue-600 text-white font-medium text-sm">Address</button>
+                                <button onclick="setMethod('coords')" id="btnCoords" class="flex-1 py-2 px-4 rounded-lg bg-gray-100 text-gray-700 font-medium text-sm">Coordinates</button>
+                                <button onclick="setMethod('url')" id="btnUrl" class="flex-1 py-2 px-4 rounded-lg bg-gray-100 text-gray-700 font-medium text-sm">Maps URL</button>
+                            </div>
+                        </div>
+                        
+                        <div id="addressInput">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Address</label>
+                            <input type="text" id="address" placeholder="123 Main St, New York, NY 10001" class="input-field w-full rounded-xl px-4 py-3">
+                            <p class="text-xs text-gray-500 mt-2">Enter full address including city and country</p>
+                        </div>
+                        
+                        <div id="coordsInput" class="hidden space-y-4">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Latitude</label>
+                                    <input type="text" id="lat" placeholder="40.7128" class="input-field w-full rounded-xl px-4 py-3">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Longitude</label>
+                                    <input type="text" id="lng" placeholder="-74.0060" class="input-field w-full rounded-xl px-4 py-3">
+                                </div>
+                            </div>
+                            <button onclick="getMyLocation()" class="text-sm text-blue-600 hover:underline flex items-center gap-1">
+                                <i data-lucide="crosshair" class="w-4 h-4"></i> Use my current location
+                            </button>
+                        </div>
+                        
+                        <div id="urlInput" class="hidden">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Google Maps URL</label>
+                            <input type="url" id="mapsUrl" placeholder="https://maps.google.com/..." class="input-field w-full rounded-xl px-4 py-3">
+                            <p class="text-xs text-gray-500 mt-2">Paste a Google Maps share link</p>
+                        </div>
+                        
+                        <button onclick="generateLocationQR()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="qr-code" class="w-5 h-5"></i>
+                            Generate Location QR Code
+                        </button>
+                    </div>
+                </div>
+
+                <div class="glass rounded-2xl p-6 shadow-xl flex flex-col">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="scan" class="w-5 h-5 text-blue-600"></i>
+                        Your Location QR Code
+                    </h2>
+                    
+                    <div class="flex-1 flex items-center justify-center">
+                        <div id="qrcode" class="bg-white p-4 rounded-xl shadow-inner border-2 border-dashed border-gray-200">
+                            <div class="w-48 h-48 flex items-center justify-center text-gray-400">
+                                <div class="text-center">
+                                    <i data-lucide="map-pin" class="w-12 h-12 mx-auto mb-2 opacity-50"></i>
+                                    <p class="text-sm">Enter location<br>to generate QR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-gray-700 font-semibold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="download" class="w-5 h-5"></i>
+                        Download PNG
+                    </button>
+                </div>
+            </div>
+
+            <!-- Use Cases -->
+            <div class="mt-12 grid md:grid-cols-4 gap-4">
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">💒</div>
+                    <h3 class="font-semibold text-sm">Wedding Invites</h3>
+                </div>
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">🏢</div>
+                    <h3 class="font-semibold text-sm">Office Location</h3>
+                </div>
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">🎉</div>
+                    <h3 class="font-semibold text-sm">Event Venues</h3>
+                </div>
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">🏨</div>
+                    <h3 class="font-semibold text-sm">Hotel Directions</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 px-4 text-center text-white/60 text-sm">
+        <p>© 2026 QRCodes.win - Free QR Code Generator</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        let method = 'address';
+        
+        function setMethod(m) {
+            method = m;
+            document.getElementById('addressInput').classList.toggle('hidden', m !== 'address');
+            document.getElementById('coordsInput').classList.toggle('hidden', m !== 'coords');
+            document.getElementById('urlInput').classList.toggle('hidden', m !== 'url');
+            
+            document.getElementById('btnAddress').className = m === 'address' ? 'flex-1 py-2 px-4 rounded-lg bg-blue-600 text-white font-medium text-sm' : 'flex-1 py-2 px-4 rounded-lg bg-gray-100 text-gray-700 font-medium text-sm';
+            document.getElementById('btnCoords').className = m === 'coords' ? 'flex-1 py-2 px-4 rounded-lg bg-blue-600 text-white font-medium text-sm' : 'flex-1 py-2 px-4 rounded-lg bg-gray-100 text-gray-700 font-medium text-sm';
+            document.getElementById('btnUrl').className = m === 'url' ? 'flex-1 py-2 px-4 rounded-lg bg-blue-600 text-white font-medium text-sm' : 'flex-1 py-2 px-4 rounded-lg bg-gray-100 text-gray-700 font-medium text-sm';
+            lucide.createIcons();
+        }
+        
+        function getMyLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(pos) {
+                    document.getElementById('lat').value = pos.coords.latitude.toFixed(6);
+                    document.getElementById('lng').value = pos.coords.longitude.toFixed(6);
+                });
+            }
+        }
+        
+        function generateLocationQR() {
+            let url;
+            
+            if (method === 'address') {
+                const addr = document.getElementById('address').value;
+                if (!addr) { alert('Please enter an address'); return; }
+                url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addr)}`;
+            } else if (method === 'coords') {
+                const lat = document.getElementById('lat').value;
+                const lng = document.getElementById('lng').value;
+                if (!lat || !lng) { alert('Please enter coordinates'); return; }
+                url = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+            } else {
+                url = document.getElementById('mapsUrl').value;
+                if (!url) { alert('Please enter a Google Maps URL'); return; }
+            }
+            
+            const container = document.getElementById('qrcode');
+            container.innerHTML = '';
+            
+            new QRCode(container, {
+                text: url,
+                width: 200,
+                height: 200,
+                colorDark: '#4285F4',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            document.getElementById('downloadBtn').disabled = false;
+        }
+        
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'location-qr-code.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            }
+        }
+    </script>
+</body>
+</html>

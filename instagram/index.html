@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram QR Code Generator | Link to Your Profile</title>
+    <meta name="description" content="Create a QR code that links to your Instagram profile. Perfect for business cards, flyers, and storefronts. Free Instagram QR code maker.">
+    
+    <link rel="canonical" href="https://qrcodes.win/instagram/">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    
+    <meta property="og:title" content="Instagram QR Code Generator">
+    <meta property="og:description" content="Create QR codes that link directly to your Instagram profile.">
+    <meta property="og:url" content="https://qrcodes.win/instagram/">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I create an Instagram QR code?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Enter your Instagram username (without the @). The QR code will link directly to your Instagram profile when scanned."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #833AB4 0%, #E1306C 50%, #F77737 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .input-field { border: 2px solid #e5e7eb; }
+        .input-field:focus { border-color: #E1306C; outline: none; box-shadow: 0 0 0 3px rgba(225,48,108,0.1); }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                    <i data-lucide="qr-code" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../" class="text-white/80 hover:text-white text-sm">← All QR Types</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center text-white mb-8">
+                <div class="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 text-sm mb-4">
+                    <i data-lucide="instagram" class="w-4 h-4"></i>
+                    <span>Instagram QR Code Generator</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">Instagram Profile<br>QR Code</h1>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto">Create a QR code that opens your Instagram profile. Perfect for business cards, storefronts, packaging, and events.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass rounded-2xl p-6 shadow-xl">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="at-sign" class="w-5 h-5 text-pink-600"></i>
+                        Your Instagram
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Username</label>
+                            <div class="flex">
+                                <span class="inline-flex items-center px-4 rounded-l-xl border-2 border-r-0 border-gray-200 bg-gray-50 text-gray-500 text-sm">instagram.com/</span>
+                                <input type="text" id="username" placeholder="yourprofile" class="input-field flex-1 rounded-r-xl px-4 py-3 border-l-0">
+                            </div>
+                        </div>
+                        
+                        <div class="bg-pink-50 border border-pink-200 rounded-xl p-4">
+                            <h3 class="font-semibold text-pink-800 text-sm mb-2">💡 Tip:</h3>
+                            <p class="text-sm text-pink-700">Enter your username without the @ symbol. Example: if your profile is @yourstore, just enter "yourstore"</p>
+                        </div>
+                        
+                        <button onclick="generateInstagramQR()" class="w-full bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:from-purple-700 hover:via-pink-700 hover:to-orange-600 text-white font-semibold py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="qr-code" class="w-5 h-5"></i>
+                            Generate Instagram QR Code
+                        </button>
+                    </div>
+                </div>
+
+                <div class="glass rounded-2xl p-6 shadow-xl flex flex-col">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="scan" class="w-5 h-5 text-pink-600"></i>
+                        Your Instagram QR Code
+                    </h2>
+                    
+                    <div class="flex-1 flex items-center justify-center">
+                        <div id="qrcode" class="bg-white p-4 rounded-xl shadow-inner border-2 border-dashed border-gray-200">
+                            <div class="w-48 h-48 flex items-center justify-center text-gray-400">
+                                <div class="text-center">
+                                    <i data-lucide="instagram" class="w-12 h-12 mx-auto mb-2 opacity-50"></i>
+                                    <p class="text-sm">Enter username<br>to generate QR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-gray-700 font-semibold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="download" class="w-5 h-5"></i>
+                        Download PNG
+                    </button>
+                </div>
+            </div>
+
+            <!-- Use Cases -->
+            <div class="mt-12 grid md:grid-cols-4 gap-4">
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">💼</div>
+                    <h3 class="font-semibold text-sm">Business Cards</h3>
+                </div>
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">🏪</div>
+                    <h3 class="font-semibold text-sm">Storefronts</h3>
+                </div>
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">📦</div>
+                    <h3 class="font-semibold text-sm">Packaging</h3>
+                </div>
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">🎪</div>
+                    <h3 class="font-semibold text-sm">Events</h3>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-8 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">How do I create an Instagram QR code?</summary>
+                        <p class="mt-2 text-gray-600">Enter your Instagram username (without the @). The QR code will link directly to your Instagram profile when scanned.</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">Does this work with Instagram Business accounts?</summary>
+                        <p class="mt-2 text-gray-600">Yes! The QR code works with personal, creator, and business Instagram accounts.</p>
+                    </details>
+                    <details class="pb-4">
+                        <summary class="font-semibold cursor-pointer">Can people follow me directly from the QR code?</summary>
+                        <p class="mt-2 text-gray-600">The QR code opens your Instagram profile. From there, users can tap "Follow" with one click.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 px-4 text-center text-white/60 text-sm">
+        <p>© 2026 QRCodes.win - Free QR Code Generator</p>
+        <div class="mt-2 flex justify-center gap-4">
+            <a href="../" class="hover:text-white">Home</a>
+            <a href="../wifi/" class="hover:text-white">WiFi QR</a>
+            <a href="../whatsapp/" class="hover:text-white">WhatsApp QR</a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        function generateInstagramQR() {
+            const username = document.getElementById('username').value.trim().replace('@', '');
+            
+            if (!username) {
+                alert('Please enter your Instagram username');
+                return;
+            }
+            
+            const url = `https://instagram.com/${username}`;
+            
+            const container = document.getElementById('qrcode');
+            container.innerHTML = '';
+            
+            new QRCode(container, {
+                text: url,
+                width: 200,
+                height: 200,
+                colorDark: '#E1306C',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            document.getElementById('downloadBtn').disabled = false;
+        }
+        
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'instagram-qr-code.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            }
+        }
+    </script>
+</body>
+</html>
