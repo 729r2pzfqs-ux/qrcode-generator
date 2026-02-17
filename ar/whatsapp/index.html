@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مولد رمز QR واتساب | إنشاء رابط دردشة</title>
+    <meta name="description" content="أنشئ رموز QR تفتح محادثة واتساب مباشرة. مثالي لبطاقات العمل والمتاجر ودعم العملاء. مجاني.">
+    <link rel="canonical" href="https://qrcodes.win/ar/whatsapp/">
+    <link rel="icon" href="../../favicon.ico" sizes="32x32">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../../qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>* { font-family: 'Noto Sans Arabic', sans-serif; } body { background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); min-height: 100vh; } .glass { background: rgba(255,255,255,0.95); } .input-field { border: 2px solid #e5e7eb; } .input-field:focus { border-color: #25D366; outline: none; }</style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4"><div class="max-w-4xl mx-auto flex items-center justify-between"><a href="../" class="flex items-center gap-2 text-white"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><i data-lucide="qr-code" class="w-6 h-6"></i></div><span class="text-xl font-bold">QRCodes.win</span></a><a href="../" class="text-white/80 hover:text-white text-sm">كل الأنواع ←</a></div></header>
+    <main class="px-4 pb-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center text-white mb-8">
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">رمز QR<br>واتساب</h1>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto">أنشئ رموز QR تفتح محادثة واتساب مباشرة.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass rounded-2xl p-6 shadow-xl">
+                    <h2 class="text-xl font-bold mb-6">بيانات واتساب</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">رقم الهاتف *</label>
+                            <div class="flex gap-2">
+                                <select id="countryCode" class="input-field rounded-xl px-3 py-3 w-24"><option value="966">+966</option><option value="971">+971</option><option value="20">+20</option><option value="212">+212</option><option value="1">+1</option></select>
+                                <input type="tel" id="phone" placeholder="50 123 4567" class="input-field flex-1 rounded-xl px-4 py-3">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">رسالة مسبقة (اختياري)</label>
+                            <textarea id="message" rows="3" placeholder="مرحباً! لقد مسحت رمز QR الخاص بك..." class="input-field w-full rounded-xl px-4 py-3 resize-none"></textarea>
+                        </div>
+                        <button onclick="generateWhatsAppQR()" class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-xl">إنشاء رمز QR واتساب</button>
+                    </div>
+                </div>
+                <div class="glass rounded-2xl p-6 shadow-xl flex flex-col">
+                    <h2 class="text-xl font-bold mb-6">رمز QR واتساب الخاص بك</h2>
+                    <div class="flex-1 flex items-center justify-center"><div id="qrcode" class="bg-white p-4 rounded-xl border-2 border-dashed border-gray-200"><div class="w-48 h-48 flex items-center justify-center text-gray-400"><p class="text-sm text-center">أدخل الرقم<br>لإنشاء QR</p></div></div></div>
+                    <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 text-gray-700 font-semibold py-3 rounded-xl">تحميل PNG</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="py-8 px-4 text-center text-white/60 text-sm"><p>© 2026 QRCodes.win</p></footer>
+    <script>lucide.createIcons();function generateWhatsAppQR(){const cc=document.getElementById('countryCode').value;const phone=document.getElementById('phone').value.replace(/\D/g,'');const msg=document.getElementById('message').value;if(!phone){alert('الرجاء إدخال رقم الهاتف');return;}let url=`https://wa.me/${cc}${phone}`;if(msg)url+=`?text=${encodeURIComponent(msg)}`;const container=document.getElementById('qrcode');container.innerHTML='';new QRCode(container,{text:url,width:200,height:200,colorDark:'#075e54',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});document.getElementById('downloadBtn').disabled=false;}function downloadQR(){const canvas=document.querySelector('#qrcode canvas');if(canvas){const link=document.createElement('a');link.download='whatsapp-qr-code.png';link.href=canvas.toDataURL('image/png');link.click();}}</script>
+</body>
+</html>
