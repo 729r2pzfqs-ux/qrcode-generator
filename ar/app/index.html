@@ -88,6 +88,7 @@
             <a href="../instagram/" class="hover:text-white">Instagram QR</a>
             <a href="../location/" class="hover:text-white">Location QR</a>
             <a href="../app/" class="hover:text-white">App Store QR</a>
+            <a href="../../blog/" class="hover:text-white font-medium">Blog</a>
         </div>
     </footer>
     <script>lucide.createIcons();function generateAppQR(){const url=document.getElementById('appUrl').value;if(!url){alert('الرجاء إدخال رابط التطبيق');return;}const container=document.getElementById('qrcode');container.innerHTML='';new QRCode(container,{text:url,width:200,height:200,colorDark:'#667eea',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});document.getElementById('downloadBtn').disabled=false;}function downloadQR(){const canvas=document.querySelector('#qrcode canvas');if(canvas){const link=document.createElement('a');link.download='app-qr-code.png';link.href=canvas.toDataURL('image/png');link.click();}}</script>

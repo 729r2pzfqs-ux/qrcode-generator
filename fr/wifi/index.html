@@ -17,7 +17,9 @@
     <style>* { font-family: 'Inter', sans-serif; } body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; } .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); } .input-field { border: 2px solid #e5e7eb; } .input-field:focus { border-color: #667eea; outline: none; box-shadow: 0 0 0 3px rgba(102,126,234,0.1); }</style>
 </head>
 <body class="text-gray-900">
-    <header class="py-6 px-4"><div class="max-w-4xl mx-auto flex items-center justify-between"><a href="../" class="flex items-center gap-2 text-white"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><i data-lucide="qr-code" class="w-6 h-6"></i></div><span class="text-xl font-bold">QRCodes.win</span></a><a href="../" class="text-white/80 hover:text-white text-sm">← Tous les types</a><select onchange="window.location.href=this.value" class="bg-white/20 text-white text-sm rounded-lg px-3 py-2 outline-none cursor-pointer border border-white/30">
+    <header class="py-6 px-4"><div class="max-w-4xl mx-auto flex items-center justify-between"><a href="../" class="flex items-center gap-2 text-white"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><i data-lucide="qr-code" class="w-6 h-6"></i></div><span class="text-xl font-bold">QRCodes.win</span></a><a href="../" class="text-white/80 hover:text-white text-sm">← Tous les types</a>
+            <a href="../../blog/" class="text-white/80 hover:text-white text-sm font-medium hidden sm:block">Blog</a>
+            <select onchange="window.location.href=this.value" class="bg-white/20 text-white text-sm rounded-lg px-3 py-2 outline-none cursor-pointer border border-white/30">
                 <option value="../../wifi/" class="text-gray-800">English</option>
 <option value="../../es/wifi/" class="text-gray-800">Español</option>
 <option value="../../de/wifi/" class="text-gray-800">Deutsch</option>
@@ -144,6 +146,7 @@
             <a href="../instagram/" class="hover:text-white">Instagram QR</a>
             <a href="../location/" class="hover:text-white">Location QR</a>
             <a href="../app/" class="hover:text-white">App Store QR</a>
+            <a href="../../blog/" class="hover:text-white font-medium">Blog</a>
         </div>
     </footer>
     <script>lucide.createIcons();function generateWiFiQR(){const ssid=document.getElementById('ssid').value;const password=document.getElementById('password').value;const security=document.getElementById('security').value;const hidden=document.getElementById('hidden').checked;if(!ssid){alert('Veuillez entrer le nom du réseau');return;}const wifiString=`WIFI:T:${security};S:${ssid};P:${password};H:${hidden};;`;const container=document.getElementById('qrcode');container.innerHTML='';new QRCode(container,{text:wifiString,width:200,height:200,colorDark:'#4f46e5',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});document.getElementById('downloadBtn').disabled=false;}function downloadQR(){const canvas=document.querySelector('#qrcode canvas');if(canvas){const link=document.createElement('a');link.download='wifi-qr-code.png';link.href=canvas.toDataURL('image/png');link.click();}}</script>
