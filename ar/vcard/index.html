@@ -89,6 +89,7 @@
             <a href="../instagram/" class="hover:text-white">Instagram QR</a>
             <a href="../location/" class="hover:text-white">Location QR</a>
             <a href="../app/" class="hover:text-white">App Store QR</a>
+            <a href="../../blog/" class="hover:text-white font-medium">Blog</a>
         </div>
     </footer>
     <script>lucide.createIcons();function generateVCardQR(){const n=document.getElementById('name').value;if(!n){alert('الرجاء إدخال الاسم');return;}const vcard=`BEGIN:VCARD\nVERSION:3.0\nFN:${n}\nTITLE:${document.getElementById('title').value}\nORG:${document.getElementById('company').value}\nTEL:${document.getElementById('phone').value}\nEMAIL:${document.getElementById('email').value}\nURL:${document.getElementById('website').value}\nEND:VCARD`;const container=document.getElementById('qrcode');container.innerHTML='';new QRCode(container,{text:vcard,width:200,height:200,colorDark:'#059669',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});document.getElementById('downloadBtn').disabled=false;}function downloadQR(){const canvas=document.querySelector('#qrcode canvas');if(canvas){const link=document.createElement('a');link.download='vcard-qr-code.png';link.href=canvas.toDataURL('image/png');link.click();}}</script>
