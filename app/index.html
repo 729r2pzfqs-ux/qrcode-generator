@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store QR Code Generator | Link to iOS & Android Apps</title>
+    <meta name="description" content="Create QR codes that link to your app on the App Store or Google Play. Perfect for marketing materials, packaging, and promotional displays.">
+    
+    <link rel="canonical" href="https://qrcodes.win/app/">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    
+    <meta property="og:title" content="App Store QR Code Generator">
+    <meta property="og:description" content="Create QR codes for App Store and Google Play app downloads.">
+    <meta property="og:url" content="https://qrcodes.win/app/">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .input-field { border: 2px solid #e5e7eb; }
+        .input-field:focus { border-color: #6366f1; outline: none; box-shadow: 0 0 0 3px rgba(99,102,241,0.1); }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                    <i data-lucide="qr-code" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../" class="text-white/80 hover:text-white text-sm">← All QR Types</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center text-white mb-8">
+                <div class="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-2 text-sm mb-4">
+                    <i data-lucide="smartphone" class="w-4 h-4"></i>
+                    <span>App Store QR Code Generator</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">App Download<br>QR Code</h1>
+                <p class="text-white/80 text-lg max-w-2xl mx-auto">Create QR codes that link directly to your app on App Store or Google Play. Perfect for marketing, packaging, and promotional materials.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass rounded-2xl p-6 shadow-xl">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="download" class="w-5 h-5 text-indigo-600"></i>
+                        App Link
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Platform</label>
+                            <div class="flex gap-2">
+                                <button onclick="setPlatform('ios')" id="btnIos" class="flex-1 py-3 px-4 rounded-lg bg-gray-900 text-white font-medium text-sm flex items-center justify-center gap-2">
+                                    <i data-lucide="apple" class="w-4 h-4"></i> App Store
+                                </button>
+                                <button onclick="setPlatform('android')" id="btnAndroid" class="flex-1 py-3 px-4 rounded-lg bg-gray-100 text-gray-700 font-medium text-sm flex items-center justify-center gap-2">
+                                    <i data-lucide="play" class="w-4 h-4"></i> Google Play
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">App Store URL</label>
+                            <input type="url" id="appUrl" placeholder="https://apps.apple.com/app/..." class="input-field w-full rounded-xl px-4 py-3">
+                            <p class="text-xs text-gray-500 mt-2" id="urlHint">Paste the full App Store link to your app</p>
+                        </div>
+                        
+                        <div class="bg-indigo-50 border border-indigo-200 rounded-xl p-4">
+                            <h3 class="font-semibold text-indigo-800 text-sm mb-2">💡 How to find your app link:</h3>
+                            <ul class="text-sm text-indigo-700 space-y-1">
+                                <li><strong>iOS:</strong> Open App Store → Share → Copy Link</li>
+                                <li><strong>Android:</strong> Open Play Store → Share → Copy Link</li>
+                            </ul>
+                        </div>
+                        
+                        <button onclick="generateAppQR()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="qr-code" class="w-5 h-5"></i>
+                            Generate App QR Code
+                        </button>
+                    </div>
+                </div>
+
+                <div class="glass rounded-2xl p-6 shadow-xl flex flex-col">
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i data-lucide="scan" class="w-5 h-5 text-indigo-600"></i>
+                        Your App QR Code
+                    </h2>
+                    
+                    <div class="flex-1 flex items-center justify-center">
+                        <div id="qrcode" class="bg-white p-4 rounded-xl shadow-inner border-2 border-dashed border-gray-200">
+                            <div class="w-48 h-48 flex items-center justify-center text-gray-400">
+                                <div class="text-center">
+                                    <i data-lucide="smartphone" class="w-12 h-12 mx-auto mb-2 opacity-50"></i>
+                                    <p class="text-sm">Enter app link<br>to generate QR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-gray-700 font-semibold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="download" class="w-5 h-5"></i>
+                        Download PNG
+                    </button>
+                </div>
+            </div>
+
+            <!-- Use Cases -->
+            <div class="mt-12 grid md:grid-cols-4 gap-4">
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">📦</div>
+                    <h3 class="font-semibold text-sm">Product Packaging</h3>
+                </div>
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">📰</div>
+                    <h3 class="font-semibold text-sm">Print Ads</h3>
+                </div>
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">🎪</div>
+                    <h3 class="font-semibold text-sm">Trade Shows</h3>
+                </div>
+                <div class="glass rounded-xl p-4 text-center">
+                    <div class="text-2xl mb-2">📧</div>
+                    <h3 class="font-semibold text-sm">Email Signatures</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 px-4 text-center text-white/60 text-sm">
+        <p>© 2026 QRCodes.win - Free QR Code Generator</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        let platform = 'ios';
+        
+        function setPlatform(p) {
+            platform = p;
+            const urlInput = document.getElementById('appUrl');
+            const hint = document.getElementById('urlHint');
+            
+            if (p === 'ios') {
+                urlInput.placeholder = 'https://apps.apple.com/app/...';
+                hint.textContent = 'Paste the full App Store link to your app';
+                document.getElementById('btnIos').className = 'flex-1 py-3 px-4 rounded-lg bg-gray-900 text-white font-medium text-sm flex items-center justify-center gap-2';
+                document.getElementById('btnAndroid').className = 'flex-1 py-3 px-4 rounded-lg bg-gray-100 text-gray-700 font-medium text-sm flex items-center justify-center gap-2';
+            } else {
+                urlInput.placeholder = 'https://play.google.com/store/apps/...';
+                hint.textContent = 'Paste the full Google Play link to your app';
+                document.getElementById('btnIos').className = 'flex-1 py-3 px-4 rounded-lg bg-gray-100 text-gray-700 font-medium text-sm flex items-center justify-center gap-2';
+                document.getElementById('btnAndroid').className = 'flex-1 py-3 px-4 rounded-lg bg-green-600 text-white font-medium text-sm flex items-center justify-center gap-2';
+            }
+            lucide.createIcons();
+        }
+        
+        function generateAppQR() {
+            const url = document.getElementById('appUrl').value;
+            
+            if (!url) {
+                alert('Please enter your app URL');
+                return;
+            }
+            
+            const container = document.getElementById('qrcode');
+            container.innerHTML = '';
+            
+            new QRCode(container, {
+                text: url,
+                width: 200,
+                height: 200,
+                colorDark: platform === 'ios' ? '#000000' : '#3DDC84',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            document.getElementById('downloadBtn').disabled = false;
+        }
+        
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'app-qr-code.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            }
+        }
+    </script>
+</body>
+</html>
