@@ -58,6 +58,57 @@
                     <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 text-gray-700 font-semibold py-3 rounded-xl">PNG डाउनलोड</button>
                 </div>
             </div>
+        
+            <!-- How It Works -->
+            <div class="mt-12 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold text-center mb-8">WhatsApp QR कोड कैसे काम करते हैं</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="scan" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">1. ग्राहक स्कैन करता है</h3>
+                        <p class="text-gray-600 text-sm">वे अपने फोन कैमरे से QR स्कैन करते हैं</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="message-circle" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">2. WhatsApp खुलता है</h3>
+                        <p class="text-gray-600 text-sm">आपके नंबर और प्री-फिल्ड मैसेज के साथ चैट खुलती है</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="send" class="w-8 h-8 text-green-600"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">3. वे मैसेज भेजते हैं</h3>
+                        <p class="text-gray-600 text-sm">एक टैप में भेजें - नंबर सेव करने की जरूरत नहीं</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="mt-8 glass rounded-2xl p-8 shadow-xl">
+                <h2 class="text-2xl font-bold mb-6">अक्सर पूछे जाने वाले प्रश्न</h2>
+                <div class="space-y-4">
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">क्या ग्राहकों को मेरा नंबर सेव करना होगा?</summary>
+                        <p class="mt-2 text-gray-600">नहीं! WhatsApp QR कोड wa.me लिंक का उपयोग करते हैं, कोई भी बिना नंबर सेव किए चैट शुरू कर सकता है।</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">क्या यह WhatsApp Business के साथ काम करता है?</summary>
+                        <p class="mt-2 text-gray-600">हाँ! QR कोड सामान्य WhatsApp और WhatsApp Business दोनों के साथ काम करते हैं।</p>
+                    </details>
+                    <details class="border-b border-gray-200 pb-4">
+                        <summary class="font-semibold cursor-pointer">अच्छा प्री-फिल्ड मैसेज क्या है?</summary>
+                        <p class="mt-2 text-gray-600">इसे छोटा रखें। उदाहरण: "नमस्ते! मैं ऑर्डर करना चाहता हूं" या "नमस्ते, मेरा एक सवाल है..."</p>
+                    </details>
+                    <details class="pb-4">
+                        <summary class="font-semibold cursor-pointer">क्या मेरा फोन नंबर सुरक्षित है?</summary>
+                        <p class="mt-2 text-gray-600">आपका नंबर QR कोड में एन्कोड है। हम आपका नंबर स्टोर नहीं करते। केवल QR स्कैन करने वाले ही देखेंगे।</p>
+                    </details>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="py-8 px-4 text-center text-white/60 text-sm"><p>© 2026 QRCodes.win</p></footer>
