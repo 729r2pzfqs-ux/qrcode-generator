@@ -35,7 +35,7 @@
                 <p class="text-white/80 text-lg">Открывает Google Карты с маршрутом при сканировании.</p>
             </div>
             <div class="grid md:grid-cols-2 gap-4 sm:gap-6">
-                <div class="w-full glass rounded-2xl p-6 shadow-xl">
+                <div class="max-w-full glass rounded-2xl p-6 shadow-xl">
                     <h2 class="text-xl font-bold mb-6">Местоположение</h2>
                     <div class="space-y-4">
                         <div>
@@ -45,7 +45,7 @@
                         <button onclick="generateLocationQR()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 rounded-xl">Создать QR Местоположения</button>
                     </div>
                 </div>
-                <div class="w-full glass rounded-2xl p-6 shadow-xl flex flex-col">
+                <div class="max-w-full glass rounded-2xl p-6 shadow-xl flex flex-col">
                     <h2 class="text-xl font-bold mb-6">Ваш QR-код Местоположения</h2>
                     <div class="flex-1 flex items-center justify-center"><div id="qrcode" class="bg-white p-4 rounded-xl border-2 border-dashed border-gray-200"><div class="w-48 h-48 flex items-center justify-center text-gray-400"><p class="text-sm text-center">Введите адрес<br>для создания</p></div></div></div>
                     <button onclick="downloadQR()" id="downloadBtn" disabled class="mt-6 w-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50 text-gray-700 font-semibold py-3 rounded-xl">Скачать PNG</button>
