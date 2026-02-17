@@ -1,25 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://qrcodes.win/</loc><priority>1.0</priority></url>
-  <url><loc>https://qrcodes.win/wifi/</loc><priority>0.9</priority></url>
-  <url><loc>https://qrcodes.win/vcard/</loc><priority>0.9</priority></url>
-  <url><loc>https://qrcodes.win/menu/</loc><priority>0.9</priority></url>
-  <url><loc>https://qrcodes.win/whatsapp/</loc><priority>0.9</priority></url>
-  <url><loc>https://qrcodes.win/instagram/</loc><priority>0.9</priority></url>
-  <url><loc>https://qrcodes.win/location/</loc><priority>0.9</priority></url>
-  <url><loc>https://qrcodes.win/app/</loc><priority>0.9</priority></url>
-  <url><loc>https://qrcodes.win/blog/</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/blog/how-to-create-qr-code.html</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/blog/wifi-qr-code-guide.html</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/blog/qr-code-for-business.html</loc><priority>0.8</priority></url>
-  <url><loc>https://qrcodes.win/es/</loc><priority>0.7</priority></url>
-  <url><loc>https://qrcodes.win/de/</loc><priority>0.7</priority></url>
-  <url><loc>https://qrcodes.win/fr/</loc><priority>0.7</priority></url>
-  <url><loc>https://qrcodes.win/pt/</loc><priority>0.7</priority></url>
-  <url><loc>https://qrcodes.win/zh/</loc><priority>0.7</priority></url>
-  <url><loc>https://qrcodes.win/ja/</loc><priority>0.7</priority></url>
-  <url><loc>https://qrcodes.win/ar/</loc><priority>0.7</priority></url>
-  <url><loc>https://qrcodes.win/hi/</loc><priority>0.7</priority></url>
-  <url><loc>https://qrcodes.win/ru/</loc><priority>0.7</priority></url>
-  <url><loc>https://qrcodes.win/tr/</loc><priority>0.7</priority></url>
+  <!-- Homepage -->
+  <url><loc>https://qrcodes.win/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  
+  <!-- English Generators -->
+  <url><loc>https://qrcodes.win/wifi/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/vcard/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/menu/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/whatsapp/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/instagram/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/location/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/app/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  
+  <!-- Blog -->
+  <url><loc>https://qrcodes.win/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/blog/how-to-create-qr-code.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qrcodes.win/blog/wifi-qr-code-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qrcodes.win/blog/qr-code-for-business.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  
+  <!-- Language Homepages -->
+  <url><loc>https://qrcodes.win/es/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/de/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/fr/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/pt/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/zh/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/ja/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/ar/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/hi/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/ru/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://qrcodes.win/tr/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  
+  <!-- Spanish Generators -->
+  <url><loc>https://qrcodes.win/es/wifi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/es/vcard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/es/menu/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/es/whatsapp/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/es/instagram/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/es/location/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/es/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- German Generators -->
+  <url><loc>https://qrcodes.win/de/wifi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/de/vcard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/de/menu/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/de/whatsapp/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/de/instagram/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/de/location/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/de/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- French Generators -->
+  <url><loc>https://qrcodes.win/fr/wifi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/fr/vcard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/fr/menu/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/fr/whatsapp/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/fr/instagram/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/fr/location/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/fr/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Portuguese Generators -->
+  <url><loc>https://qrcodes.win/pt/wifi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/pt/vcard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/pt/menu/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/pt/whatsapp/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/pt/instagram/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/pt/location/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/pt/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Chinese Generators -->
+  <url><loc>https://qrcodes.win/zh/wifi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/zh/vcard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/zh/menu/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/zh/whatsapp/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/zh/instagram/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/zh/location/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/zh/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Japanese Generators -->
+  <url><loc>https://qrcodes.win/ja/wifi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ja/vcard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ja/menu/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ja/whatsapp/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ja/instagram/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ja/location/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ja/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Arabic Generators -->
+  <url><loc>https://qrcodes.win/ar/wifi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ar/vcard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ar/menu/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ar/whatsapp/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ar/instagram/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ar/location/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ar/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Hindi Generators -->
+  <url><loc>https://qrcodes.win/hi/wifi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/hi/vcard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/hi/menu/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/hi/whatsapp/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/hi/instagram/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/hi/location/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/hi/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Russian Generators -->
+  <url><loc>https://qrcodes.win/ru/wifi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ru/vcard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ru/menu/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ru/whatsapp/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ru/instagram/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ru/location/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/ru/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  
+  <!-- Turkish Generators -->
+  <url><loc>https://qrcodes.win/tr/wifi/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/tr/vcard/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/tr/menu/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/tr/whatsapp/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/tr/instagram/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/tr/location/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qrcodes.win/tr/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
