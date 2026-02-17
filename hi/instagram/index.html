@@ -92,7 +92,19 @@
             </div>
         </div>
     </main>
-    <footer class="py-8 px-4 text-center text-white/60 text-sm"><p>© 2026 QRCodes.win</p></footer>
+    <footer class="py-8 px-4 text-center text-white/60 text-sm">
+        <p>© 2026 QRCodes.win - Free QR Code Generator</p>
+        <div class="mt-2 flex flex-wrap justify-center gap-4">
+            <a href="../" class="hover:text-white">Home</a>
+            <a href="../wifi/" class="hover:text-white">WiFi QR</a>
+            <a href="../vcard/" class="hover:text-white">vCard QR</a>
+            <a href="../menu/" class="hover:text-white">Menu QR</a>
+            <a href="../whatsapp/" class="hover:text-white">WhatsApp QR</a>
+            <a href="../instagram/" class="hover:text-white">Instagram QR</a>
+            <a href="../location/" class="hover:text-white">Location QR</a>
+            <a href="../app/" class="hover:text-white">App Store QR</a>
+        </div>
+    </footer>
     <script>lucide.createIcons();function generateInstagramQR(){const u=document.getElementById('username').value.trim().replace('@','');if(!u){alert('कृपया यूजरनेम दर्ज करें');return;}const container=document.getElementById('qrcode');container.innerHTML='';new QRCode(container,{text:`https://instagram.com/${u}`,width:200,height:200,colorDark:'#E1306C',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});document.getElementById('downloadBtn').disabled=false;}function downloadQR(){const canvas=document.querySelector('#qrcode canvas');if(canvas){const link=document.createElement('a');link.download='instagram-qr-code.png';link.href=canvas.toDataURL('image/png');link.click();}}</script>
 </body>
 </html>
