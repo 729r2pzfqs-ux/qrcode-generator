@@ -713,4 +713,17 @@
   <url><loc>https://qrcodes.win/blog/hi/qr-code-safety/</loc><lastmod>2026-02-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://qrcodes.win/blog/ru/qr-code-safety/</loc><lastmod>2026-02-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://qrcodes.win/blog/tr/qr-code-safety/</loc><lastmod>2026-02-20</lastmod><priority>0.7</priority></url>
+
+
+  <!-- Blog Index Pages -->
+  <url><loc>https://qrcodes.win/blog/de/</loc><lastmod>2026-02-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://qrcodes.win/blog/es/</loc><lastmod>2026-02-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://qrcodes.win/blog/fr/</loc><lastmod>2026-02-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://qrcodes.win/blog/pt/</loc><lastmod>2026-02-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://qrcodes.win/blog/zh/</loc><lastmod>2026-02-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://qrcodes.win/blog/ja/</loc><lastmod>2026-02-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://qrcodes.win/blog/ar/</loc><lastmod>2026-02-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://qrcodes.win/blog/hi/</loc><lastmod>2026-02-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://qrcodes.win/blog/ru/</loc><lastmod>2026-02-20</lastmod><priority>0.6</priority></url>
+  <url><loc>https://qrcodes.win/blog/tr/</loc><lastmod>2026-02-20</lastmod><priority>0.6</priority></url>
 </urlset>

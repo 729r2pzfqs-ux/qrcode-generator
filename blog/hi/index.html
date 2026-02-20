@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR कोड ब्लॉग</title>
+    <meta name="description" content="टिप्स, गाइड और बेस्ट प्रैक्टिस">
+    <link rel="canonical" href="https://qrcodes.win/blog/hi/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../../hi/" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                    <i data-lucide="qr-code" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../../hi/" class="text-white/80 hover:text-white text-sm">← QR जेनरेटर</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center text-white mb-10">
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">QR कोड ब्लॉग</h1>
+                <p class="text-white/80 text-lg">टिप्स, गाइड और बेस्ट प्रैक्टिस</p>
+            </div>
+
+            <div class="space-y-6">
+                <a href="how-qr-codes-work/" class="glass rounded-2xl p-6 shadow-xl block hover:shadow-2xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="cpu" class="w-8 h-8 text-blue-600"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full">नया</span>
+                            </div>
+                            <h2 class="text-xl font-bold mb-2">QR कोड कैसे काम करते हैं: तकनीक की व्याख्या</h2>
+                            <p class="text-gray-600 mb-3">क्या आपने कभी सोचा है कि वे काले और सफेद वर्ग कैसे काम करते हैं? पोजीशन पैटर्न, एरर करेक्शन और बहुत कुछ जानें।</p>
+                            <span class="text-indigo-600 font-medium text-sm">→</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="qr-code-safety/" class="glass rounded-2xl p-6 shadow-xl block hover:shadow-2xl transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-red-600"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="bg-red-600 text-white text-xs px-2 py-0.5 rounded-full">नया</span>
+                            </div>
+                            <h2 class="text-xl font-bold mb-2">क्या QR कोड सुरक्षित हैं? जोखिम और सुरक्षा</h2>
+                            <p class="text-gray-600 mb-3">QR कोड हर जगह हैं, लेकिन क्या वे सुरक्षित हैं? फिशिंग जोखिमों और खुद को कैसे बचाएं यह जानें।</p>
+                            <span class="text-indigo-600 font-medium text-sm">→</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 px-4 text-center text-white/60 text-sm">
+        <p>© 2026 QRCodes.win</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
