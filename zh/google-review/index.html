@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google评价二维码生成器 | 获取更多评价</title>
+    <meta name="description" content="创建直接链接到您的Google评价页面的二维码。让客户轻松留下5星评价。免费即时生成。">
+    
+    <link rel="canonical" href="https://qrcodes.win/zh/google-review/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    
+    <meta property="og:title" content="Google评价二维码">
+    <meta property="og:description" content="创建直接链接到您的Google评价页面的二维码。让客户轻松留下5星评价。免费即时生成。">
+    <meta property="og:type" content="website">
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","name":"Google评价二维码","description":"创建直接链接到您的Google评价页面的二维码。让客户轻松留下5星评价。免费即时生成。","url":"https://qrcodes.win/zh/google-review/","mainEntity":{"@type":"SoftwareApplication","name":"Google Review QR Code Generator","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"什么是Google评价二维码？","acceptedAnswer":{"@type":"Answer","text":"这是一个二维码，扫描后直接将客户带到您的Google评价页面。他们可以在几秒钟内留下评价。"}},
+        {"@type":"Question","name":"如何找到我的Google评价链接？","acceptedAnswer":{"@type":"Answer","text":"登录Google商家资料，点击"获取更多评价"。复制链接。"}},
+        {"@type":"Question","name":"这是免费的吗？","acceptedAnswer":{"@type":"Answer","text":"是的，100%免费。无需注册，无限制，无水印。"}}
+    ]}
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../../qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .input-field { border: 2px solid #e5e7eb; }
+        .input-field:focus { border-color: #4F46E5; outline: none; box-shadow: 0 0 0 3px rgba(79,70,229,0.1); }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                    <i data-lucide="qr-code" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../../" class="text-white/80 hover:text-white text-sm">← 所有二维码类型</a>
+            <select onchange="window.location.href=this.value" class="bg-white/20 text-white text-sm rounded-lg px-3 py-2 outline-none cursor-pointer border border-white/30">
+                <option value="../../google-review/" class="text-gray-800">English</option>
+<option value="../../es/google-review/" class="text-gray-800">Español</option>
+<option value="../../de/google-review/" class="text-gray-800">Deutsch</option>
+<option value="../../fr/google-review/" class="text-gray-800">Français</option>
+<option value="../../pt/google-review/" class="text-gray-800">Português</option>
+<option value="../../zh/google-review/" selected class="text-gray-800">中文</option>
+<option value="../../ja/google-review/" class="text-gray-800">日本語</option>
+<option value="../../ar/google-review/" class="text-gray-800">العربية</option>
+<option value="../../hi/google-review/" class="text-gray-800">हिन्दी</option>
+<option value="../../ru/google-review/" class="text-gray-800">Русский</option>
+<option value="../../tr/google-review/" class="text-gray-800">Türkçe</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="px-4 pb-16">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">⭐ Google评价二维码</h1>
+                <p class="text-white/80">一次扫描获取更多5星评价</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8 shadow-2xl mb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Google评价链接</label>
+                        <input type="url" id="reviewUrl" placeholder="在此粘贴您的Google评价链接" class="input-field w-full px-4 py-3 rounded-xl text-lg">
+                        <p class="text-sm text-gray-500 mt-2">从Google商家资料 → "请求评价"获取链接</p>
+                        
+                        <button onclick="generateQR()" class="w-full mt-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-xl hover:opacity-90 transition">
+                            生成二维码
+                        </button>
+                    </div>
+                    
+                    <div class="flex flex-col items-center justify-center">
+                        <div id="qrcode" class="bg-white p-4 rounded-xl shadow-lg"></div>
+                        <button id="downloadBtn" onclick="downloadQR()" class="mt-4 bg-gray-900 text-white font-medium py-2 px-6 rounded-lg hover:bg-gray-800 transition hidden">
+                            下载二维码
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8 mb-8">
+                <h2 class="text-xl font-bold mb-4">如何获取您的Google评价链接</h2>
+                <ol class="space-y-3 text-gray-700">
+                    <li class="flex gap-3"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>前往您的<strong>Google商家资料</strong></li>
+                    <li class="flex gap-3"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>点击<strong>"获取更多评价"</strong></li>
+                    <li class="flex gap-3"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>复制提供的链接</li>
+                    <li class="flex gap-3"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>粘贴到上方并生成您的二维码</li>
+                </ol>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8 mb-8">
+                <h2 class="text-xl font-bold mb-6">为什么使用Google评价二维码？</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-green-50 rounded-xl"><h3 class="font-semibold text-green-800">📈 更多评价</h3><p class="text-green-700 text-sm mt-1">当操作简单时，客户留下评价的可能性增加3倍</p></div>
+                    <div class="p-4 bg-blue-50 rounded-xl"><h3 class="font-semibold text-blue-800">🔍 更好的SEO</h3><p class="text-blue-700 text-sm mt-1">更多Google评价 = 更高的本地搜索排名</p></div>
+                    <div class="p-4 bg-purple-50 rounded-xl"><h3 class="font-semibold text-purple-800">🤝 建立信任</h3><p class="text-purple-700 text-sm mt-1">评价是客户购买前检查的第一要素</p></div>
+                    <div class="p-4 bg-amber-50 rounded-xl"><h3 class="font-semibold text-amber-800">📤 易于分享</h3><p class="text-amber-700 text-sm mt-1">打印在收据、卡片、标牌、桌面、菜单上</p></div>
+                </div>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8 mb-8">
+                <h2 class="text-xl font-bold mb-4">在哪里展示您的二维码</h2>
+                <ul class="grid md:grid-cols-2 gap-2 text-gray-700">
+                    <li>收银台</li><li>收据和发票</li><li>名片</li><li>桌牌（餐厅）</li><li>产品包装</li><li>电子邮件签名</li><li>感谢卡</li>
+                </ul>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8">
+                <h2 class="text-xl font-bold mb-4">FAQ</h2>
+                <div class="space-y-4">
+                    <div><h3 class="font-semibold text-indigo-700">什么是Google评价二维码？</h3><p class="text-gray-600 mt-1">这是一个二维码，扫描后直接将客户带到您的Google评价页面。他们可以在几秒钟内留下评价。</p></div>
+                    <div><h3 class="font-semibold text-indigo-700">如何找到我的Google评价链接？</h3><p class="text-gray-600 mt-1">登录Google商家资料，点击"获取更多评价"。复制链接。</p></div>
+                    <div><h3 class="font-semibold text-indigo-700">这是免费的吗？</h3><p class="text-gray-600 mt-1">是的，100%免费。无需注册，无限制，无水印。</p></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 px-4 border-t border-white/10">
+        <div class="max-w-4xl mx-auto text-center text-white/60 text-sm">
+            <p>© 2026 QRCodes.win — Free QR Code Generator</p>
+        </div>
+    </footer>
+
+    <script>
+        let qr = null;
+        function generateQR() {
+            const url = document.getElementById('reviewUrl').value.trim();
+            if (!url) return alert('Please enter a URL');
+            
+            const container = document.getElementById('qrcode');
+            container.innerHTML = '';
+            
+            qr = new QRCode(container, {
+                text: url,
+                width: 200,
+                height: 200,
+                colorDark: '#000000',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            document.getElementById('downloadBtn').classList.remove('hidden');
+        }
+        
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'google-review-qr.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            }
+        }
+        
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор QR-кода для отзывов Google | Получите больше отзывов</title>
+    <meta name="description" content="Создайте QR-код со ссылкой на страницу отзывов Google. Упростите клиентам возможность оставить 5-звездочный отзыв. Бесплатно и мгновенно.">
+    
+    <link rel="canonical" href="https://qrcodes.win/ru/google-review/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    
+    <meta property="og:title" content="QR-код для отзывов Google">
+    <meta property="og:description" content="Создайте QR-код со ссылкой на страницу отзывов Google. Упростите клиентам возможность оставить 5-звездочный отзыв. Бесплатно и мгновенно.">
+    <meta property="og:type" content="website">
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","name":"QR-код для отзывов Google","description":"Создайте QR-код со ссылкой на страницу отзывов Google. Упростите клиентам возможность оставить 5-звездочный отзыв. Бесплатно и мгновенно.","url":"https://qrcodes.win/ru/google-review/","mainEntity":{"@type":"SoftwareApplication","name":"Google Review QR Code Generator","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"Что такое QR-код для отзыва Google?","acceptedAnswer":{"@type":"Answer","text":"Это QR-код, который при сканировании ведёт клиентов прямо на страницу отзывов Google. Они могут оставить отзыв за секунды."}},
+        {"@type":"Question","name":"Как найти ссылку на отзыв Google?","acceptedAnswer":{"@type":"Answer","text":"Войдите в Google Бизнес Профиль, нажмите "Получить больше отзывов". Скопируйте ссылку."}},
+        {"@type":"Question","name":"Это бесплатно?","acceptedAnswer":{"@type":"Answer","text":"Да, 100% бесплатно. Без регистрации, без ограничений, без водяных знаков."}}
+    ]}
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../../qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .input-field { border: 2px solid #e5e7eb; }
+        .input-field:focus { border-color: #4F46E5; outline: none; box-shadow: 0 0 0 3px rgba(79,70,229,0.1); }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                    <i data-lucide="qr-code" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../../" class="text-white/80 hover:text-white text-sm">← Все типы QR</a>
+            <select onchange="window.location.href=this.value" class="bg-white/20 text-white text-sm rounded-lg px-3 py-2 outline-none cursor-pointer border border-white/30">
+                <option value="../../google-review/" class="text-gray-800">English</option>
+<option value="../../es/google-review/" class="text-gray-800">Español</option>
+<option value="../../de/google-review/" class="text-gray-800">Deutsch</option>
+<option value="../../fr/google-review/" class="text-gray-800">Français</option>
+<option value="../../pt/google-review/" class="text-gray-800">Português</option>
+<option value="../../zh/google-review/" class="text-gray-800">中文</option>
+<option value="../../ja/google-review/" class="text-gray-800">日本語</option>
+<option value="../../ar/google-review/" class="text-gray-800">العربية</option>
+<option value="../../hi/google-review/" class="text-gray-800">हिन्दी</option>
+<option value="../../ru/google-review/" selected class="text-gray-800">Русский</option>
+<option value="../../tr/google-review/" class="text-gray-800">Türkçe</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="px-4 pb-16">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">⭐ QR-код для отзывов Google</h1>
+                <p class="text-white/80">Получите больше 5-звездочных отзывов одним сканированием</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8 shadow-2xl mb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Ссылка на отзыв Google</label>
+                        <input type="url" id="reviewUrl" placeholder="Вставьте ссылку на отзыв Google здесь" class="input-field w-full px-4 py-3 rounded-xl text-lg">
+                        <p class="text-sm text-gray-500 mt-2">Получите ссылку из Google Бизнес Профиля → "Запросить отзывы"</p>
+                        
+                        <button onclick="generateQR()" class="w-full mt-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-xl hover:opacity-90 transition">
+                            Создать QR-код
+                        </button>
+                    </div>
+                    
+                    <div class="flex flex-col items-center justify-center">
+                        <div id="qrcode" class="bg-white p-4 rounded-xl shadow-lg"></div>
+                        <button id="downloadBtn" onclick="downloadQR()" class="mt-4 bg-gray-900 text-white font-medium py-2 px-6 rounded-lg hover:bg-gray-800 transition hidden">
+                            Скачать QR-код
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8 mb-8">
+                <h2 class="text-xl font-bold mb-4">Как получить ссылку для отзыва Google</h2>
+                <ol class="space-y-3 text-gray-700">
+                    <li class="flex gap-3"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>Перейдите в <strong>Google Бизнес Профиль</strong></li>
+                    <li class="flex gap-3"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>Нажмите <strong>"Получить больше отзывов"</strong></li>
+                    <li class="flex gap-3"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>Скопируйте предоставленную ссылку</li>
+                    <li class="flex gap-3"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>Вставьте выше и создайте QR-код</li>
+                </ol>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8 mb-8">
+                <h2 class="text-xl font-bold mb-6">Зачем использовать QR-код для отзывов Google?</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-green-50 rounded-xl"><h3 class="font-semibold text-green-800">📈 Больше отзывов</h3><p class="text-green-700 text-sm mt-1">Клиенты в 3 раза чаще оставляют отзыв, когда это легко</p></div>
+                    <div class="p-4 bg-blue-50 rounded-xl"><h3 class="font-semibold text-blue-800">🔍 Лучшее SEO</h3><p class="text-blue-700 text-sm mt-1">Больше отзывов Google = выше позиции в локальном поиске</p></div>
+                    <div class="p-4 bg-purple-50 rounded-xl"><h3 class="font-semibold text-purple-800">🤝 Построение доверия</h3><p class="text-purple-700 text-sm mt-1">Отзывы — фактор №1, который проверяют клиенты перед покупкой</p></div>
+                    <div class="p-4 bg-amber-50 rounded-xl"><h3 class="font-semibold text-amber-800">📤 Легко делиться</h3><p class="text-amber-700 text-sm mt-1">Печатайте на чеках, визитках, вывесках, столах, меню</p></div>
+                </div>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8 mb-8">
+                <h2 class="text-xl font-bold mb-4">Где разместить QR-код</h2>
+                <ul class="grid md:grid-cols-2 gap-2 text-gray-700">
+                    <li>Касса</li><li>Чеки и счета</li><li>Визитные карточки</li><li>Настольные подставки (рестораны)</li><li>Упаковка продукции</li><li>Подписи в email</li><li>Благодарственные открытки</li>
+                </ul>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8">
+                <h2 class="text-xl font-bold mb-4">FAQ</h2>
+                <div class="space-y-4">
+                    <div><h3 class="font-semibold text-indigo-700">Что такое QR-код для отзыва Google?</h3><p class="text-gray-600 mt-1">Это QR-код, который при сканировании ведёт клиентов прямо на страницу отзывов Google. Они могут оставить отзыв за секунды.</p></div>
+                    <div><h3 class="font-semibold text-indigo-700">Как найти ссылку на отзыв Google?</h3><p class="text-gray-600 mt-1">Войдите в Google Бизнес Профиль, нажмите "Получить больше отзывов". Скопируйте ссылку.</p></div>
+                    <div><h3 class="font-semibold text-indigo-700">Это бесплатно?</h3><p class="text-gray-600 mt-1">Да, 100% бесплатно. Без регистрации, без ограничений, без водяных знаков.</p></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 px-4 border-t border-white/10">
+        <div class="max-w-4xl mx-auto text-center text-white/60 text-sm">
+            <p>© 2026 QRCodes.win — Free QR Code Generator</p>
+        </div>
+    </footer>
+
+    <script>
+        let qr = null;
+        function generateQR() {
+            const url = document.getElementById('reviewUrl').value.trim();
+            if (!url) return alert('Please enter a URL');
+            
+            const container = document.getElementById('qrcode');
+            container.innerHTML = '';
+            
+            qr = new QRCode(container, {
+                text: url,
+                width: 200,
+                height: 200,
+                colorDark: '#000000',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            document.getElementById('downloadBtn').classList.remove('hidden');
+        }
+        
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'google-review-qr.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            }
+        }
+        
+        lucide.createIcons();
+    </script>
+</body>
+</html>
