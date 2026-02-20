@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de QR para PDF | Enlace a Documentos PDF</title>
+    <meta name="description" content="Crea un código QR que enlaza a tu archivo PDF. Perfecto para menús, folletos, manuales y documentos. Gratis e instantáneo.">
+    
+    <link rel="canonical" href="https://qrcodes.win/es/pdf/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    
+    <meta property="og:title" content="Generador de QR para PDF">
+    <meta property="og:description" content="Crea un código QR que enlaza a tu archivo PDF. Perfecto para menús, folletos, manuales y documentos. Gratis e instantáneo.">
+    <meta property="og:type" content="website">
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","name":"Generador de QR para PDF","description":"Crea un código QR que enlaza a tu archivo PDF. Perfecto para menús, folletos, manuales y documentos. Gratis e instantáneo.","url":"https://qrcodes.win/es/pdf/","mainEntity":{"@type":"SoftwareApplication","name":"PDF QR Code Generator","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"¿Dónde debo alojar mi PDF?","acceptedAnswer":{"@type":"Answer","text":"Google Drive (gratis), Dropbox, OneDrive o tu propio sitio web funcionan. Asegúrate de que el enlace sea de acceso público."}},
+        {"@type":"Question","name":"¿Puedo actualizar el PDF después?","acceptedAnswer":{"@type":"Answer","text":"¡Sí! Si reemplazas el archivo en la misma URL, el código QR mostrará la nueva versión. Con Google Drive, solo sube una nueva versión del mismo archivo."}},
+        {"@type":"Question","name":"¿Hay límite de tamaño de archivo?","acceptedAnswer":{"@type":"Answer","text":"El código QR solo enlaza a tu PDF — no hay límite. Sin embargo, PDFs más pequeños (menos de 10MB) cargan más rápido en dispositivos móviles."}}
+    ]}
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../../qrcode.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .input-field { border: 2px solid #e5e7eb; }
+        .input-field:focus { border-color: #dc2626; outline: none; box-shadow: 0 0 0 3px rgba(220,38,38,0.1); }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between">
+            <a href="../../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                    <i data-lucide="qr-code" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../../" class="text-white/80 hover:text-white text-sm">← Todos los tipos de QR</a>
+            <select onchange="window.location.href=this.value" class="bg-white/20 text-white text-sm rounded-lg px-3 py-2 outline-none cursor-pointer border border-white/30">
+                <option value="../../pdf/" class="text-gray-800">English</option>
+<option value="../../es/pdf/" selected class="text-gray-800">Español</option>
+<option value="../../de/pdf/" class="text-gray-800">Deutsch</option>
+<option value="../../fr/pdf/" class="text-gray-800">Français</option>
+<option value="../../pt/pdf/" class="text-gray-800">Português</option>
+<option value="../../zh/pdf/" class="text-gray-800">中文</option>
+<option value="../../ja/pdf/" class="text-gray-800">日本語</option>
+<option value="../../ar/pdf/" class="text-gray-800">العربية</option>
+<option value="../../hi/pdf/" class="text-gray-800">हिन्दी</option>
+<option value="../../ru/pdf/" class="text-gray-800">Русский</option>
+<option value="../../tr/pdf/" class="text-gray-800">Türkçe</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="px-4 pb-16">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">📄 Generador de QR para PDF</h1>
+                <p class="text-white/80">Comparte cualquier documento PDF con un simple escaneo</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8 shadow-2xl mb-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Enlace PDF (URL)</label>
+                        <input type="url" id="pdfUrl" placeholder="https://ejemplo.com/documento.pdf" class="input-field w-full px-4 py-3 rounded-xl text-lg">
+                        <p class="text-sm text-gray-500 mt-2">Tu PDF debe estar alojado en línea (Google Drive, Dropbox, tu sitio web)</p>
+                        
+                        <button onclick="generateQR()" class="w-full mt-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold py-3 px-6 rounded-xl hover:opacity-90 transition">
+                            Generar Código QR
+                        </button>
+                    </div>
+                    
+                    <div class="flex flex-col items-center justify-center">
+                        <div id="qrcode" class="bg-white p-4 rounded-xl shadow-lg"></div>
+                        <button id="downloadBtn" onclick="downloadQR()" class="mt-4 bg-gray-900 text-white font-medium py-2 px-6 rounded-lg hover:bg-gray-800 transition hidden">
+                            Descargar Código QR
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8 mb-8">
+                <h2 class="text-xl font-bold mb-4">Cómo Crear un Código QR para PDF</h2>
+                <ol class="space-y-3 text-gray-700">
+                    <li class="flex gap-3"><span class="bg-red-100 text-red-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>Sube tu PDF a almacenamiento en la nube (Google Drive, Dropbox) o tu sitio web</li>
+                    <li class="flex gap-3"><span class="bg-red-100 text-red-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>Obtén el <strong>enlace público/compartible</strong> de tu PDF</li>
+                    <li class="flex gap-3"><span class="bg-red-100 text-red-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>Pega el enlace arriba</li>
+                    <li class="flex gap-3"><span class="bg-red-100 text-red-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>Genera y descarga tu código QR</li>
+                </ol>
+                <div class="mt-4 p-4 bg-amber-50 rounded-xl border border-amber-200">
+                    <p class="font-semibold text-amber-800">💡 Consejo Pro: Google Drive</p>
+                    <p class="text-amber-700 text-sm mt-1">Para Google Drive: Clic derecho en PDF → "Obtener enlace" → Cambiar a "Cualquiera con el enlace" → Copiar enlace</p>
+                </div>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8 mb-8">
+                <h2 class="text-xl font-bold mb-6">¿Por Qué Usar un Código QR para PDF?</h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="p-4 bg-green-50 rounded-xl"><h3 class="font-semibold text-green-800">🌱 Sin Papel</h3><p class="text-green-700 text-sm mt-1">Comparte documentos sin imprimir — ecológico y económico</p></div>
+                    <div class="p-4 bg-blue-50 rounded-xl"><h3 class="font-semibold text-blue-800">🔄 Siempre Actualizado</h3><p class="text-blue-700 text-sm mt-1">Actualiza tu PDF cuando quieras — el código QR permanece igual</p></div>
+                    <div class="p-4 bg-purple-50 rounded-xl"><h3 class="font-semibold text-purple-800">📊 Rastrea Vistas</h3><p class="text-purple-700 text-sm mt-1">Usa bit.ly o similar para rastrear cuántas personas acceden a tu PDF</p></div>
+                    <div class="p-4 bg-amber-50 rounded-xl"><h3 class="font-semibold text-amber-800">📱 Funciona en Todos Lados</h3><p class="text-amber-700 text-sm mt-1">Cualquier smartphone puede escanear y ver PDFs instantáneamente</p></div>
+                </div>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8 mb-8">
+                <h2 class="text-xl font-bold mb-4">Usos Populares para Códigos QR de PDF</h2>
+                <ul class="grid md:grid-cols-2 gap-2 text-gray-700">
+                    <li>Menús de restaurantes</li><li>Manuales e instrucciones</li><li>Programas de eventos</li><li>Folletos inmobiliarios</li><li>Folletos de negocios</li><li>Materiales educativos</li><li>Listas de precios y catálogos</li>
+                </ul>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-8">
+                <h2 class="text-xl font-bold mb-4">FAQ</h2>
+                <div class="space-y-4">
+                    <div><h3 class="font-semibold text-red-700">¿Dónde debo alojar mi PDF?</h3><p class="text-gray-600 mt-1">Google Drive (gratis), Dropbox, OneDrive o tu propio sitio web funcionan. Asegúrate de que el enlace sea de acceso público.</p></div>
+                    <div><h3 class="font-semibold text-red-700">¿Puedo actualizar el PDF después?</h3><p class="text-gray-600 mt-1">¡Sí! Si reemplazas el archivo en la misma URL, el código QR mostrará la nueva versión. Con Google Drive, solo sube una nueva versión del mismo archivo.</p></div>
+                    <div><h3 class="font-semibold text-red-700">¿Hay límite de tamaño de archivo?</h3><p class="text-gray-600 mt-1">El código QR solo enlaza a tu PDF — no hay límite. Sin embargo, PDFs más pequeños (menos de 10MB) cargan más rápido en dispositivos móviles.</p></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-8 px-4 border-t border-white/10">
+        <div class="max-w-4xl mx-auto text-center text-white/60 text-sm">
+            <p>© 2026 QRCodes.win — Free QR Code Generator</p>
+        </div>
+    </footer>
+
+    <script>
+        let qr = null;
+        function generateQR() {
+            const url = document.getElementById('pdfUrl').value.trim();
+            if (!url) return alert('Please enter a PDF URL');
+            
+            const container = document.getElementById('qrcode');
+            container.innerHTML = '';
+            
+            qr = new QRCode(container, {
+                text: url,
+                width: 200,
+                height: 200,
+                colorDark: '#000000',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            document.getElementById('downloadBtn').classList.remove('hidden');
+        }
+        
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (canvas) {
+                const link = document.createElement('a');
+                link.download = 'pdf-qr-code.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            }
+        }
+        
+        lucide.createIcons();
+    </script>
+</body>
+</html>
