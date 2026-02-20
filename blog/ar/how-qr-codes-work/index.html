@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كيف تعمل رموز QR | التقنية موضحة ببساطة</title>
+    <meta name="description" content="تعلم كيف تعمل رموز QR، من المسح إلى فك التشفير. افهم التقنية وراء تلك الأنماط المربعة.">
+    <link rel="canonical" href="https://qrcodes.win/blog/ar/how-qr-codes-work/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"كيف تعمل رموز QR","description":"تعلم كيف تعمل رموز QR، من المسح إلى فك التشفير. افهم التقنية وراء تلك الأنماط المربعة.","author":{"@type":"Organization","name":"QRCodes.win"},"publisher":{"@type":"Organization","name":"QRCodes.win"},"datePublished":"2026-02-20"}
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #4F46E5; }
+        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #6366f1; }
+        .prose p { margin-bottom: 1rem; color: #374151; line-height: 1.7; }
+        .prose ul, .prose ol { margin-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .prose ul { list-style: disc; }
+        .prose ol { list-style: decimal; }
+        .prose li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-3xl mx-auto flex items-center justify-between">
+            <a href="../../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center text-xl">📱</div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../../" class="text-white/80 hover:text-white text-sm">رجوع ←</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-16">
+        <article class="max-w-3xl mx-auto">
+            <div class="text-center mb-8 text-white">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">كيف تعمل رموز QR</h1>
+                <p class="text-white/70">التقنية الرائعة وراء تلك المربعات السوداء والبيضاء</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-10 prose">
+                <p class="text-lg">أنت تمسحها كل يوم — في المطاعم، على المنتجات، في الإعلانات. لكن هل تساءلت يوماً <strong>كيف تعمل رموز QR فعلاً</strong>؟ دعنا نشرح التقنية بعبارات بسيطة.</p>
+
+                <h2>ما هو رمز QR؟</h2>
+                <p>QR تعني <strong>Quick Response</strong> (استجابة سريعة). إنه نوع من الباركود ثنائي الأبعاد اخترعته شركة يابانية تسمى Denso Wave في عام 1994. على عكس الباركود التقليدي الذي يخزن البيانات أفقياً فقط، تخزن رموز QR المعلومات أفقياً وعمودياً — مما يسمح لها بتخزين المزيد من البيانات.</p>
+                <p class="bg-indigo-50 p-4 rounded-xl border-l-4 border-indigo-500">يمكن لرمز QR واحد تخزين ما يصل إلى <strong>3,000 حرف</strong> من النص، مقارنة بـ 20-25 حرفاً فقط في الباركود التقليدي.</p>
+
+                <h2>تشريح رمز QR</h2>
+                <p>كل رمز QR يحتوي على هذه المكونات الرئيسية:</p>
+                <div class="space-y-3 my-4">
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">أنماط الموقع (المربعات الكبيرة):</strong> المربعات الثلاثة الكبيرة في الزوايا تساعد الماسحات على تحديد موقع رمز QR وتوجيهه بسرعة.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">نمط المحاذاة:</strong> المربع الأصغر يساعد في القراءة الدقيقة، خاصة على الأسطح المنحنية.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">أنماط التوقيت:</strong> وحدات سوداء وبيضاء متناوبة تحدد حجم شبكة البيانات.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">منطقة البيانات:</strong> النمط المشوش في المنتصف — هنا يتم ترميز معلوماتك الفعلية.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">المنطقة الهادئة:</strong> الحدود البيضاء حول الرمز التي تساعد الماسحات على تمييز رمز QR عن محيطه.</div>
+                </div>
+
+                <h2>كيف يعمل المسح</h2>
+                <ol class="space-y-2 list-none ml-0"><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">1</span><span><strong>التقاط الصورة:</strong> كاميرا هاتفك تلتقط صورة لرمز QR</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">2</span><span><strong>كشف الأنماط:</strong> البرنامج يجد أنماط الموقع الثلاثة</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">3</span><span><strong>رسم الشبكة:</strong> الماسح ينشئ شبكة فوق الصورة</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">4</span><span><strong>استخراج البيانات:</strong> الوحدات السوداء = 1، الوحدات البيضاء = 0 — إنشاء بيانات ثنائية</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">5</span><span><strong>تصحيح الأخطاء:</strong> الماسح يستخدم تصحيح أخطاء Reed-Solomon</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">6</span><span><strong>فك التشفير:</strong> البيانات الثنائية تتحول إلى نص أو روابط قابلة للقراءة</span></li></ol>
+
+                <h2>تصحيح الأخطاء: لماذا تعمل رموز QR التالفة</h2>
+                <p>رموز QR لديها تكرار مدمج. حتى لو كان جزء من الرمز تالفاً أو مغطى، يمكن قراءته. هناك أربعة مستويات لتصحيح الأخطاء:</p>
+                <ul><li><strong>L (منخفض):</strong> يمكن استعادة ~7% من الرمز</li><li><strong>M (متوسط):</strong> يمكن استعادة ~15%</li><li><strong>Q (ربعي):</strong> يمكن استعادة ~25%</li><li><strong>H (عالي):</strong> يمكن استعادة ~30% — لهذا يمكنك وضع الشعارات في المنتصف!</li></ul>
+
+                <h2>ماذا يمكن أن تخزن رموز QR؟</h2>
+                <ul class="grid grid-cols-2 gap-2"><li>روابط المواقع</li><li>نص عادي</li><li>معلومات الاتصال (vCard)</li><li>بيانات WiFi</li><li>أرقام الهاتف</li><li>عناوين البريد الإلكتروني</li><li>إحداثيات GPS</li><li>أحداث التقويم</li><li>روابط متجر التطبيقات</li></ul>
+
+                <h2>رموز QR الثابتة مقابل الديناميكية</h2>
+                <div class="grid md:grid-cols-2 gap-4 my-4">
+                    <div class="p-4 bg-green-50 rounded-xl border border-green-200">
+                        <h3 class="text-green-700 mt-0">رموز QR الثابتة</h3>
+                        <p class="text-green-800 text-sm mb-0">البيانات مشفرة مباشرة في النمط. بمجرد إنشائها، لا يمكن تغييرها. مجانية الإنشاء، تعمل للأبد.</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-xl border border-blue-200">
+                        <h3 class="text-blue-700 mt-0">رموز QR الديناميكية</h3>
+                        <p class="text-blue-800 text-sm mb-0">الرمز يشير إلى رابط إعادة توجيه. يمكنك تغيير الوجهة في أي وقت وتتبع المسح. يتطلب خدمة مدفوعة.</p>
+                    </div>
+                </div>
+
+                <h2>لماذا أصبحت رموز QR شائعة جداً</h2>
+                <ul><li><strong>بدون تلامس:</strong> كوفيد-19 سرّع اعتماد القوائم والمدفوعات اللاتلامسية</li><li><strong>كاميرات الهواتف:</strong> لا حاجة لتطبيق — مدمج في iOS وأندرويد منذ 2017</li><li><strong>مجاني:</strong> أي شخص يمكنه إنشاء رموز QR فوراً</li><li><strong>متعدد الاستخدامات:</strong> يعمل للروابط والنصوص وWiFi وجهات الاتصال والمزيد</li><li><strong>موثوق:</strong> تصحيح الأخطاء يعني أنها تعمل حتى عند التلف</li></ul>
+
+                <h2>حقائق ممتعة</h2>
+                <ul class="bg-amber-50 p-4 rounded-xl"><li>أكبر رمز QR على الإطلاق كان 2.1 كم² (أُنشئ في حقل قمح صيني)</li><li>اخترعت رموز QR أصلاً لتتبع قطع السيارات في التصنيع</li><li>براءة اختراع رموز QR مملوكة لـ Denso Wave، لكنهم لا يمارسونها — للحفاظ على التقنية مجانية</li><li>يجب أن يكون لرمز QR منطقة هادئة لا تقل عن 4 وحدات حوله</li></ul>
+
+                <div class="mt-8 p-6 bg-indigo-100 rounded-xl text-center">
+                    <h3 class="text-indigo-800 mt-0">أنشئ رمز QR الخاص بك</h3>
+                    <p class="text-indigo-700">الآن بعد أن تعرف كيف تعمل، أنشئ رمز QR الخاص بك مجاناً.</p>
+                    <a href="../../" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl mt-2">إنشاء رمز QR ←</a>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

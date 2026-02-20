@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRコードの仕組み | 技術をわかりやすく解説</title>
+    <meta name="description" content="QRコードがどのように機能するか、スキャンからデコードまでを学びましょう。あの四角いパターンの背後にある技術を理解しましょう。">
+    <link rel="canonical" href="https://qrcodes.win/blog/ja/how-qr-codes-work/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"QRコードの仕組み","description":"QRコードがどのように機能するか、スキャンからデコードまでを学びましょう。あの四角いパターンの背後にある技術を理解しましょう。","author":{"@type":"Organization","name":"QRCodes.win"},"publisher":{"@type":"Organization","name":"QRCodes.win"},"datePublished":"2026-02-20"}
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #4F46E5; }
+        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #6366f1; }
+        .prose p { margin-bottom: 1rem; color: #374151; line-height: 1.7; }
+        .prose ul, .prose ol { margin-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .prose ul { list-style: disc; }
+        .prose ol { list-style: decimal; }
+        .prose li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-3xl mx-auto flex items-center justify-between">
+            <a href="../../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center text-xl">📱</div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../../" class="text-white/80 hover:text-white text-sm">← 戻る</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-16">
+        <article class="max-w-3xl mx-auto">
+            <div class="text-center mb-8 text-white">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">QRコードの仕組み</h1>
+                <p class="text-white/70">白黒の四角の背後にある魅力的な技術</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-10 prose">
+                <p class="text-lg">あなたは毎日それをスキャンしています — レストラン、製品、広告で。でも<strong>QRコードが実際にどのように機能するか</strong>考えたことはありますか？技術をシンプルに解説します。</p>
+
+                <h2>QRコードとは？</h2>
+                <p>QRは<strong>Quick Response</strong>（クイックレスポンス）の略です。1994年に日本の会社デンソーウェーブによって発明された2次元バーコードの一種です。データを水平方向にのみ保存する従来のバーコードとは異なり、QRコードは水平と垂直の両方に情報を保存できます — より多くのデータを保存できます。</p>
+                <p class="bg-indigo-50 p-4 rounded-xl border-l-4 border-indigo-500">1つのQRコードは最大<strong>3,000文字</strong>のテキストを保存できます。従来のバーコードの20-25文字と比較してください。</p>
+
+                <h2>QRコードの構造</h2>
+                <p>すべてのQRコードにはこれらの主要なコンポーネントがあります：</p>
+                <div class="space-y-3 my-4">
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">位置検出パターン（大きな四角）:</strong> 角にある3つの大きな四角は、スキャナーがQRコードを素早く見つけて向きを決めるのに役立ちます。</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">アライメントパターン:</strong> 小さな四角は、特に曲面での正確な読み取りに役立ちます。</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">タイミングパターン:</strong> データグリッドのサイズを決定する白黒交互のモジュール。</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">データ領域:</strong> 中央のスクランブルに見えるパターン — ここに実際の情報がエンコードされています。</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">クワイエットゾーン:</strong> コード周囲の白い境界線で、スキャナーがQRコードを周囲から区別するのに役立ちます。</div>
+                </div>
+
+                <h2>スキャンの仕組み</h2>
+                <ol class="space-y-2 list-none ml-0"><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">1</span><span><strong>画像キャプチャ：</strong>スマホのカメラがQRコードの写真を撮影</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">2</span><span><strong>パターン検出：</strong>ソフトウェアが3つの位置検出パターンを見つける</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">3</span><span><strong>グリッドマッピング：</strong>スキャナーが画像上にグリッドを作成</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">4</span><span><strong>データ抽出：</strong>黒いモジュール=1、白いモジュール=0 — バイナリデータを作成</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">5</span><span><strong>エラー訂正：</strong>スキャナーがリードソロモン誤り訂正を使用</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">6</span><span><strong>デコード：</strong>バイナリデータが読み取り可能なテキストやURLに変換</span></li></ol>
+
+                <h2>エラー訂正：損傷したQRコードがまだ機能する理由</h2>
+                <p>QRコードには冗長性が組み込まれています。コードの一部が損傷したり覆われていても、読み取ることができます。4つのエラー訂正レベルがあります：</p>
+                <ul><li><strong>L（低）：</strong>コードの約7%を復元可能</li><li><strong>M（中）：</strong>約15%を復元可能</li><li><strong>Q（クォータイル）：</strong>約25%を復元可能</li><li><strong>H（高）：</strong>約30%を復元可能 — だから中央にロゴを入れられます！</li></ul>
+
+                <h2>QRコードに保存できるもの</h2>
+                <ul class="grid grid-cols-2 gap-2"><li>ウェブサイトURL</li><li>プレーンテキスト</li><li>連絡先情報（vCard）</li><li>WiFi認証情報</li><li>電話番号</li><li>メールアドレス</li><li>GPS座標</li><li>カレンダーイベント</li><li>アプリストアリンク</li></ul>
+
+                <h2>静的QRコード vs 動的QRコード</h2>
+                <div class="grid md:grid-cols-2 gap-4 my-4">
+                    <div class="p-4 bg-green-50 rounded-xl border border-green-200">
+                        <h3 class="text-green-700 mt-0">静的QRコード</h3>
+                        <p class="text-green-800 text-sm mb-0">データはパターンに直接エンコードされます。作成後は変更できません。無料で作成、永久に機能。</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-xl border border-blue-200">
+                        <h3 class="text-blue-700 mt-0">動的QRコード</h3>
+                        <p class="text-blue-800 text-sm mb-0">コードはリダイレクトURLを指します。いつでも宛先を変更でき、スキャンを追跡できます。有料サービスが必要。</p>
+                    </div>
+                </div>
+
+                <h2>QRコードが人気になった理由</h2>
+                <ul><li><strong>非接触：</strong>COVID-19が非接触メニューや決済の採用を加速</li><li><strong>スマホカメラ：</strong>アプリ不要 — 2017年からiOSとAndroidに内蔵</li><li><strong>無料：</strong>誰でも即座にQRコードを生成できる</li><li><strong>多用途：</strong>URL、テキスト、WiFi、連絡先などに対応</li><li><strong>信頼性：</strong>エラー訂正により損傷しても機能</li></ul>
+
+                <h2>豆知識</h2>
+                <ul class="bg-amber-50 p-4 rounded-xl"><li>史上最大のQRコードは2.1km²（中国の麦畑に作成）</li><li>QRコードは元々、製造業で自動車部品を追跡するために発明された</li><li>QRコードの特許はデンソーウェーブが所有しているが、行使していない — 技術を無料に保っている</li><li>QRコードは周囲に最低4モジュールの「クワイエットゾーン」が必要</li></ul>
+
+                <div class="mt-8 p-6 bg-indigo-100 rounded-xl text-center">
+                    <h3 class="text-indigo-800 mt-0">自分のQRコードを作成</h3>
+                    <p class="text-indigo-700">仕組みがわかったところで、無料で自分のQRコードを作成しましょう。</p>
+                    <a href="../../" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl mt-2">QRコードを作成 →</a>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

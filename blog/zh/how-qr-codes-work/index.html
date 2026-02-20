@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二维码如何工作 | 技术原理简单解释</title>
+    <meta name="description" content="了解二维码如何工作，从扫描到解码。理解这些方形图案背后的技术以及它们为何如此可靠。">
+    <link rel="canonical" href="https://qrcodes.win/blog/zh/how-qr-codes-work/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"二维码如何工作","description":"了解二维码如何工作，从扫描到解码。理解这些方形图案背后的技术以及它们为何如此可靠。","author":{"@type":"Organization","name":"QRCodes.win"},"publisher":{"@type":"Organization","name":"QRCodes.win"},"datePublished":"2026-02-20"}
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #4F46E5; }
+        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #6366f1; }
+        .prose p { margin-bottom: 1rem; color: #374151; line-height: 1.7; }
+        .prose ul, .prose ol { margin-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .prose ul { list-style: disc; }
+        .prose ol { list-style: decimal; }
+        .prose li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-3xl mx-auto flex items-center justify-between">
+            <a href="../../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center text-xl">📱</div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../../" class="text-white/80 hover:text-white text-sm">← 返回</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-16">
+        <article class="max-w-3xl mx-auto">
+            <div class="text-center mb-8 text-white">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">二维码如何工作</h1>
+                <p class="text-white/70">黑白方块背后的迷人技术</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-10 prose">
+                <p class="text-lg">你每天都在扫描它们——在餐厅、产品上、广告中。但你有没有想过<strong>二维码究竟是如何工作的</strong>？让我们用简单的术语来解释这项技术。</p>
+
+                <h2>什么是二维码？</h2>
+                <p>QR代表<strong>Quick Response</strong>（快速响应）。它是一种二维条码，由日本公司Denso Wave于1994年发明。与只能水平存储数据的传统条码不同，二维码可以水平和垂直存储信息——使它们能够存储更多数据。</p>
+                <p class="bg-indigo-50 p-4 rounded-xl border-l-4 border-indigo-500">一个二维码可以存储多达<strong>3,000个字符</strong>的文本，而传统条码只能存储20-25个字符。</p>
+
+                <h2>二维码的结构</h2>
+                <p>每个二维码都有这些关键组件：</p>
+                <div class="space-y-3 my-4">
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">定位图案（大方块）:</strong> 角落的三个大方块帮助扫描器快速定位和确定二维码的方向。</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">对齐图案:</strong> 较小的方块有助于精确读取，特别是在曲面上。</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">定时图案:</strong> 交替的黑白模块，用于确定数据网格的大小。</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">数据区:</strong> 中间看起来杂乱的图案——这是你的实际信息编码的地方。</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">静区:</strong> 代码周围的白色边框，帮助扫描器将二维码与周围环境区分开。</div>
+                </div>
+
+                <h2>扫描如何工作</h2>
+                <ol class="space-y-2 list-none ml-0"><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">1</span><span><strong>图像捕获：</strong>手机摄像头拍摄二维码照片</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">2</span><span><strong>图案检测：</strong>软件找到三个定位图案来定位代码</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">3</span><span><strong>网格映射：</strong>扫描器在图像上创建网格</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">4</span><span><strong>数据提取：</strong>黑色模块=1，白色模块=0——创建二进制数据</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">5</span><span><strong>纠错：</strong>扫描器使用Reed-Solomon纠错</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">6</span><span><strong>解码：</strong>二进制数据转换为可读文本或URL</span></li></ol>
+
+                <h2>纠错：为什么损坏的二维码仍然有效</h2>
+                <p>二维码具有内置冗余。即使部分代码损坏或被遮盖，仍然可以读取。有四个纠错级别：</p>
+                <ul><li><strong>L（低）：</strong>约7%的代码可以恢复</li><li><strong>M（中）：</strong>约15%可以恢复</li><li><strong>Q（四分位）：</strong>约25%可以恢复</li><li><strong>H（高）：</strong>约30%可以恢复——这就是为什么你可以在中间放logo！</li></ul>
+
+                <h2>二维码可以存储什么？</h2>
+                <ul class="grid grid-cols-2 gap-2"><li>网站URL</li><li>纯文本</li><li>联系信息（vCard）</li><li>WiFi凭证</li><li>电话号码</li><li>电子邮件地址</li><li>GPS坐标</li><li>日历事件</li><li>应用商店链接</li></ul>
+
+                <h2>静态与动态二维码</h2>
+                <div class="grid md:grid-cols-2 gap-4 my-4">
+                    <div class="p-4 bg-green-50 rounded-xl border border-green-200">
+                        <h3 class="text-green-700 mt-0">静态二维码</h3>
+                        <p class="text-green-800 text-sm mb-0">数据直接编码在图案中。一旦创建，无法更改。免费创建，永久有效。</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-xl border border-blue-200">
+                        <h3 class="text-blue-700 mt-0">动态二维码</h3>
+                        <p class="text-blue-800 text-sm mb-0">代码指向重定向URL。你可以随时更改目标并跟踪扫描。需要付费服务。</p>
+                    </div>
+                </div>
+
+                <h2>为什么二维码如此流行</h2>
+                <ul><li><strong>无接触：</strong>COVID-19加速了无接触菜单和支付的采用</li><li><strong>智能手机摄像头：</strong>无需应用——自2017年起内置于iOS和Android</li><li><strong>免费：</strong>任何人都可以即时生成二维码</li><li><strong>多功能：</strong>适用于URL、文本、WiFi、联系人等</li><li><strong>可靠：</strong>纠错意味着即使损坏也能工作</li></ul>
+
+                <h2>有趣的事实</h2>
+                <ul class="bg-amber-50 p-4 rounded-xl"><li>有史以来最大的二维码是2.1平方公里（在中国麦田中创建）</li><li>二维码最初是为了在制造中追踪汽车零件而发明的</li><li>二维码专利属于Denso Wave，但他们不行使——保持技术免费</li><li>二维码周围必须至少有4个模块的"静区"</li></ul>
+
+                <div class="mt-8 p-6 bg-indigo-100 rounded-xl text-center">
+                    <h3 class="text-indigo-800 mt-0">创建你自己的二维码</h3>
+                    <p class="text-indigo-700">现在你知道它们是如何工作的了，免费创建你自己的二维码。</p>
+                    <a href="../../" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl mt-2">创建二维码 →</a>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

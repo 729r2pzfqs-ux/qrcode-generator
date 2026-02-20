@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRコードは安全？セキュリティリスクと対策</title>
+    <meta name="description" content="QRコードをスキャンするのは安全ですか？QRコードのセキュリティリスク、一般的な詐欺、悪意のあるコードから身を守る方法について学びましょう。">
+    <link rel="canonical" href="https://qrcodes.win/blog/ja/qr-code-safety/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"QRコードは安全？","description":"QRコードをスキャンするのは安全ですか？QRコードのセキュリティリスク、一般的な詐欺、悪意のあるコードから身を守る方法について学びましょう。","author":{"@type":"Organization","name":"QRCodes.win"},"publisher":{"@type":"Organization","name":"QRCodes.win"},"datePublished":"2026-02-20"}
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #dc2626; }
+        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #b91c1c; }
+        .prose p { margin-bottom: 1rem; color: #374151; line-height: 1.7; }
+        .prose ul { list-style: disc; margin-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .prose li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-3xl mx-auto flex items-center justify-between">
+            <a href="../../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center text-xl">🔒</div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../../" class="text-white/80 hover:text-white text-sm">← 戻る</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-16">
+        <article class="max-w-3xl mx-auto">
+            <div class="text-center mb-8 text-white">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">QRコードは安全？</h1>
+                <p class="text-white/70">リスクを理解し、身を守る方法</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-10 prose">
+                <p class="text-lg">QRコードはどこにでもあります — でも安全なのでしょうか？短い答え：<strong>QRコード自体は安全ですが、リンク先は安全でない可能性があります</strong>。リスクと対策を解説します。</p>
+
+                <h2>✅ 技術自体は安全</h2>
+                <p>QRコードはデータを視覚的に保存する方法に過ぎません — テキストやURLのように。コード自体はマルウェアをインストールしたり、スマホをハッキングすることはできません。バーコードのような単なるデータ形式です。</p>
+                <p class="bg-green-50 p-4 rounded-xl border-l-4 border-green-500 italic">QRコードは住所が書かれた封筒のようなものです。封筒自体は無害ですが、それが指す目的地が重要です。</p>
+
+                <h2>⚠️ 本当のリスク</h2>
+                <div class="space-y-4">
+                    <div class="p-4 bg-red-50 rounded-xl border-l-4 border-red-400">
+                        <h3 class="mt-0 text-red-700">1. フィッシング攻撃</h3>
+                        <p class="mb-0 text-red-800">悪意のあるQRコードは、銀行やメールに見せかけた偽サイトにリンクし、ログイン情報を盗む可能性があります。</p>
+                    </div>
+                    <div class="p-4 bg-red-50 rounded-xl border-l-4 border-red-400">
+                        <h3 class="mt-0 text-red-700">2. 悪意のあるダウンロード</h3>
+                        <p class="mb-0 text-red-800">一部のQRコードは、特に古いデバイスでマルウェアをダウンロードしようとするサイトにリンクする可能性があります。</p>
+                    </div>
+                    <div class="p-4 bg-red-50 rounded-xl border-l-4 border-red-400">
+                        <h3 class="mt-0 text-red-700">3. QRコードの入れ替え</h3>
+                        <p class="mb-0 text-red-800">犯罪者は、駐車メーターやレストランのメニューなど、正規のQRコードの上に偽のステッカーを貼ることがあります。</p>
+                    </div>
+                    <div class="p-4 bg-red-50 rounded-xl border-l-4 border-red-400">
+                        <h3 class="mt-0 text-red-700">4. データ収集</h3>
+                        <p class="mb-0 text-red-800">一部のQRコードは、明確な開示なしに位置情報やデバイス情報を収集するトラッキングURLにリンクします。</p>
+                    </div>
+                </div>
+
+                <h2>🚨 実際のQRコード詐欺</h2>
+                <ul>
+                    <li><strong>駐車メーター詐欺：</strong>偽のQRコードがクレジットカード情報を盗む支払いサイトに誘導</li>
+                    <li><strong>配達詐欺：</strong>フィッシングサイトにつながるQRコード付きの偽の「不在配達」通知</li>
+                    <li><strong>暗号通貨詐欺：</strong>無料のビットコインを約束するQRコードが実際にはウォレット認証情報を盗む</li>
+                    <li><strong>COVID-19詐欺：</strong>データ収集サイトにリンクする偽のワクチン接種や検査結果のQRコード</li>
+                </ul>
+
+                <h2>🛡️ 安全を保つ方法</h2>
+                <div class="space-y-3">
+                    <div class="p-3 bg-blue-50 rounded-lg"><strong class="text-blue-700">クリック前にプレビュー:</strong> ほとんどのスマホは開く前にURLを表示します。常にドメインを確認してください。</div>
+                    <div class="p-3 bg-blue-50 rounded-lg"><strong class="text-blue-700">改ざんをチェック:</strong> QRコードが何かの上に貼られたステッカーのように見えたら、警戒してください。</div>
+                    <div class="p-3 bg-blue-50 rounded-lg"><strong class="text-blue-700">プレビュー機能付きスキャナーを使用:</strong> 一部のスキャナーアプリはリンクを表示し、確認を求めます。iPhoneとAndroidの内蔵カメラアプリはこれを行います。</div>
+                    <div class="p-3 bg-blue-50 rounded-lg"><strong class="text-blue-700">スマホを最新に保つ:</strong> アップデートはセキュリティ脆弱性を修正します。最新のスマホは攻撃されにくくなります。</div>
+                    <div class="p-3 bg-blue-50 rounded-lg"><strong class="text-blue-700">直感を信じる:</strong> 電柱のランダムなQRコード？メールの未承諾QRコード？怪しいと思ったら、スキャンしないでください。</div>
+                </div>
+
+                <h2>🚩 危険信号</h2>
+                <ul class="bg-amber-50 p-4 rounded-xl"><li>既存のコードの上に貼られたQRコードステッカー</li><li>出所不明のランダムなチラシのQRコード</li><li>スキャン後に機密情報を求められる</li><li>少し「おかしい」URL</li><li>急いで行動するよう圧力</li></ul>
+
+                <h2>QRコードが一般的に安全な場合</h2>
+                <ul class="bg-green-50 p-4 rounded-xl"><li>✅ レストランメニュー（テーブルで、ランダムなステッカーではなく）</li><li>✅ 信頼できるブランドの製品パッケージ</li><li>✅ 有名企業の公式アプリとウェブサイト</li><li>✅ 公式チケットプラットフォームからのイベントチケット</li><li>✅ 二要素認証の設定</li><li>✅ 信頼できる家庭やオフィスでのWiFi共有</li></ul>
+
+                <h2>📋 結論</h2>
+                <p class="bg-gray-100 p-4 rounded-xl font-medium">QRコードは、それを作成した人や会社と同じくらい安全です。QRコードのスキャンをリンクのクリックと同じように扱ってください。</p>
+
+                <div class="mt-8 p-6 bg-red-100 rounded-xl text-center">
+                    <h3 class="text-red-800 mt-0">安全なQRコードを作成</h3>
+                    <p class="text-red-700">私たちでQRコードを作成すると、見たままのものが得られます — トラッキングなし、リダイレクトなし。</p>
+                    <a href="../../" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-xl mt-2">QRコードを作成 →</a>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
