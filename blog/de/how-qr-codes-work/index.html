@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wie QR-Codes funktionieren | Die Technologie einfach erklärt</title>
+    <meta name="description" content="Erfahren Sie, wie QR-Codes funktionieren, vom Scannen bis zur Dekodierung. Verstehen Sie die Technologie hinter diesen quadratischen Mustern.">
+    <link rel="canonical" href="https://qrcodes.win/blog/de/how-qr-codes-work/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"Wie QR-Codes funktionieren","description":"Erfahren Sie, wie QR-Codes funktionieren, vom Scannen bis zur Dekodierung. Verstehen Sie die Technologie hinter diesen quadratischen Mustern.","author":{"@type":"Organization","name":"QRCodes.win"},"publisher":{"@type":"Organization","name":"QRCodes.win"},"datePublished":"2026-02-20"}
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #4F46E5; }
+        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #6366f1; }
+        .prose p { margin-bottom: 1rem; color: #374151; line-height: 1.7; }
+        .prose ul, .prose ol { margin-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .prose ul { list-style: disc; }
+        .prose ol { list-style: decimal; }
+        .prose li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-3xl mx-auto flex items-center justify-between">
+            <a href="../../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center text-xl">📱</div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../../" class="text-white/80 hover:text-white text-sm">← Zurück</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-16">
+        <article class="max-w-3xl mx-auto">
+            <div class="text-center mb-8 text-white">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">Wie QR-Codes funktionieren</h1>
+                <p class="text-white/70">Die faszinierende Technologie hinter den schwarz-weißen Quadraten</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-10 prose">
+                <p class="text-lg">Sie scannen sie jeden Tag — in Restaurants, auf Produkten, in Werbung. Aber haben Sie sich jemals gefragt, <strong>wie QR-Codes tatsächlich funktionieren</strong>? Lassen Sie uns die Technologie einfach erklären.</p>
+
+                <h2>Was ist ein QR-Code?</h2>
+                <p>QR steht für <strong>Quick Response</strong> (Schnelle Antwort). Es ist eine Art 2D-Barcode, der 1994 von der japanischen Firma Denso Wave erfunden wurde. Anders als traditionelle Barcodes, die Daten nur horizontal speichern, speichern QR-Codes Informationen horizontal und vertikal — was ihnen ermöglicht, viel mehr Daten zu speichern.</p>
+                <p class="bg-indigo-50 p-4 rounded-xl border-l-4 border-indigo-500">Ein einzelner QR-Code kann bis zu <strong>3.000 Zeichen</strong> Text speichern, verglichen mit nur 20-25 Zeichen bei einem traditionellen Barcode.</p>
+
+                <h2>Anatomie eines QR-Codes</h2>
+                <p>Jeder QR-Code hat diese Hauptkomponenten:</p>
+                <div class="space-y-3 my-4">
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Positionsmarkierungen (Große Quadrate):</strong> Die drei großen Quadrate in den Ecken helfen Scannern, den QR-Code schnell zu finden und auszurichten.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Ausrichtungsmuster:</strong> Das kleinere Quadrat hilft beim genauen Lesen, besonders auf gekrümmten Oberflächen.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Timing-Muster:</strong> Abwechselnde schwarze und weiße Module, die die Größe des Datenrasters bestimmen.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Datenbereich:</strong> Das verschlüsselt aussehende Muster in der Mitte — hier sind Ihre tatsächlichen Informationen kodiert.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Ruhezone:</strong> Der weiße Rand um den Code, der Scannern hilft, den QR-Code von seiner Umgebung zu unterscheiden.</div>
+                </div>
+
+                <h2>Wie das Scannen funktioniert</h2>
+                <ol class="space-y-2 list-none ml-0"><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">1</span><span><strong>Bildaufnahme:</strong> Die Kamera Ihres Handys macht ein Foto des QR-Codes</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">2</span><span><strong>Mustererkennung:</strong> Software findet die drei Positionsmarkierungen zur Lokalisierung</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">3</span><span><strong>Rasterzuordnung:</strong> Der Scanner erstellt ein Raster über das Bild</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">4</span><span><strong>Datenextraktion:</strong> Schwarze Module = 1, weiße Module = 0 — erzeugt Binärdaten</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">5</span><span><strong>Fehlerkorrektur:</strong> Der Scanner verwendet Reed-Solomon-Fehlerkorrektur</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">6</span><span><strong>Dekodierung:</strong> Binärdaten werden in lesbaren Text oder URLs umgewandelt</span></li></ol>
+
+                <h2>Fehlerkorrektur: Warum beschädigte QR-Codes noch funktionieren</h2>
+                <p>QR-Codes haben eingebaute Redundanz. Selbst wenn ein Teil des Codes beschädigt oder verdeckt ist, kann er noch gelesen werden. Es gibt vier Fehlerkorrekturstufen:</p>
+                <ul><li><strong>L (Niedrig):</strong> ~7% des Codes können wiederhergestellt werden</li><li><strong>M (Mittel):</strong> ~15% können wiederhergestellt werden</li><li><strong>Q (Quartil):</strong> ~25% können wiederhergestellt werden</li><li><strong>H (Hoch):</strong> ~30% können wiederhergestellt werden — deshalb können Sie Logos in die Mitte setzen!</li></ul>
+
+                <h2>Was können QR-Codes speichern?</h2>
+                <ul class="grid grid-cols-2 gap-2"><li>Website-URLs</li><li>Einfacher Text</li><li>Kontaktinformationen (vCard)</li><li>WLAN-Zugangsdaten</li><li>Telefonnummern</li><li>E-Mail-Adressen</li><li>GPS-Koordinaten</li><li>Kalendertermine</li><li>App-Store-Links</li></ul>
+
+                <h2>Statische vs Dynamische QR-Codes</h2>
+                <div class="grid md:grid-cols-2 gap-4 my-4">
+                    <div class="p-4 bg-green-50 rounded-xl border border-green-200">
+                        <h3 class="text-green-700 mt-0">Statische QR-Codes</h3>
+                        <p class="text-green-800 text-sm mb-0">Die Daten sind direkt im Muster kodiert. Einmal erstellt, können sie nicht geändert werden. Kostenlos zu erstellen, funktioniert für immer.</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-xl border border-blue-200">
+                        <h3 class="text-blue-700 mt-0">Dynamische QR-Codes</h3>
+                        <p class="text-blue-800 text-sm mb-0">Der Code verweist auf eine Weiterleitungs-URL. Sie können das Ziel jederzeit ändern und Scans verfolgen. Erfordert einen kostenpflichtigen Dienst.</p>
+                    </div>
+                </div>
+
+                <h2>Warum QR-Codes so beliebt wurden</h2>
+                <ul><li><strong>Kontaktlos:</strong> COVID-19 beschleunigte die Nutzung für berührungslose Menüs und Zahlungen</li><li><strong>Smartphone-Kameras:</strong> Keine App nötig — seit 2017 in iOS und Android integriert</li><li><strong>Kostenlos:</strong> Jeder kann QR-Codes sofort erstellen</li><li><strong>Vielseitig:</strong> Funktioniert für URLs, Text, WLAN, Kontakte und mehr</li><li><strong>Zuverlässig:</strong> Fehlerkorrektur bedeutet, dass sie auch beschädigt funktionieren</li></ul>
+
+                <h2>Interessante Fakten</h2>
+                <ul class="bg-amber-50 p-4 rounded-xl"><li>Der größte QR-Code war 2,1 km² (in einem chinesischen Weizenfeld erstellt)</li><li>QR-Codes wurden ursprünglich erfunden, um Autoteile in der Fertigung zu verfolgen</li><li>Das Patent für QR-Codes gehört Denso Wave, aber sie nutzen es nicht — die Technologie bleibt kostenlos</li><li>Ein QR-Code braucht mindestens 4 Module "Ruhezone" um ihn herum</li></ul>
+
+                <div class="mt-8 p-6 bg-indigo-100 rounded-xl text-center">
+                    <h3 class="text-indigo-800 mt-0">Erstellen Sie Ihren eigenen QR-Code</h3>
+                    <p class="text-indigo-700">Jetzt, da Sie wissen, wie sie funktionieren, erstellen Sie kostenlos Ihren eigenen QR-Code.</p>
+                    <a href="../../" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl mt-2">QR-Code erstellen →</a>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二维码安全吗？安全风险与防护措施</title>
+    <meta name="description" content="扫描二维码安全吗？了解二维码安全风险、常见骗局以及如何保护自己免受恶意代码的侵害。">
+    <link rel="canonical" href="https://qrcodes.win/blog/zh/qr-code-safety/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"二维码安全吗？","description":"扫描二维码安全吗？了解二维码安全风险、常见骗局以及如何保护自己免受恶意代码的侵害。","author":{"@type":"Organization","name":"QRCodes.win"},"publisher":{"@type":"Organization","name":"QRCodes.win"},"datePublished":"2026-02-20"}
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #dc2626; }
+        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #b91c1c; }
+        .prose p { margin-bottom: 1rem; color: #374151; line-height: 1.7; }
+        .prose ul { list-style: disc; margin-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .prose li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-3xl mx-auto flex items-center justify-between">
+            <a href="../../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center text-xl">🔒</div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../../" class="text-white/80 hover:text-white text-sm">← 返回</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-16">
+        <article class="max-w-3xl mx-auto">
+            <div class="text-center mb-8 text-white">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">二维码安全吗？</h1>
+                <p class="text-white/70">了解风险以及如何保护自己</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-10 prose">
+                <p class="text-lg">二维码无处不在——但它们安全吗？简短的回答：<strong>二维码本身是安全的，但它们链接到的内容可能不安全</strong>。让我们分析风险和如何保持安全。</p>
+
+                <h2>✅ 技术本身是安全的</h2>
+                <p>二维码只是一种可视化存储数据的方式——如文本或URL。代码本身不能安装恶意软件或入侵您的手机。它只是一种数据格式，就像条形码一样。</p>
+                <p class="bg-green-50 p-4 rounded-xl border-l-4 border-green-500 italic">把二维码想象成一个有地址的信封。信封本身是无害的——但它指向的目的地才是关键。</p>
+
+                <h2>⚠️ 真正的风险</h2>
+                <div class="space-y-4">
+                    <div class="p-4 bg-red-50 rounded-xl border-l-4 border-red-400">
+                        <h3 class="mt-0 text-red-700">1. 钓鱼攻击</h3>
+                        <p class="mb-0 text-red-800">恶意二维码可能链接到看起来像您银行或邮箱的假网站——旨在窃取您的登录凭证。</p>
+                    </div>
+                    <div class="p-4 bg-red-50 rounded-xl border-l-4 border-red-400">
+                        <h3 class="mt-0 text-red-700">2. 恶意下载</h3>
+                        <p class="mb-0 text-red-800">某些二维码可能链接到试图下载恶意软件的网站，特别是在过时的设备上。</p>
+                    </div>
+                    <div class="p-4 bg-red-50 rounded-xl border-l-4 border-red-400">
+                        <h3 class="mt-0 text-red-700">3. 二维码替换</h3>
+                        <p class="mb-0 text-red-800">犯罪分子可以将假的二维码贴纸贴在合法的上面——如停车计时器或餐厅菜单上。</p>
+                    </div>
+                    <div class="p-4 bg-red-50 rounded-xl border-l-4 border-red-400">
+                        <h3 class="mt-0 text-red-700">4. 数据收集</h3>
+                        <p class="mb-0 text-red-800">某些二维码链接到跟踪URL，在没有明确披露的情况下收集您的位置和设备信息。</p>
+                    </div>
+                </div>
+
+                <h2>🚨 真实的二维码骗局</h2>
+                <ul>
+                    <li><strong>停车计时器骗局：</strong>假二维码导向窃取信用卡信息的支付网站</li>
+                    <li><strong>包裹递送骗局：</strong>带有二维码的假"错过递送"通知导向钓鱼网站</li>
+                    <li><strong>加密货币骗局：</strong>承诺免费比特币的二维码实际上窃取钱包凭证</li>
+                    <li><strong>COVID-19骗局：</strong>假疫苗接种或测试结果二维码链接到数据收集网站</li>
+                </ul>
+
+                <h2>🛡️ 如何保持安全</h2>
+                <div class="space-y-3">
+                    <div class="p-3 bg-blue-50 rounded-lg"><strong class="text-blue-700">点击前预览:</strong> 大多数手机在打开前会显示URL。始终检查域名。</div>
+                    <div class="p-3 bg-blue-50 rounded-lg"><strong class="text-blue-700">检查是否被篡改:</strong> 如果二维码看起来像贴在其他东西上的贴纸，要警惕。</div>
+                    <div class="p-3 bg-blue-50 rounded-lg"><strong class="text-blue-700">使用带预览的扫描器:</strong> 某些扫描器应用会显示链接并要求确认。iPhone和Android上的内置相机应用会这样做。</div>
+                    <div class="p-3 bg-blue-50 rounded-lg"><strong class="text-blue-700">保持手机更新:</strong> 更新可修补安全漏洞。更新的手机更难被攻击。</div>
+                    <div class="p-3 bg-blue-50 rounded-lg"><strong class="text-blue-700">相信你的直觉:</strong> 路灯杆上的随机二维码？邮件中未经请求的二维码？如果看起来可疑，就不要扫描。</div>
+                </div>
+
+                <h2>🚩 危险信号</h2>
+                <ul class="bg-amber-50 p-4 rounded-xl"><li>贴在现有代码上的二维码贴纸</li><li>没有明确来源的随机传单上的二维码</li><li>扫描后要求敏感信息</li><li>看起来有点"不对劲"的URL</li><li>催促快速行动的压力</li></ul>
+
+                <h2>二维码通常安全的情况</h2>
+                <ul class="bg-green-50 p-4 rounded-xl"><li>✅ 餐厅菜单（在桌上，不是随机贴纸上）</li><li>✅ 您信任的品牌的产品包装</li><li>✅ 知名公司的官方应用和网站</li><li>✅ 官方票务平台的活动门票</li><li>✅ 双因素认证设置</li><li>✅ 您信任的家庭和办公室的WiFi共享</li></ul>
+
+                <h2>📋 总结</h2>
+                <p class="bg-gray-100 p-4 rounded-xl font-medium">二维码的安全程度取决于创建它的人或公司。像点击链接一样对待扫描二维码。</p>
+
+                <div class="mt-8 p-6 bg-red-100 rounded-xl text-center">
+                    <h3 class="text-red-800 mt-0">创建安全的二维码</h3>
+                    <p class="text-red-700">当您用我们创建二维码时，所见即所得——没有跟踪，没有重定向。</p>
+                    <a href="../../" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-xl mt-2">创建二维码 →</a>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Kodları Nasıl Çalışır | Teknoloji Basitçe Açıklandı</title>
+    <meta name="description" content="QR kodların nasıl çalıştığını, taramadan kod çözmeye kadar öğrenin. Kare desenlerin arkasındaki teknolojiyi anlayın.">
+    <link rel="canonical" href="https://qrcodes.win/blog/tr/how-qr-codes-work/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"QR Kodları Nasıl Çalışır","description":"QR kodların nasıl çalıştığını, taramadan kod çözmeye kadar öğrenin. Kare desenlerin arkasındaki teknolojiyi anlayın.","author":{"@type":"Organization","name":"QRCodes.win"},"publisher":{"@type":"Organization","name":"QRCodes.win"},"datePublished":"2026-02-20"}
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #4F46E5; }
+        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #6366f1; }
+        .prose p { margin-bottom: 1rem; color: #374151; line-height: 1.7; }
+        .prose ul, .prose ol { margin-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .prose ul { list-style: disc; }
+        .prose ol { list-style: decimal; }
+        .prose li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-3xl mx-auto flex items-center justify-between">
+            <a href="../../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center text-xl">📱</div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../../" class="text-white/80 hover:text-white text-sm">← Geri</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-16">
+        <article class="max-w-3xl mx-auto">
+            <div class="text-center mb-8 text-white">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">QR Kodları Nasıl Çalışır</h1>
+                <p class="text-white/70">Siyah beyaz karelerin arkasındaki büyüleyici teknoloji</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-10 prose">
+                <p class="text-lg">Her gün onları tarıyorsunuz — restoranlarda, ürünlerde, reklamlarda. Ama hiç <strong>QR kodların gerçekte nasıl çalıştığını</strong> merak ettiniz mi? Teknolojiyi basit terimlerle açıklayalım.</p>
+
+                <h2>QR Kod Nedir?</h2>
+                <p>QR, <strong>Quick Response</strong> (Hızlı Yanıt) anlamına gelir. 1994 yılında Denso Wave adlı bir Japon şirketi tarafından icat edilen bir 2D barkod türüdür. Verileri yalnızca yatay olarak depolayan geleneksel barkodların aksine, QR kodlar bilgileri hem yatay hem de dikey olarak depolar — çok daha fazla veri depolamalarını sağlar.</p>
+                <p class="bg-indigo-50 p-4 rounded-xl border-l-4 border-indigo-500">Tek bir QR kod, geleneksel barkodun 20-25 karakterine kıyasla <strong>3.000 karaktere</strong> kadar metin depolayabilir.</p>
+
+                <h2>QR Kodun Anatomisi</h2>
+                <p>Her QR kodun bu temel bileşenleri vardır:</p>
+                <div class="space-y-3 my-4">
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Konum Desenleri (Büyük Kareler):</strong> Köşelerdeki üç büyük kare, tarayıcıların QR kodu hızla bulmasına ve yönlendirmesine yardımcı olur.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Hizalama Deseni:</strong> Küçük kare, özellikle eğri yüzeylerde doğru okumaya yardımcı olur.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Zamanlama Desenleri:</strong> Veri ızgarasının boyutunu belirleyen siyah ve beyaz değişen modüller.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Veri Alanı:</strong> Ortadaki karışık görünümlü desen — gerçek bilgilerinizin kodlandığı yer burası.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Sessiz Bölge:</strong> Kodun etrafındaki beyaz kenarlık, tarayıcıların QR kodu çevresinden ayırt etmesine yardımcı olur.</div>
+                </div>
+
+                <h2>Tarama Nasıl Çalışır</h2>
+                <ol class="space-y-2 list-none ml-0"><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">1</span><span><strong>Görüntü Yakalama:</strong> Telefonunuzun kamerası QR kodun fotoğrafını çeker</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">2</span><span><strong>Desen Algılama:</strong> Yazılım üç konum desenini bulur</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">3</span><span><strong>Izgara Eşleme:</strong> Tarayıcı görüntü üzerine bir ızgara oluşturur</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">4</span><span><strong>Veri Çıkarma:</strong> Siyah modüller = 1, beyaz modüller = 0 — ikili veri oluşturur</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">5</span><span><strong>Hata Düzeltme:</strong> Tarayıcı Reed-Solomon hata düzeltmesini kullanır</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">6</span><span><strong>Kod Çözme:</strong> İkili veriler okunabilir metin veya URL'lere dönüştürülür</span></li></ol>
+
+                <h2>Hata Düzeltme: Hasarlı QR Kodlar Neden Hala Çalışır</h2>
+                <p>QR kodlarda yerleşik yedeklilik vardır. Kodun bir kısmı hasar görse veya kapatılsa bile yine okunabilir. Dört hata düzeltme seviyesi vardır:</p>
+                <ul><li><strong>L (Düşük):</strong> Kodun ~%7'si geri yüklenebilir</li><li><strong>M (Orta):</strong> ~%15 geri yüklenebilir</li><li><strong>Q (Çeyrek):</strong> ~%25 geri yüklenebilir</li><li><strong>H (Yüksek):</strong> ~%30 geri yüklenebilir — bu yüzden ortaya logo koyabilirsiniz!</li></ul>
+
+                <h2>QR Kodlar Ne Depolayabilir?</h2>
+                <ul class="grid grid-cols-2 gap-2"><li>Web sitesi URL'leri</li><li>Düz metin</li><li>İletişim bilgileri (vCard)</li><li>WiFi kimlik bilgileri</li><li>Telefon numaraları</li><li>E-posta adresleri</li><li>GPS koordinatları</li><li>Takvim etkinlikleri</li><li>Uygulama mağazası bağlantıları</li></ul>
+
+                <h2>Statik vs Dinamik QR Kodlar</h2>
+                <div class="grid md:grid-cols-2 gap-4 my-4">
+                    <div class="p-4 bg-green-50 rounded-xl border border-green-200">
+                        <h3 class="text-green-700 mt-0">Statik QR Kodlar</h3>
+                        <p class="text-green-800 text-sm mb-0">Veriler doğrudan desene kodlanır. Oluşturulduktan sonra değiştirilemez. Ücretsiz oluşturulur, sonsuza kadar çalışır.</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-xl border border-blue-200">
+                        <h3 class="text-blue-700 mt-0">Dinamik QR Kodlar</h3>
+                        <p class="text-blue-800 text-sm mb-0">Kod bir yönlendirme URL'sine işaret eder. Hedefi istediğiniz zaman değiştirebilir ve taramaları izleyebilirsiniz. Ücretli hizmet gerektirir.</p>
+                    </div>
+                </div>
+
+                <h2>QR Kodlar Neden Bu Kadar Popüler Oldu</h2>
+                <ul><li><strong>Temassız:</strong> COVID-19, temassız menüler ve ödemeler için benimsemeyi hızlandırdı</li><li><strong>Akıllı telefon kameraları:</strong> Uygulama gerekmez — 2017'den beri iOS ve Android'de yerleşik</li><li><strong>Ücretsiz:</strong> Herkes anında QR kod oluşturabilir</li><li><strong>Çok yönlü:</strong> URL'ler, metin, WiFi, kişiler ve daha fazlası için çalışır</li><li><strong>Güvenilir:</strong> Hata düzeltme, hasarlı olsalar bile çalışacakları anlamına gelir</li></ul>
+
+                <h2>İlginç Bilgiler</h2>
+                <ul class="bg-amber-50 p-4 rounded-xl"><li>Şimdiye kadar yapılan en büyük QR kod 2,1 km² idi (Çin buğday tarlasında oluşturuldu)</li><li>QR kodlar başlangıçta üretimde araba parçalarını izlemek için icat edildi</li><li>QR kod patenti Denso Wave'e aittir, ancak uygulamıyorlar — teknolojiyi ücretsiz tutuyorlar</li><li>Bir QR kodun etrafında en az 4 modül "sessiz bölge" olmalıdır</li></ul>
+
+                <div class="mt-8 p-6 bg-indigo-100 rounded-xl text-center">
+                    <h3 class="text-indigo-800 mt-0">Kendi QR Kodunuzu Oluşturun</h3>
+                    <p class="text-indigo-700">Artık nasıl çalıştıklarını bildiğinize göre, ücretsiz kendi QR kodunuzu oluşturun.</p>
+                    <a href="../../" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl mt-2">QR Kodu Oluştur →</a>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

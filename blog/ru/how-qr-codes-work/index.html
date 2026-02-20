@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как работают QR-коды | Технология простыми словами</title>
+    <meta name="description" content="Узнайте, как работают QR-коды, от сканирования до декодирования. Поймите технологию за этими квадратными узорами.">
+    <link rel="canonical" href="https://qrcodes.win/blog/ru/how-qr-codes-work/">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"Как работают QR-коды","description":"Узнайте, как работают QR-коды, от сканирования до декодирования. Поймите технологию за этими квадратными узорами.","author":{"@type":"Organization","name":"QRCodes.win"},"publisher":{"@type":"Organization","name":"QRCodes.win"},"datePublished":"2026-02-20"}
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        body { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); min-height: 100vh; }
+        .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #4F46E5; }
+        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #6366f1; }
+        .prose p { margin-bottom: 1rem; color: #374151; line-height: 1.7; }
+        .prose ul, .prose ol { margin-left: 1.5rem; margin-bottom: 1rem; color: #374151; }
+        .prose ul { list-style: disc; }
+        .prose ol { list-style: decimal; }
+        .prose li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="text-gray-900">
+    <header class="py-6 px-4">
+        <div class="max-w-3xl mx-auto flex items-center justify-between">
+            <a href="../../" class="flex items-center gap-2 text-white">
+                <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center text-xl">📱</div>
+                <span class="text-xl font-bold">QRCodes.win</span>
+            </a>
+            <a href="../../" class="text-white/80 hover:text-white text-sm">← Назад</a>
+        </div>
+    </header>
+
+    <main class="px-4 pb-16">
+        <article class="max-w-3xl mx-auto">
+            <div class="text-center mb-8 text-white">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">Как работают QR-коды</h1>
+                <p class="text-white/70">Увлекательная технология за чёрно-белыми квадратами</p>
+            </div>
+
+            <div class="glass rounded-2xl p-6 md:p-10 prose">
+                <p class="text-lg">Вы сканируете их каждый день — в ресторанах, на товарах, в рекламе. Но задумывались ли вы, <strong>как QR-коды на самом деле работают</strong>? Давайте разберём технологию простым языком.</p>
+
+                <h2>Что такое QR-код?</h2>
+                <p>QR означает <strong>Quick Response</strong> (Быстрый Ответ). Это тип 2D штрих-кода, изобретённый в 1994 году японской компанией Denso Wave. В отличие от традиционных штрих-кодов, хранящих данные только горизонтально, QR-коды хранят информацию горизонтально и вертикально — позволяя хранить гораздо больше данных.</p>
+                <p class="bg-indigo-50 p-4 rounded-xl border-l-4 border-indigo-500">Один QR-код может хранить до <strong>3000 символов</strong> текста, по сравнению с 20-25 символами в традиционном штрих-коде.</p>
+
+                <h2>Анатомия QR-кода</h2>
+                <p>Каждый QR-код имеет эти ключевые компоненты:</p>
+                <div class="space-y-3 my-4">
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Поисковые паттерны (Большие квадраты):</strong> Три больших квадрата в углах помогают сканерам быстро находить и ориентировать QR-код.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Паттерн выравнивания:</strong> Меньший квадрат помогает точному чтению, особенно на изогнутых поверхностях.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Тайминг-паттерны:</strong> Чередующиеся чёрные и белые модули, определяющие размер сетки данных.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Область данных:</strong> Запутанный на вид узор в центре — здесь закодирована ваша информация.</div>
+                    <div class="p-3 bg-gray-50 rounded-lg"><strong class="text-indigo-600">Тихая зона:</strong> Белая граница вокруг кода, помогающая сканерам отличить QR-код от окружения.</div>
+                </div>
+
+                <h2>Как работает сканирование</h2>
+                <ol class="space-y-2 list-none ml-0"><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">1</span><span><strong>Захват изображения:</strong> Камера телефона фотографирует QR-код</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">2</span><span><strong>Обнаружение паттернов:</strong> ПО находит три поисковых паттерна</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">3</span><span><strong>Построение сетки:</strong> Сканер создаёт сетку поверх изображения</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">4</span><span><strong>Извлечение данных:</strong> Чёрные модули = 1, белые = 0 — создаётся двоичные данные</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">5</span><span><strong>Коррекция ошибок:</strong> Сканер использует коррекцию ошибок Рида-Соломона</span></li><li class="flex gap-3 items-start"><span class="bg-indigo-100 text-indigo-700 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">6</span><span><strong>Декодирование:</strong> Двоичные данные преобразуются в читаемый текст или URL</span></li></ol>
+
+                <h2>Коррекция ошибок: Почему повреждённые QR-коды работают</h2>
+                <p>QR-коды имеют встроенную избыточность. Даже если часть кода повреждена или закрыта, его можно прочитать. Есть четыре уровня коррекции ошибок:</p>
+                <ul><li><strong>L (Низкий):</strong> ~7% кода можно восстановить</li><li><strong>M (Средний):</strong> ~15% можно восстановить</li><li><strong>Q (Квартиль):</strong> ~25% можно восстановить</li><li><strong>H (Высокий):</strong> ~30% можно восстановить — поэтому можно помещать логотипы в центр!</li></ul>
+
+                <h2>Что могут хранить QR-коды?</h2>
+                <ul class="grid grid-cols-2 gap-2"><li>URL сайтов</li><li>Простой текст</li><li>Контактная информация (vCard)</li><li>Данные WiFi</li><li>Номера телефонов</li><li>Email-адреса</li><li>GPS-координаты</li><li>События календаря</li><li>Ссылки на магазины приложений</li></ul>
+
+                <h2>Статические vs Динамические QR-коды</h2>
+                <div class="grid md:grid-cols-2 gap-4 my-4">
+                    <div class="p-4 bg-green-50 rounded-xl border border-green-200">
+                        <h3 class="text-green-700 mt-0">Статические QR-коды</h3>
+                        <p class="text-green-800 text-sm mb-0">Данные закодированы прямо в паттерне. После создания нельзя изменить. Бесплатно создавать, работают вечно.</p>
+                    </div>
+                    <div class="p-4 bg-blue-50 rounded-xl border border-blue-200">
+                        <h3 class="text-blue-700 mt-0">Динамические QR-коды</h3>
+                        <p class="text-blue-800 text-sm mb-0">Код указывает на URL перенаправления. Можно менять назначение когда угодно и отслеживать сканирования. Требуется платный сервис.</p>
+                    </div>
+                </div>
+
+                <h2>Почему QR-коды стали такими популярными</h2>
+                <ul><li><strong>Бесконтактность:</strong> COVID-19 ускорил внедрение бесконтактных меню и платежей</li><li><strong>Камеры смартфонов:</strong> Приложение не нужно — встроено в iOS и Android с 2017</li><li><strong>Бесплатно:</strong> Любой может мгновенно создать QR-код</li><li><strong>Универсальность:</strong> Работает для URL, текста, WiFi, контактов и др.</li><li><strong>Надёжность:</strong> Коррекция ошибок позволяет работать даже при повреждении</li></ul>
+
+                <h2>Интересные факты</h2>
+                <ul class="bg-amber-50 p-4 rounded-xl"><li>Самый большой QR-код составлял 2,1 км² (создан на китайском пшеничном поле)</li><li>QR-коды изначально изобретены для отслеживания автозапчастей на производстве</li><li>Патент на QR-коды принадлежит Denso Wave, но они не реализуют его — технология остаётся бесплатной</li><li>QR-код должен иметь минимум 4 модуля «тихой зоны» вокруг</li></ul>
+
+                <div class="mt-8 p-6 bg-indigo-100 rounded-xl text-center">
+                    <h3 class="text-indigo-800 mt-0">Создайте свой QR-код</h3>
+                    <p class="text-indigo-700">Теперь, когда вы знаете, как они работают, создайте свой QR-код бесплатно.</p>
+                    <a href="../../" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl mt-2">Создать QR-код →</a>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
