@@ -25,17 +25,17 @@
     
     <style>
         * { font-family: 'Inter', sans-serif; }
-        body { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); min-height: 100vh; }
-        .gradient-bg { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); }
-        .card { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        body { background: #0d1117; min-height: 100vh; }
+        .gradient-bg { background: #161b22; }
+        .card { background: #161b22; border: 1px solid #30363d; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
         .qr-preview { background: white; border: 2px solid #e5e7eb; border-radius: 16px; }
-        .tab-active { background: #4F46E5; color: white; }
+        .tab-active { background: #238636; color: white; }
         .tab-inactive { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); color: #475569; }
-        .btn-primary { background: #4F46E5; }
-        .btn-primary:hover { background: #4338CA; }
-        .btn-success { background: #10B981; }
-        .input-field { border: 2px solid #e5e7eb; }
-        .input-field:focus { border-color: #4F46E5; outline: none; }
+        .btn-primary { background: #238636; }
+        .btn-primary:hover { background: #2ea043; }
+        .btn-success { background: #1f6feb; }
+        .input-field { background: #0d1117; border: 2px solid #30363d; color: #c9d1d9; }
+        .input-field:focus { border-color: #58a6ff; outline: none; }
         .color-picker { -webkit-appearance: none; width: 48px; height: 48px; border: 2px solid #e5e7eb; border-radius: 12px; cursor: pointer; }
         .color-picker::-webkit-color-swatch-wrapper { padding: 0; }
         .color-picker::-webkit-color-swatch { border: none; border-radius: 10px; }
@@ -46,7 +46,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WXHC5G0TQ"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-5WXHC5G0TQ");</script>
 </head>
-<body class="text-gray-800">
+<body class="text-gray-200">
     <header class="gradient-bg py-4 px-4">
         <div class="max-w-6xl mx-auto flex items-center justify-between">
             <a href="/fr/" class="flex items-center gap-2">
@@ -132,9 +132,9 @@
         <div class="max-w-5xl mx-auto">
             <h2 class="text-2xl font-bold text-center text-white mb-10">Pourquoi utiliser notre générateur?</h2>
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="card p-6"><div class="icon-box bg-indigo-100 mb-4"><i data-lucide="zap" class="w-6 h-6 text-indigo-600"></i></div><h3 class="text-lg font-bold text-gray-900 mb-2">Génération instantanée</h3><p class="text-gray-600 text-sm">Créez des QR codes en millisecondes. Sans attente.</p></div>
-                <div class="card p-6"><div class="icon-box bg-green-100 mb-4"><i data-lucide="shield-check" class="w-6 h-6 text-green-600"></i></div><h3 class="text-lg font-bold text-gray-900 mb-2">100% Privé</h3><p class="text-gray-600 text-sm">Tout est traité localement dans votre navigateur.</p></div>
-                <div class="card p-6"><div class="icon-box bg-purple-100 mb-4"><i data-lucide="palette" class="w-6 h-6 text-purple-600"></i></div><h3 class="text-lg font-bold text-gray-900 mb-2">Entièrement personnalisable</h3><p class="text-gray-600 text-sm">Couleurs, tailles et niveaux de correction ajustables.</p></div>
+                <div class="card p-6"><div class="icon-box bg-green-900/30 mb-4"><i data-lucide="zap" class="w-6 h-6 text-green-400"></i></div><h3 class="text-lg font-bold text-gray-900 mb-2">Génération instantanée</h3><p class="text-gray-600 text-sm">Créez des QR codes en millisecondes. Sans attente.</p></div>
+                <div class="card p-6"><div class="icon-box bg-blue-900/30 mb-4"><i data-lucide="shield-check" class="w-6 h-6 text-blue-400"></i></div><h3 class="text-lg font-bold text-gray-900 mb-2">100% Privé</h3><p class="text-gray-600 text-sm">Tout est traité localement dans votre navigateur.</p></div>
+                <div class="card p-6"><div class="icon-box bg-purple-900/30 mb-4"><i data-lucide="palette" class="w-6 h-6 text-purple-400"></i></div><h3 class="text-lg font-bold text-gray-900 mb-2">Entièrement personnalisable</h3><p class="text-gray-600 text-sm">Couleurs, tailles et niveaux de correction ajustables.</p></div>
             </div>
         </div>
     </section>
@@ -146,50 +146,50 @@
             <h2 class="text-2xl font-bold text-center text-white mb-4">Types de Codes QR Populaires</h2>
             <p class="text-center text-white/80 mb-10">Générateurs spécialisés pour les cas d'utilisation courants</p>
             <div class="grid md:grid-cols-4 gap-6">
-                <a href="./wifi/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
-                    <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-200 transition-colors">
-                        <i data-lucide="wifi" class="w-8 h-8 text-indigo-600"></i>
+                <a href="./wifi/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
+                    <div class="w-16 h-16 bg-indigo-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-800/60 transition-colors">
+                        <i data-lucide="wifi" class="w-8 h-8 text-green-400"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Code QR WiFi</h3>
                     <p class="text-gray-600 text-sm">Partagez votre mot de passe instantanément</p>
                 </a>
-                <a href="./vcard/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
-                    <div class="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-200 transition-colors">
+                <a href="./vcard/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
+                    <div class="w-16 h-16 bg-emerald-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-800/60 transition-colors">
                         <i data-lucide="contact" class="w-8 h-8 text-emerald-600"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Code QR vCard</h3>
                     <p class="text-gray-600 text-sm">Carte de visite numérique</p>
                 </a>
-                <a href="./menu/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
-                    <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-200 transition-colors">
-                        <i data-lucide="utensils" class="w-8 h-8 text-red-600"></i>
+                <a href="./menu/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
+                    <div class="w-16 h-16 bg-red-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-800/60 transition-colors">
+                        <i data-lucide="utensils" class="w-8 h-8 text-red-400"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Code QR Menu</h3>
                     <p class="text-gray-600 text-sm">Menu sans contact pour restaurants</p>
                 </a>
-                <a href="./whatsapp/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
-                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 transition-colors">
-                        <i data-lucide="message-circle" class="w-8 h-8 text-green-600"></i>
+                <a href="./whatsapp/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
+                    <div class="w-16 h-16 bg-green-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-800/60 transition-colors">
+                        <i data-lucide="message-circle" class="w-8 h-8 text-blue-400"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">QR WhatsApp</h3>
                     <p class="text-gray-600 text-sm">Ouvrir une conversation instantanément</p>
                 </a>
-                <a href="./instagram/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
-                    <div class="w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-200 transition-colors">
+                <a href="./instagram/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
+                    <div class="w-16 h-16 bg-pink-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-800/60 transition-colors">
                         <i data-lucide="instagram" class="w-8 h-8 text-pink-600"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">QR Instagram</h3>
                     <p class="text-gray-600 text-sm">Lien vers votre profil</p>
                 </a>
-                <a href="./location/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
-                        <i data-lucide="map-pin" class="w-8 h-8 text-blue-600"></i>
+                <a href="./location/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
+                    <div class="w-16 h-16 bg-blue-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-800/60 transition-colors">
+                        <i data-lucide="map-pin" class="w-8 h-8 text-cyan-400"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">QR Localisation</h3>
                     <p class="text-gray-600 text-sm">Itinéraire Google Maps</p>
                 </a>
-                <a href="./app/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
-                    <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-gray-200 transition-colors">
+                <a href="./app/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
+                    <div class="w-16 h-16 bg-gray-700/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-gray-600/60 transition-colors">
                         <i data-lucide="smartphone" class="w-8 h-8 text-gray-600"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">QR App Store</h3>
