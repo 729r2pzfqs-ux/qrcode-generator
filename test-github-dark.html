@@ -115,7 +115,7 @@
         body { background: #0d1117; min-height: 100vh; }
         .gradient-bg { background: #161b22; }
         .card { background: #161b22; border: 1px solid #30363d; border-radius: 16px; box-shadow: none; }
-        .qr-preview { background: #0d1117; border: 2px solid #30363d; border-radius: 16px; min-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .qr-preview { background: white; border: none; border-radius: 16px; min-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         .tab-active { background: #238636; color: white; }
         .tab-inactive { background: #21262d; color: #8b949e; }
         .tab-inactive:hover { background: #30363d; }
@@ -238,7 +238,7 @@
                     <div class="lg:w-96 qr-preview-container">
                         <div class="qr-preview p-8">
                             <div id="qrcode"></div>
-                            <p class="text-xs text-gray-400 mt-4 text-center">Scan with any smartphone camera</p>
+                            <p class="text-xs text-gray-500 mt-4 text-center">Scan with any smartphone camera</p>
                         </div>
                         <div class="flex gap-3 mt-4">
                             <button id="downloadPNG" class="btn-primary flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><i data-lucide="download" class="w-4 h-4"></i> PNG</button>
