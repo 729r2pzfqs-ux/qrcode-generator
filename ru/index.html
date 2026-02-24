@@ -25,7 +25,44 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>*{font-family:'Inter',sans-serif}body{background:linear-gradient(135deg,#4F46E5 0%,#7C3AED 100%);min-height:100vh}.gradient-bg{background:linear-gradient(135deg,#4F46E5 0%,#7C3AED 100%)}.card{background:white;border-radius:16px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)}.qr-preview{background:white;border:2px solid #e5e7eb;border-radius:16px}.tab-active{background:#4F46E5;color:white}.tab-inactive{background:#f1f5f9;color:#64748b}.btn-primary{background:#4F46E5}.btn-primary:hover{background:#4338CA}.btn-success{background:#10B981}.input-field{border:2px solid #e5e7eb}.input-field:focus{border-color:#4F46E5;outline:none}.color-picker{-webkit-appearance:none;width:48px;height:48px;border:2px solid #e5e7eb;border-radius:12px;cursor:pointer}.color-picker::-webkit-color-swatch-wrapper{padding:0}.color-picker::-webkit-color-swatch{border:none;border-radius:10px}.icon-box{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center}@media(max-width:768px){.qr-section{flex-direction:column}.qr-preview-container{order:-1;margin-bottom:1.5rem}.tab-scroll{overflow-x:auto}}</style>
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        /* GitHub Dark Theme */
+        body { background: #0d1117; min-height: 100vh; }
+        .gradient-bg { background: #161b22; }
+        .card { background: #161b22; border: 1px solid #30363d; border-radius: 16px; box-shadow: none; }
+        .qr-preview { background: white; border: none; border-radius: 16px; min-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .tab-active { background: #238636; color: white; }
+        .tab-inactive { background: #21262d; color: #8b949e; }
+        .tab-inactive:hover { background: #30363d; }
+        .btn-primary { background: #238636; transition: all 0.2s; }
+        .btn-primary:hover { background: #2ea043; }
+        .btn-success { background: #1f6feb; }
+        .btn-success:hover { background: #388bfd; }
+        .input-field { background: #0d1117; border: 2px solid #30363d; color: #c9d1d9; transition: all 0.2s; }
+        .input-field:focus { border-color: #58a6ff; outline: none; box-shadow: 0 0 0 3px rgba(56, 139, 253, 0.3); }
+        .color-picker { -webkit-appearance: none; width: 48px; height: 48px; border: 2px solid #30363d; border-radius: 12px; cursor: pointer; background: #0d1117; }
+        .color-picker::-webkit-color-swatch-wrapper { padding: 0; }
+        .color-picker::-webkit-color-swatch { border: none; border-radius: 10px; }
+        .icon-box { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+        #qrcode { display: flex; justify-content: center; align-items: center; }
+        #qrcode canvas, #qrcode img { border-radius: 8px; }
+        .feature-card { background: #161b22; border: 1px solid #30363d; }
+        .feature-card:hover { border-color: #8b949e; }
+        .qr-type-card { background: #161b22; border: 1px solid #30363d; transition: all 0.2s; }
+        .qr-type-card:hover { border-color: #58a6ff; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+        /* Override Tailwind text colors for dark theme */
+        .text-gray-800, .text-gray-900 { color: #c9d1d9 !important; }
+        .text-gray-700 { color: #c9d1d9 !important; }
+        .text-gray-600 { color: #8b949e !important; }
+        .text-gray-500 { color: #8b949e !important; }
+        .text-gray-400 { color: #6e7681 !important; }
+        @media (max-width: 1023px) {
+            .qr-section { flex-direction: column; }
+            .qr-preview-container { order: -1; margin-bottom: 1.5rem; }
+        }
+    </style>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WXHC5G0TQ"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-5WXHC5G0TQ");</script>
