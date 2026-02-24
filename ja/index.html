@@ -24,7 +24,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         * { font-family: 'Inter', sans-serif; }
         /* GitHub Dark Theme */
@@ -68,72 +68,12 @@
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-5WXHC5G0TQ");</script>
 </head>
 <body class="text-gray-200">
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-  <symbol id="icon-qr-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/>
-  </symbol>
-  <symbol id="icon-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-  </symbol>
-  <symbol id="icon-type" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/>
-  </symbol>
-  <symbol id="icon-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/>
-  </symbol>
-  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-  </symbol>
-  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-  </symbol>
-  <symbol id="icon-message-square" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-  </symbol>
-  <symbol id="icon-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.555C21.965 6.012 17.461 2 12 2z"/>
-  </symbol>
-  <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>
-  </symbol>
-  <symbol id="icon-file-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/>
-  </symbol>
-  <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
-  </symbol>
-  <symbol id="icon-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>
-  </symbol>
-  <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-  </symbol>
-  <symbol id="icon-smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>
-  </symbol>
-  <symbol id="icon-contact" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"/><rect width="18" height="18" x="3" y="4" rx="2"/><circle cx="12" cy="10" r="2"/><line x1="8" x2="8" y1="2" y2="4"/><line x1="16" x2="16" y1="2" y2="4"/>
-  </symbol>
-  <symbol id="icon-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
-  </symbol>
-  <symbol id="icon-message-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
-  </symbol>
-  <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-  </symbol>
-  <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>
-  </symbol>
-</svg>
-
-    <header class="gradient-bg py-4 px-4"><div class="max-w-6xl mx-auto flex items-center justify-between"><a href="/ja/" class="flex items-center gap-2"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><svg aria-hidden="true" style="width:1.5rem;height:1.5rem;" class="w-6 h-6 text-white"><use href="#icon-qr-code"/></svg></div><span class="text-xl font-bold text-white">QRコード作成</span></a>
+    <header class="gradient-bg py-4 px-4"><div class="max-w-6xl mx-auto flex items-center justify-between"><a href="/ja/" class="flex items-center gap-2"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><i data-lucide="qr-code" class="w-6 h-6 text-white"></i></div><span class="text-xl font-bold text-white">QRコード作成</span></a>
             <a href="./blog/" class="text-white/80 hover:text-white text-sm font-medium hidden sm:block">ブログ</a>
             <select onchange="window.location.href=this.value" class="bg-white/20 text-white text-sm rounded-lg px-3 py-2 border border-white/30"><option value="/" class="text-gray-800">English</option><option value="/es/" class="text-gray-800">Español</option><option value="/de/" class="text-gray-800">Deutsch</option><option value="/fr/" class="text-gray-800">Français</option><option value="/pt/" class="text-gray-800">Português</option><option value="/zh/" class="text-gray-800">中文</option><option value="/ja/" selected class="text-gray-800">日本語</option><option value="/ar/" class="text-gray-800">العربية</option><option value="/hi/" class="text-gray-800">हिन्दी</option><option value="/ru/" class="text-gray-800">Русский</option><option value="/tr/" class="text-gray-800">Türkçe</option></select></div></header>
     <section class="gradient-bg px-4 pt-8 pb-16"><div class="max-w-3xl mx-auto text-center"><h1 class="text-3xl md:text-4xl font-bold text-white mb-3">無料QRコードジェネレーター</h1><p class="text-lg text-white/80">数秒でカスタムQRコードを作成。登録不要。</p></div></section>
-    <main class="px-4 -mt-8 pb-16"><div class="max-w-4xl mx-auto"><div class="card p-6 md:p-8"><div class="flex flex-col lg:flex-row gap-8 qr-section"><div class="flex-1"><div class="tab-scroll flex gap-2 mb-6"><button class="tab-btn tab-active px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="url"><svg aria-hidden="true" style="width:1rem;height:1rem;" class="w-4 h-4"><use href="#icon-link"/></svg> URL</button><button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="text"><svg aria-hidden="true" style="width:1rem;height:1rem;" class="w-4 h-4"><use href="#icon-type"/></svg> テキスト</button><button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="wifi"><svg aria-hidden="true" style="width:1rem;height:1rem;" class="w-4 h-4"><use href="#icon-wifi"/></svg> WiFi</button><button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="email"><svg aria-hidden="true" style="width:1rem;height:1rem;" class="w-4 h-4"><use href="#icon-mail"/></svg> メール</button><button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="phone"><svg aria-hidden="true" style="width:1rem;height:1rem;" class="w-4 h-4"><use href="#icon-phone"/></svg> 電話</button></div><div id="inputFields"><div id="input-url" class="input-group"><label class="block text-sm font-semibold text-gray-700 mb-2">ウェブサイトURL</label><input type="url" id="urlInput" class="input-field w-full px-4 py-3 rounded-xl" placeholder="https://example.com" value="https://example.com"></div><div id="input-text" class="input-group hidden"><label class="block text-sm font-semibold text-gray-700 mb-2">テキスト</label><textarea id="textInput" class="input-field w-full px-4 py-3 rounded-xl resize-none" rows="4" placeholder="テキストを入力..."></textarea></div><div id="input-wifi" class="input-group hidden space-y-4"><div><label class="block text-sm font-semibold text-gray-700 mb-2">ネットワーク名 (SSID)</label><input type="text" id="wifiSSID" class="input-field w-full px-4 py-3 rounded-xl" placeholder="MyWiFi"></div><div><label class="block text-sm font-semibold text-gray-700 mb-2">パスワード</label><input type="text" id="wifiPass" class="input-field w-full px-4 py-3 rounded-xl" placeholder="password123"></div><div><label class="block text-sm font-semibold text-gray-700 mb-2">セキュリティ</label><select id="wifiSec" class="input-field w-full px-4 py-3 rounded-xl"><option value="WPA">WPA/WPA2</option><option value="WEP">WEP</option><option value="nopass">パスワードなし</option></select></div></div><div id="input-email" class="input-group hidden space-y-4"><div><label class="block text-sm font-semibold text-gray-700 mb-2">メールアドレス</label><input type="email" id="emailAddr" class="input-field w-full px-4 py-3 rounded-xl" placeholder="hello@example.com"></div><div><label class="block text-sm font-semibold text-gray-700 mb-2">件名（任意）</label><input type="text" id="emailSubj" class="input-field w-full px-4 py-3 rounded-xl" placeholder="こんにちは"></div><div><label class="block text-sm font-semibold text-gray-700 mb-2">メッセージ（任意）</label><textarea id="emailBody" class="input-field w-full px-4 py-3 rounded-xl resize-none" rows="3" placeholder="メッセージ..."></textarea></div></div><div id="input-phone" class="input-group hidden"><label class="block text-sm font-semibold text-gray-700 mb-2">電話番号</label><input type="tel" id="phoneInput" class="input-field w-full px-4 py-3 rounded-xl" placeholder="+81123456789"></div></div><div class="mt-6 pt-6 border-t border-gray-200"><h3 class="text-sm font-bold text-gray-700 mb-4 flex items-center gap-2"><svg aria-hidden="true" style="width:1rem;height:1rem;" class="w-4 h-4"><use href="#icon-palette"/></svg> カスタマイズ</h3><div class="grid grid-cols-2 md:grid-cols-4 gap-4"><div><label class="block text-xs font-medium text-gray-500 mb-2">QR色</label><input type="color" id="qrColor" class="color-picker" value="#000000"></div><div><label class="block text-xs font-medium text-gray-500 mb-2">背景</label><input type="color" id="bgColor" class="color-picker" value="#FFFFFF"></div><div><label class="block text-xs font-medium text-gray-500 mb-2">サイズ</label><select id="qrSize" class="input-field w-full px-3 py-3 rounded-xl text-sm"><option value="200">200px</option><option value="300" selected>300px</option><option value="400">400px</option><option value="500">500px</option></select></div><div><label class="block text-xs font-medium text-gray-500 mb-2">誤り訂正</label><select id="errorLevel" class="input-field w-full px-3 py-3 rounded-xl text-sm"><option value="L">低</option><option value="M" selected>中</option><option value="Q">高</option><option value="H">最高</option></select></div></div></div></div><div class="lg:w-80 qr-preview-container"><div class="qr-preview p-6 flex flex-col items-center"><div id="qrcode"></div><p class="text-xs text-gray-400 mt-4">スマホのカメラでスキャン</p></div><div class="flex gap-3 mt-4"><button id="downloadPNG" class="btn-primary flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><svg aria-hidden="true" style="width:1rem;height:1rem;" class="w-4 h-4"><use href="#icon-download"/></svg> PNG</button><button id="downloadSVG" class="btn-success flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><svg aria-hidden="true" style="width:1rem;height:1rem;" class="w-4 h-4"><use href="#icon-download"/></svg> SVG</button></div></div></div></div></div></main>
-    <section class="px-4 py-16"><div class="max-w-5xl mx-auto"><h2 class="text-2xl font-bold text-center text-white mb-10">なぜ当ジェネレーターを使うのか？</h2><div class="grid md:grid-cols-3 gap-6"><div class="card p-6"><div class="icon-box bg-green-900/30 mb-4"><svg aria-hidden="true" style="width:1.5rem;height:1.5rem;" class="w-6 h-6 text-green-400"><use href="#icon-zap"/></svg></div><h3 class="text-lg font-bold text-gray-900 mb-2">即時生成</h3><p class="text-gray-600 text-sm">ミリ秒でQRコードを作成。待ち時間なし。</p></div><div class="card p-6"><div class="icon-box bg-blue-900/30 mb-4"><svg aria-hidden="true" style="width:1.5rem;height:1.5rem;" class="w-6 h-6 text-blue-400"><use href="#icon-shield-check"/></svg></div><h3 class="text-lg font-bold text-gray-900 mb-2">100%プライベート</h3><p class="text-gray-600 text-sm">すべてブラウザ内で処理。データは外部に送信されません。</p></div><div class="card p-6"><div class="icon-box bg-purple-900/30 mb-4"><svg aria-hidden="true" style="width:1.5rem;height:1.5rem;" class="w-6 h-6 text-purple-400"><use href="#icon-palette"/></svg></div><h3 class="text-lg font-bold text-gray-900 mb-2">完全カスタマイズ</h3><p class="text-gray-600 text-sm">色、サイズ、誤り訂正レベルを調整可能。</p></div></div></div></section>
+    <main class="px-4 -mt-8 pb-16"><div class="max-w-4xl mx-auto"><div class="card p-6 md:p-8"><div class="flex flex-col lg:flex-row gap-8 qr-section"><div class="flex-1"><div class="tab-scroll flex gap-2 mb-6"><button class="tab-btn tab-active px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="url"><i data-lucide="link" class="w-4 h-4"></i> URL</button><button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="text"><i data-lucide="type" class="w-4 h-4"></i> テキスト</button><button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="wifi"><i data-lucide="wifi" class="w-4 h-4"></i> WiFi</button><button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="email"><i data-lucide="mail" class="w-4 h-4"></i> メール</button><button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="phone"><i data-lucide="phone" class="w-4 h-4"></i> 電話</button></div><div id="inputFields"><div id="input-url" class="input-group"><label class="block text-sm font-semibold text-gray-700 mb-2">ウェブサイトURL</label><input type="url" id="urlInput" class="input-field w-full px-4 py-3 rounded-xl" placeholder="https://example.com" value="https://example.com"></div><div id="input-text" class="input-group hidden"><label class="block text-sm font-semibold text-gray-700 mb-2">テキスト</label><textarea id="textInput" class="input-field w-full px-4 py-3 rounded-xl resize-none" rows="4" placeholder="テキストを入力..."></textarea></div><div id="input-wifi" class="input-group hidden space-y-4"><div><label class="block text-sm font-semibold text-gray-700 mb-2">ネットワーク名 (SSID)</label><input type="text" id="wifiSSID" class="input-field w-full px-4 py-3 rounded-xl" placeholder="MyWiFi"></div><div><label class="block text-sm font-semibold text-gray-700 mb-2">パスワード</label><input type="text" id="wifiPass" class="input-field w-full px-4 py-3 rounded-xl" placeholder="password123"></div><div><label class="block text-sm font-semibold text-gray-700 mb-2">セキュリティ</label><select id="wifiSec" class="input-field w-full px-4 py-3 rounded-xl"><option value="WPA">WPA/WPA2</option><option value="WEP">WEP</option><option value="nopass">パスワードなし</option></select></div></div><div id="input-email" class="input-group hidden space-y-4"><div><label class="block text-sm font-semibold text-gray-700 mb-2">メールアドレス</label><input type="email" id="emailAddr" class="input-field w-full px-4 py-3 rounded-xl" placeholder="hello@example.com"></div><div><label class="block text-sm font-semibold text-gray-700 mb-2">件名（任意）</label><input type="text" id="emailSubj" class="input-field w-full px-4 py-3 rounded-xl" placeholder="こんにちは"></div><div><label class="block text-sm font-semibold text-gray-700 mb-2">メッセージ（任意）</label><textarea id="emailBody" class="input-field w-full px-4 py-3 rounded-xl resize-none" rows="3" placeholder="メッセージ..."></textarea></div></div><div id="input-phone" class="input-group hidden"><label class="block text-sm font-semibold text-gray-700 mb-2">電話番号</label><input type="tel" id="phoneInput" class="input-field w-full px-4 py-3 rounded-xl" placeholder="+81123456789"></div></div><div class="mt-6 pt-6 border-t border-gray-200"><h3 class="text-sm font-bold text-gray-700 mb-4 flex items-center gap-2"><i data-lucide="palette" class="w-4 h-4"></i> カスタマイズ</h3><div class="grid grid-cols-2 md:grid-cols-4 gap-4"><div><label class="block text-xs font-medium text-gray-500 mb-2">QR色</label><input type="color" id="qrColor" class="color-picker" value="#000000"></div><div><label class="block text-xs font-medium text-gray-500 mb-2">背景</label><input type="color" id="bgColor" class="color-picker" value="#FFFFFF"></div><div><label class="block text-xs font-medium text-gray-500 mb-2">サイズ</label><select id="qrSize" class="input-field w-full px-3 py-3 rounded-xl text-sm"><option value="200">200px</option><option value="300" selected>300px</option><option value="400">400px</option><option value="500">500px</option></select></div><div><label class="block text-xs font-medium text-gray-500 mb-2">誤り訂正</label><select id="errorLevel" class="input-field w-full px-3 py-3 rounded-xl text-sm"><option value="L">低</option><option value="M" selected>中</option><option value="Q">高</option><option value="H">最高</option></select></div></div></div></div><div class="lg:w-80 qr-preview-container"><div class="qr-preview p-6 flex flex-col items-center"><div id="qrcode"></div><p class="text-xs text-gray-400 mt-4">スマホのカメラでスキャン</p></div><div class="flex gap-3 mt-4"><button id="downloadPNG" class="btn-primary flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><i data-lucide="download" class="w-4 h-4"></i> PNG</button><button id="downloadSVG" class="btn-success flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><i data-lucide="download" class="w-4 h-4"></i> SVG</button></div></div></div></div></div></main>
+    <section class="px-4 py-16"><div class="max-w-5xl mx-auto"><h2 class="text-2xl font-bold text-center text-white mb-10">なぜ当ジェネレーターを使うのか？</h2><div class="grid md:grid-cols-3 gap-6"><div class="card p-6"><div class="icon-box bg-green-900/30 mb-4"><i data-lucide="zap" class="w-6 h-6 text-green-400"></i></div><h3 class="text-lg font-bold text-gray-900 mb-2">即時生成</h3><p class="text-gray-600 text-sm">ミリ秒でQRコードを作成。待ち時間なし。</p></div><div class="card p-6"><div class="icon-box bg-blue-900/30 mb-4"><i data-lucide="shield-check" class="w-6 h-6 text-blue-400"></i></div><h3 class="text-lg font-bold text-gray-900 mb-2">100%プライベート</h3><p class="text-gray-600 text-sm">すべてブラウザ内で処理。データは外部に送信されません。</p></div><div class="card p-6"><div class="icon-box bg-purple-900/30 mb-4"><i data-lucide="palette" class="w-6 h-6 text-purple-400"></i></div><h3 class="text-lg font-bold text-gray-900 mb-2">完全カスタマイズ</h3><p class="text-gray-600 text-sm">色、サイズ、誤り訂正レベルを調整可能。</p></div></div></div></section>
     
     <!-- Popular QR Code Types -->
     <section class="px-4 py-16">
@@ -143,49 +83,49 @@
             <div class="grid md:grid-cols-4 gap-6">
                 <a href="./wifi/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-indigo-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-800/60 transition-colors">
-                        <svg aria-hidden="true" style="width:2rem;height:2rem;" class="w-8 h-8 text-green-400"><use href="#icon-wifi"/></svg>
+                        <i data-lucide="wifi" class="w-8 h-8 text-green-400"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">WiFi QRコード</h3>
                     <p class="text-gray-600 text-sm">パスワードを即座に共有</p>
                 </a>
                 <a href="./vcard/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-emerald-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-800/60 transition-colors">
-                        <svg aria-hidden="true" style="width:2rem;height:2rem;" class="w-8 h-8 text-emerald-600"><use href="#icon-contact"/></svg>
+                        <i data-lucide="contact" class="w-8 h-8 text-emerald-600"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">vCard QRコード</h3>
                     <p class="text-gray-600 text-sm">デジタル名刺</p>
                 </a>
                 <a href="./menu/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-red-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-800/60 transition-colors">
-                        <svg aria-hidden="true" style="width:2rem;height:2rem;" class="w-8 h-8 text-red-400"><use href="#icon-utensils"/></svg>
+                        <i data-lucide="utensils" class="w-8 h-8 text-red-400"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">メニューQRコード</h3>
                     <p class="text-gray-600 text-sm">レストランの非接触メニュー</p>
                 </a>
                 <a href="./whatsapp/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-green-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-800/60 transition-colors">
-                        <svg aria-hidden="true" style="width:2rem;height:2rem;" class="w-8 h-8 text-blue-400"><use href="#icon-message-circle"/></svg>
+                        <i data-lucide="message-circle" class="w-8 h-8 text-blue-400"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">WhatsApp QR</h3>
                     <p class="text-gray-600 text-sm">チャットを即座に開く</p>
                 </a>
                 <a href="./instagram/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-pink-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-800/60 transition-colors">
-                        <svg aria-hidden="true" style="width:2rem;height:2rem;" class="w-8 h-8 text-pink-600"><use href="#icon-instagram"/></svg>
+                        <i data-lucide="instagram" class="w-8 h-8 text-pink-600"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Instagram QR</h3>
                     <p class="text-gray-600 text-sm">プロフィールへのリンク</p>
                 </a>
                 <a href="./location/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-blue-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-800/60 transition-colors">
-                        <svg aria-hidden="true" style="width:2rem;height:2rem;" class="w-8 h-8 text-cyan-400"><use href="#icon-map-pin"/></svg>
+                        <i data-lucide="map-pin" class="w-8 h-8 text-cyan-400"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">位置情報QR</h3>
                     <p class="text-gray-600 text-sm">Google マップの道順</p>
                 </a>
                 <a href="./app/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-gray-700/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-gray-600/60 transition-colors">
-                        <svg aria-hidden="true" style="width:2rem;height:2rem;" class="w-8 h-8 text-gray-600"><use href="#icon-smartphone"/></svg>
+                        <i data-lucide="smartphone" class="w-8 h-8 text-gray-600"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">App Store QR</h3>
                     <p class="text-gray-600 text-sm">iOS & Android ダウンロード</p>
@@ -217,7 +157,8 @@
     let qr = null;
 
     window.addEventListener('load', function() {
-        if (typeof lucide !== 'undefined') generateQR();
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        generateQR();
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', () => selectType(btn.dataset.type));
         });
@@ -238,7 +179,8 @@
         document.querySelector('[data-type="'+type+'"]').classList.add('tab-active');
         document.querySelectorAll('.input-group').forEach(g => g.classList.add('hidden'));
         document.getElementById('input-'+type).classList.remove('hidden');
-        if (typeof lucide !== 'undefined') generateQR();
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        generateQR();
     }
 
     function getData() {
