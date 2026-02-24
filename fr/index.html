@@ -130,7 +130,7 @@
         <div class="max-w-6xl mx-auto flex items-center justify-between">
             <a href="/fr/" class="flex items-center gap-2">
                 <div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
-                    <svg class="w-6 h-6 text-white"><use href="#icon-qr-code"/></svg>
+                    <svg aria-hidden="true" class="w-6 h-6 text-white"><use href="#icon-qr-code"/></svg>
                 </div>
                 <span class="text-xl font-bold text-white">QRCodes.win</span>
             </a>
@@ -152,11 +152,11 @@
                 <div class="flex flex-col lg:flex-row gap-8 qr-section">
                     <div class="flex-1">
                         <div class="tab-scroll flex gap-2 mb-6">
-                            <button class="tab-btn tab-active px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="url"><svg class="w-4 h-4"><use href="#icon-link"/></svg> URL</button>
-                            <button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="text"><svg class="w-4 h-4"><use href="#icon-type"/></svg> Texte</button>
-                            <button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="wifi"><svg class="w-4 h-4"><use href="#icon-wifi"/></svg> WiFi</button>
-                            <button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="email"><svg class="w-4 h-4"><use href="#icon-mail"/></svg> Email</button>
-                            <button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="phone"><svg class="w-4 h-4"><use href="#icon-phone"/></svg> Téléphone</button>
+                            <button class="tab-btn tab-active px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="url"><svg aria-hidden="true" class="w-4 h-4"><use href="#icon-link"/></svg> URL</button>
+                            <button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="text"><svg aria-hidden="true" class="w-4 h-4"><use href="#icon-type"/></svg> Texte</button>
+                            <button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="wifi"><svg aria-hidden="true" class="w-4 h-4"><use href="#icon-wifi"/></svg> WiFi</button>
+                            <button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="email"><svg aria-hidden="true" class="w-4 h-4"><use href="#icon-mail"/></svg> Email</button>
+                            <button class="tab-btn tab-inactive px-4 py-2.5 rounded-lg font-medium text-sm flex items-center gap-2" data-type="phone"><svg aria-hidden="true" class="w-4 h-4"><use href="#icon-phone"/></svg> Téléphone</button>
                         </div>
                         <div id="inputFields">
                             <div id="input-url" class="input-group">
@@ -183,7 +183,7 @@
                             </div>
                         </div>
                         <div class="mt-6 pt-6 border-t border-gray-200">
-                            <h3 class="text-sm font-bold text-gray-700 mb-4 flex items-center gap-2"><svg class="w-4 h-4"><use href="#icon-palette"/></svg> Personnaliser</h3>
+                            <h3 class="text-sm font-bold text-gray-700 mb-4 flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4"><use href="#icon-palette"/></svg> Personnaliser</h3>
                             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                                 <div><label class="block text-xs font-medium text-gray-500 mb-2">Couleur QR</label><input type="color" id="qrColor" class="color-picker" value="#000000"></div>
                                 <div><label class="block text-xs font-medium text-gray-500 mb-2">Fond</label><input type="color" id="bgColor" class="color-picker" value="#FFFFFF"></div>
@@ -198,8 +198,8 @@
                             <p class="text-xs text-gray-400 mt-4">Scannez avec l'appareil photo</p>
                         </div>
                         <div class="flex gap-3 mt-4">
-                            <button id="downloadPNG" class="btn-primary flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><svg class="w-4 h-4"><use href="#icon-download"/></svg> PNG</button>
-                            <button id="downloadSVG" class="btn-success flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><svg class="w-4 h-4"><use href="#icon-download"/></svg> SVG</button>
+                            <button id="downloadPNG" class="btn-primary flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><svg aria-hidden="true" class="w-4 h-4"><use href="#icon-download"/></svg> PNG</button>
+                            <button id="downloadSVG" class="btn-success flex-1 py-3 rounded-xl text-white font-semibold flex items-center justify-center gap-2"><svg aria-hidden="true" class="w-4 h-4"><use href="#icon-download"/></svg> SVG</button>
                         </div>
                     </div>
                 </div>
@@ -211,9 +211,9 @@
         <div class="max-w-5xl mx-auto">
             <h2 class="text-2xl font-bold text-center text-white mb-10">Pourquoi utiliser notre générateur?</h2>
             <div class="grid md:grid-cols-3 gap-6">
-                <div class="card p-6"><div class="icon-box bg-green-900/30 mb-4"><svg class="w-6 h-6 text-green-400"><use href="#icon-zap"/></svg></div><h3 class="text-lg font-bold text-gray-900 mb-2">Génération instantanée</h3><p class="text-gray-600 text-sm">Créez des QR codes en millisecondes. Sans attente.</p></div>
-                <div class="card p-6"><div class="icon-box bg-blue-900/30 mb-4"><svg class="w-6 h-6 text-blue-400"><use href="#icon-shield-check"/></svg></div><h3 class="text-lg font-bold text-gray-900 mb-2">100% Privé</h3><p class="text-gray-600 text-sm">Tout est traité localement dans votre navigateur.</p></div>
-                <div class="card p-6"><div class="icon-box bg-purple-900/30 mb-4"><svg class="w-6 h-6 text-purple-400"><use href="#icon-palette"/></svg></div><h3 class="text-lg font-bold text-gray-900 mb-2">Entièrement personnalisable</h3><p class="text-gray-600 text-sm">Couleurs, tailles et niveaux de correction ajustables.</p></div>
+                <div class="card p-6"><div class="icon-box bg-green-900/30 mb-4"><svg aria-hidden="true" class="w-6 h-6 text-green-400"><use href="#icon-zap"/></svg></div><h3 class="text-lg font-bold text-gray-900 mb-2">Génération instantanée</h3><p class="text-gray-600 text-sm">Créez des QR codes en millisecondes. Sans attente.</p></div>
+                <div class="card p-6"><div class="icon-box bg-blue-900/30 mb-4"><svg aria-hidden="true" class="w-6 h-6 text-blue-400"><use href="#icon-shield-check"/></svg></div><h3 class="text-lg font-bold text-gray-900 mb-2">100% Privé</h3><p class="text-gray-600 text-sm">Tout est traité localement dans votre navigateur.</p></div>
+                <div class="card p-6"><div class="icon-box bg-purple-900/30 mb-4"><svg aria-hidden="true" class="w-6 h-6 text-purple-400"><use href="#icon-palette"/></svg></div><h3 class="text-lg font-bold text-gray-900 mb-2">Entièrement personnalisable</h3><p class="text-gray-600 text-sm">Couleurs, tailles et niveaux de correction ajustables.</p></div>
             </div>
         </div>
     </section>
@@ -227,49 +227,49 @@
             <div class="grid md:grid-cols-4 gap-6">
                 <a href="./wifi/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-indigo-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-800/60 transition-colors">
-                        <svg class="w-8 h-8 text-green-400"><use href="#icon-wifi"/></svg>
+                        <svg aria-hidden="true" class="w-8 h-8 text-green-400"><use href="#icon-wifi"/></svg>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Code QR WiFi</h3>
                     <p class="text-gray-600 text-sm">Partagez votre mot de passe instantanément</p>
                 </a>
                 <a href="./vcard/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-emerald-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-800/60 transition-colors">
-                        <svg class="w-8 h-8 text-emerald-600"><use href="#icon-contact"/></svg>
+                        <svg aria-hidden="true" class="w-8 h-8 text-emerald-600"><use href="#icon-contact"/></svg>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Code QR vCard</h3>
                     <p class="text-gray-600 text-sm">Carte de visite numérique</p>
                 </a>
                 <a href="./menu/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-red-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-800/60 transition-colors">
-                        <svg class="w-8 h-8 text-red-400"><use href="#icon-utensils"/></svg>
+                        <svg aria-hidden="true" class="w-8 h-8 text-red-400"><use href="#icon-utensils"/></svg>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Code QR Menu</h3>
                     <p class="text-gray-600 text-sm">Menu sans contact pour restaurants</p>
                 </a>
                 <a href="./whatsapp/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-green-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-800/60 transition-colors">
-                        <svg class="w-8 h-8 text-blue-400"><use href="#icon-message-circle"/></svg>
+                        <svg aria-hidden="true" class="w-8 h-8 text-blue-400"><use href="#icon-message-circle"/></svg>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">QR WhatsApp</h3>
                     <p class="text-gray-600 text-sm">Ouvrir une conversation instantanément</p>
                 </a>
                 <a href="./instagram/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-pink-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-800/60 transition-colors">
-                        <svg class="w-8 h-8 text-pink-600"><use href="#icon-instagram"/></svg>
+                        <svg aria-hidden="true" class="w-8 h-8 text-pink-600"><use href="#icon-instagram"/></svg>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">QR Instagram</h3>
                     <p class="text-gray-600 text-sm">Lien vers votre profil</p>
                 </a>
                 <a href="./location/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-blue-900/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-800/60 transition-colors">
-                        <svg class="w-8 h-8 text-cyan-400"><use href="#icon-map-pin"/></svg>
+                        <svg aria-hidden="true" class="w-8 h-8 text-cyan-400"><use href="#icon-map-pin"/></svg>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">QR Localisation</h3>
                     <p class="text-gray-600 text-sm">Itinéraire Google Maps</p>
                 </a>
                 <a href="./app/" class="block bg-[#161b22] border border-[#30363d] rounded-2xl p-6 text-center hover:border-[#58a6ff] hover:bg-[#1f2937] transition-all group">
                     <div class="w-16 h-16 bg-gray-700/40 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-gray-600/60 transition-colors">
-                        <svg class="w-8 h-8 text-gray-600"><use href="#icon-smartphone"/></svg>
+                        <svg aria-hidden="true" class="w-8 h-8 text-gray-600"><use href="#icon-smartphone"/></svg>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">QR App Store</h3>
                     <p class="text-gray-600 text-sm">Téléchargements iOS et Android</p>
