@@ -71,10 +71,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { font-family: 'Inter', sans-serif; }
-        body { background: #f1f5f9; min-height: 100vh; }
+        body { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); min-height: 100vh; }
         .glass { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); }
         .input-field { border: 2px solid #e5e7eb; }
-        .input-field:focus { border-color: #0ea5e9; outline: none; box-shadow: 0 0 0 3px rgba(79,70,229,0.1); }
+        .input-field:focus { border-color: #4F46E5; outline: none; box-shadow: 0 0 0 3px rgba(79,70,229,0.1); }
     </style>
 </head>
 <body class="text-gray-900">
@@ -118,7 +118,7 @@
                 <!-- Generator -->
                 <div class="max-w-full glass rounded-2xl p-6 shadow-xl">
                     <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
-                        <i data-lucide="settings" class="w-5 h-5 text-sky-600"></i>
+                        <i data-lucide="settings" class="w-5 h-5 text-indigo-600"></i>
                         WiFi Details
                     </h2>
                     
@@ -148,7 +148,7 @@
                         </div>
                         
                         <div class="flex items-center gap-2">
-                            <input type="checkbox" id="hidden" class="w-4 h-4 rounded text-sky-600">
+                            <input type="checkbox" id="hidden" class="w-4 h-4 rounded text-indigo-600">
                             <label for="hidden" class="text-sm text-gray-600">Hidden network</label>
                         </div>
                         
@@ -162,7 +162,7 @@
                 <!-- QR Display -->
                 <div class="max-w-full glass rounded-2xl p-6 shadow-xl flex flex-col">
                     <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
-                        <i data-lucide="scan" class="w-5 h-5 text-sky-600"></i>
+                        <i data-lucide="scan" class="w-5 h-5 text-indigo-600"></i>
                         Your WiFi QR Code
                     </h2>
                     
@@ -190,21 +190,21 @@
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="edit-3" class="w-8 h-8 text-sky-600"></i>
+                            <i data-lucide="edit-3" class="w-8 h-8 text-indigo-600"></i>
                         </div>
                         <h3 class="font-bold mb-2">1. Enter Details</h3>
                         <p class="text-gray-600 text-sm">Type your WiFi network name and password</p>
                     </div>
                     <div class="text-center">
                         <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="qr-code" class="w-8 h-8 text-sky-600"></i>
+                            <i data-lucide="qr-code" class="w-8 h-8 text-indigo-600"></i>
                         </div>
                         <h3 class="font-bold mb-2">2. Generate & Print</h3>
                         <p class="text-gray-600 text-sm">Download your QR code and print or display it</p>
                     </div>
                     <div class="text-center">
                         <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                            <i data-lucide="smartphone" class="w-8 h-8 text-sky-600"></i>
+                            <i data-lucide="smartphone" class="w-8 h-8 text-indigo-600"></i>
                         </div>
                         <h3 class="font-bold mb-2">3. Scan & Connect</h3>
                         <p class="text-gray-600 text-sm">Guests scan with their phone camera and connect instantly</p>
@@ -261,7 +261,7 @@
         </div>
     </main>
 
-    <footer class="py-8 px-4 text-center text-slate-400 text-sm">
+    <footer class="py-8 px-4 text-center text-white/60 text-sm">
         <p>© 2026 QRCodes.win - Free QR Code Generator</p>
         <div class="mt-2 flex flex-wrap justify-center gap-4">
             <a href="../" class="hover:text-white">Home</a>

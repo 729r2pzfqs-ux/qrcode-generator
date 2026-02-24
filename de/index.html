@@ -25,19 +25,19 @@
     
     <style>
         * { font-family: 'Inter', sans-serif; }
-        body { background: #f1f5f9; min-height: 100vh; }
-        .gradient-bg { background: #f1f5f9; }
+        body { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); min-height: 100vh; }
+        .gradient-bg { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); }
         .card { background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
         .qr-preview { background: white; border: 2px solid #e5e7eb; border-radius: 16px; }
-        .tab-active { background: #0ea5e9; color: white; }
-        .tab-inactive { background: #f1f5f9; color: #475569; }
+        .tab-active { background: #4F46E5; color: white; }
+        .tab-inactive { background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%); color: #475569; }
         .tab-inactive:hover { background: #e2e8f0; }
-        .btn-primary { background: #0ea5e9; transition: all 0.2s; }
-        .btn-primary:hover { background: #0284c7; }
+        .btn-primary { background: #4F46E5; transition: all 0.2s; }
+        .btn-primary:hover { background: #4338CA; }
         .btn-success { background: #10B981; }
         .btn-success:hover { background: #059669; }
         .input-field { border: 2px solid #e5e7eb; transition: all 0.2s; }
-        .input-field:focus { border-color: #0ea5e9; outline: none; box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15); }
+        .input-field:focus { border-color: #4F46E5; outline: none; box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1); }
         .color-picker { -webkit-appearance: none; width: 48px; height: 48px; border: 2px solid #e5e7eb; border-radius: 12px; cursor: pointer; overflow: hidden; padding: 0; }
         .color-picker::-webkit-color-swatch-wrapper { padding: 0; }
         .color-picker::-webkit-color-swatch { border: none; border-radius: 10px; }
@@ -201,10 +201,10 @@
 
     <section class="px-4 py-16">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-2xl font-bold text-center text-slate-800 mb-10">Warum unseren Generator nutzen?</h2>
+            <h2 class="text-2xl font-bold text-center text-white mb-10">Warum unseren Generator nutzen?</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="feature-card card p-6">
-                    <div class="icon-box bg-sky-100 mb-4"><i data-lucide="zap" class="w-6 h-6 text-sky-600"></i></div>
+                    <div class="icon-box bg-indigo-100 mb-4"><i data-lucide="zap" class="w-6 h-6 text-indigo-600"></i></div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Sofortige Erstellung</h3>
                     <p class="text-gray-600 text-sm">QR-Codes in Millisekunden erstellen. Keine Wartezeit.</p>
                 </div>
@@ -214,7 +214,7 @@
                     <p class="text-gray-600 text-sm">Alles wird lokal in Ihrem Browser verarbeitet. Wir sehen Ihre Daten nie.</p>
                 </div>
                 <div class="feature-card card p-6">
-                    <div class="icon-box bg-violet-100 mb-4"><i data-lucide="palette" class="w-6 h-6 text-violet-600"></i></div>
+                    <div class="icon-box bg-purple-100 mb-4"><i data-lucide="palette" class="w-6 h-6 text-purple-600"></i></div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Voll anpassbar</h3>
                     <p class="text-gray-600 text-sm">Individuelle Farben, verschiedene Größen und Korrekturstufen.</p>
                 </div>
@@ -231,7 +231,7 @@
             <div class="grid md:grid-cols-4 gap-6">
                 <a href="./wifi/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
                     <div class="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-indigo-200 transition-colors">
-                        <i data-lucide="wifi" class="w-8 h-8 text-sky-600"></i>
+                        <i data-lucide="wifi" class="w-8 h-8 text-indigo-600"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">WiFi QR-Code</h3>
                     <p class="text-gray-600 text-sm">Teilen Sie Ihr Passwort sofort</p>
@@ -245,7 +245,7 @@
                 </a>
                 <a href="./menu/" class="card p-6 text-center hover:shadow-lg transition-shadow group">
                     <div class="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-200 transition-colors">
-                        <i data-lucide="utensils" class="w-8 h-8 text-rose-600"></i>
+                        <i data-lucide="utensils" class="w-8 h-8 text-red-600"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Menü QR-Code</h3>
                     <p class="text-gray-600 text-sm">Kontaktloses Restaurantmenü</p>
@@ -282,19 +282,19 @@
         </div>
     </section>
 
-    <footer class="gradient-bg py-8 px-4 border-t border-slate-700">
+    <footer class="py-8 px-4 border-t border-white/20">
         <div class="max-w-5xl mx-auto">
             <div class="flex flex-wrap justify-center gap-4 mb-4 text-sm">
-                <a href="./wifi/" class="text-slate-300 hover:text-white transition-colors">WiFi QR-Code</a>
-                <a href="./vcard/" class="text-slate-300 hover:text-white transition-colors">vCard QR-Code</a>
-                <a href="./menu/" class="text-slate-300 hover:text-white transition-colors">Menü QR-Code</a>
-                <a href="./whatsapp/" class="text-slate-300 hover:text-white transition-colors">WhatsApp QR</a>
-                <a href="./instagram/" class="text-slate-300 hover:text-white transition-colors">Instagram QR</a>
-                <a href="./location/" class="text-slate-300 hover:text-white transition-colors">Standort QR</a>
-                <a href="./app/" class="text-slate-300 hover:text-white transition-colors">App Store QR</a>
+                <a href="./wifi/" class="text-white/70 hover:text-white">WiFi QR-Code</a>
+                <a href="./vcard/" class="text-white/70 hover:text-white">vCard QR-Code</a>
+                <a href="./menu/" class="text-white/70 hover:text-white">Menü QR-Code</a>
+                <a href="./whatsapp/" class="text-white/70 hover:text-white">WhatsApp QR</a>
+                <a href="./instagram/" class="text-white/70 hover:text-white">Instagram QR</a>
+                <a href="./location/" class="text-white/70 hover:text-white">Standort QR</a>
+                <a href="./app/" class="text-white/70 hover:text-white">App Store QR</a>
                 <a href="./blog/" class="text-white/70 hover:text-white font-medium">Blog</a>
             </div>
-            <p class="text-center text-slate-400 text-sm">© 2026 QRCodes.win — Kostenloser QR-Code-Generator</p>
+            <p class="text-center text-white/60 text-sm">© 2026 QRCodes.win — Kostenloser QR-Code-Generator</p>
         </div>
     </footer>
 
