@@ -13,7 +13,19 @@
     <script src="../../qrcode.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>* { font-family: 'Inter', sans-serif; } body { background: linear-gradient(135deg, #833AB4 0%, #E1306C 50%, #F77737 100%); min-height: 100vh; } .glass { background: rgba(255,255,255,0.95); } .input-field { border: 2px solid #e5e7eb; } .input-field:focus { border-color: #E1306C; outline: none; }</style>
-</head>
+    <link rel="alternate" hreflang="en" href="https://qrcodes.win/instagram/">
+    <link rel="alternate" hreflang="ar" href="https://qrcodes.win/ar/instagram/">
+    <link rel="alternate" hreflang="de" href="https://qrcodes.win/de/instagram/">
+    <link rel="alternate" hreflang="es" href="https://qrcodes.win/es/instagram/">
+    <link rel="alternate" hreflang="fr" href="https://qrcodes.win/fr/instagram/">
+    <link rel="alternate" hreflang="hi" href="https://qrcodes.win/hi/instagram/">
+    <link rel="alternate" hreflang="ja" href="https://qrcodes.win/ja/instagram/">
+    <link rel="alternate" hreflang="pt" href="https://qrcodes.win/pt/instagram/">
+    <link rel="alternate" hreflang="ru" href="https://qrcodes.win/ru/instagram/">
+    <link rel="alternate" hreflang="tr" href="https://qrcodes.win/tr/instagram/">
+    <link rel="alternate" hreflang="zh" href="https://qrcodes.win/zh/instagram/">
+    <link rel="alternate" hreflang="x-default" href="https://qrcodes.win/instagram/">
+  </head>
 <body class="text-gray-900">
     <header class="py-6 px-4"><div class="max-w-4xl mx-auto flex items-center justify-between"><a href="../" class="flex items-center gap-2 text-white"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><i data-lucide="qr-code" class="w-6 h-6"></i></div><span class="text-xl font-bold">QRCodes.win</span></a><a href="../" class="text-white/80 hover:text-white text-sm">← Todos os tipos</a>
             <a href="../../blog/" class="text-white/80 hover:text-white text-sm font-medium hidden sm:block">Blog</a>
@@ -109,5 +121,21 @@
         </div>
     </footer>
     <script>lucide.createIcons();function generateInstagramQR(){const u=document.getElementById('username').value.trim().replace('@','');if(!u){alert('Por favor digite seu usuário');return;}const container=document.getElementById('qrcode');container.innerHTML='';new QRCode(container,{text:`https://instagram.com/${u}`,width:200,height:200,colorDark:'#E1306C',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});document.getElementById('downloadBtn').disabled=false;}function downloadQR(){const canvas=document.querySelector('#qrcode canvas');if(canvas){const link=document.createElement('a');link.download='instagram-qr-code.png';link.href=canvas.toDataURL('image/png');link.click();}}</script>
+<!-- GDPR Cookie Consent -->
+<div id="cookie-consent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:16px 24px;z-index:9999;font-family:system-ui,sans-serif;font-size:14px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <p style="margin:0;flex:1;min-width:200px;">We use cookies for analytics. By clicking "Accept", you consent to our use of cookies.</p>
+    <div style="display:flex;gap:8px;">
+      <button onclick="acceptCookies()" style="background:#8b5cf6;color:#fff;border:none;padding:8px 20px;border-radius:6px;cursor:pointer;font-size:14px;">Accept</button>
+      <button onclick="declineCookies()" style="background:transparent;color:#fff;border:1px solid #555;padding:8px 20px;border-radius:6px;cursor:pointer;font-size:14px;">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+function loadGA(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-5WXHC5G0TQ';document.head.appendChild(s);s.onload=function(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-5WXHC5G0TQ');};}
+function acceptCookies(){localStorage.setItem('qrcodes-consent','granted');document.getElementById('cookie-consent').style.display='none';loadGA();}
+function declineCookies(){localStorage.setItem('qrcodes-consent','denied');document.getElementById('cookie-consent').style.display='none';}
+(function(){var c=localStorage.getItem('qrcodes-consent');if(c==='granted'){loadGA();}else if(!c){document.getElementById('cookie-consent').style.display='block';}})();
+</script>
 </body>
 </html>

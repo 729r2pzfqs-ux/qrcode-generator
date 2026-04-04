@@ -37,7 +37,19 @@
         article ul, article ol { margin-bottom: 1rem; padding-left: 1.5rem; }
         article li { margin-bottom: 0.5rem; line-height: 1.75; }
     </style>
-</head>
+    <link rel="alternate" hreflang="en" href="https://qrcodes.win/blog/">
+    <link rel="alternate" hreflang="ar" href="https://qrcodes.win/ar/blog/">
+    <link rel="alternate" hreflang="de" href="https://qrcodes.win/de/blog/">
+    <link rel="alternate" hreflang="es" href="https://qrcodes.win/es/blog/">
+    <link rel="alternate" hreflang="fr" href="https://qrcodes.win/fr/blog/">
+    <link rel="alternate" hreflang="hi" href="https://qrcodes.win/hi/blog/">
+    <link rel="alternate" hreflang="ja" href="https://qrcodes.win/ja/blog/">
+    <link rel="alternate" hreflang="pt" href="https://qrcodes.win/pt/blog/">
+    <link rel="alternate" hreflang="ru" href="https://qrcodes.win/ru/blog/">
+    <link rel="alternate" hreflang="tr" href="https://qrcodes.win/tr/blog/">
+    <link rel="alternate" hreflang="zh" href="https://qrcodes.win/zh/blog/">
+    <link rel="alternate" hreflang="x-default" href="https://qrcodes.win/blog/">
+  </head>
 <body class="bg-gray-50 text-gray-900">
     <header class="py-6 px-4 bg-indigo-600">
         <div class="max-w-3xl mx-auto flex items-center justify-between">
@@ -125,5 +137,21 @@
     </footer>
 
     <script>lucide.createIcons();</script>
+<!-- GDPR Cookie Consent -->
+<div id="cookie-consent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#fff;padding:16px 24px;z-index:9999;font-family:system-ui,sans-serif;font-size:14px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+    <p style="margin:0;flex:1;min-width:200px;">We use cookies for analytics. By clicking "Accept", you consent to our use of cookies.</p>
+    <div style="display:flex;gap:8px;">
+      <button onclick="acceptCookies()" style="background:#8b5cf6;color:#fff;border:none;padding:8px 20px;border-radius:6px;cursor:pointer;font-size:14px;">Accept</button>
+      <button onclick="declineCookies()" style="background:transparent;color:#fff;border:1px solid #555;padding:8px 20px;border-radius:6px;cursor:pointer;font-size:14px;">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+function loadGA(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-5WXHC5G0TQ';document.head.appendChild(s);s.onload=function(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-5WXHC5G0TQ');};}
+function acceptCookies(){localStorage.setItem('qrcodes-consent','granted');document.getElementById('cookie-consent').style.display='none';loadGA();}
+function declineCookies(){localStorage.setItem('qrcodes-consent','denied');document.getElementById('cookie-consent').style.display='none';}
+(function(){var c=localStorage.getItem('qrcodes-consent');if(c==='granted'){loadGA();}else if(!c){document.getElementById('cookie-consent').style.display='block';}})();
+</script>
 </body>
 </html>
