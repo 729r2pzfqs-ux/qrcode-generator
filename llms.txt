@@ -1,0 +1,7 @@
+# qrcodes.win
+
+## About
+QRCodes.win is a free, privacy-first QR code generator. Create QR codes for URLs, text, WiFi, contact cards, and more. No tracking, no data collection.
+
+## URLs
+- Homepage: https://qrcodes.win/
