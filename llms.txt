@@ -1,7 +1,87 @@
 # qrcodes.win
 
+> A free, privacy-first QR code generator that creates QR codes entirely in your browser — no signup, no tracking, no data collection.
+
 ## About
 QRCodes.win is a free, privacy-first QR code generator. Create QR codes for URLs, text, WiFi, contact cards, and more. No tracking, no data collection.
 
-## URLs
-- Homepage: https://qrcodes.win/
+## Features / QR Code Types
+The main generator (homepage) supports these QR code types via tabs:
+- URL — website links
+- Text — any plain text
+- WiFi — network credentials (SSID, password, security type WPA/WPA2, WEP, or no password)
+- Email — mailto links with optional subject and body
+- Phone — tel links
+- SMS — pre-filled text messages with phone number and body
+
+Customization options:
+- QR foreground color and background color (color pickers)
+- Size: 200px, 256px, 384px, or 512px
+- Error correction level: Low (L), Medium (M), Quartile (Q), High (H)
+- Download as PNG or SVG
+
+Specialized generators (dedicated pages with tailored UX) cover:
+- WiFi QR Code — share WiFi password instantly
+- vCard QR Code — digital business card
+- Restaurant Menu QR Code — contactless digital menu
+- WhatsApp QR Code — open a WhatsApp chat
+- Instagram QR Code — link to a profile
+- Location QR Code — Google Maps directions
+- App Store QR Code — iOS & Android app downloads
+- Google Review QR Code — collect more Google reviews
+- PDF QR Code — link to PDF documents
+
+## Sections
+- [Generator (Homepage)](https://qrcodes.win/): Main multi-type QR generator with live preview and PNG/SVG download
+- [WiFi QR Code](https://qrcodes.win/wifi/): Share WiFi password instantly
+- [vCard QR Code](https://qrcodes.win/vcard/): Digital business card
+- [Menu QR Code](https://qrcodes.win/menu/): Restaurant contactless menu
+- [WhatsApp QR Code](https://qrcodes.win/whatsapp/): Open a WhatsApp chat
+- [Instagram QR Code](https://qrcodes.win/instagram/): Link to your Instagram profile
+- [Location QR Code](https://qrcodes.win/location/): Google Maps location/directions
+- [App Store QR Code](https://qrcodes.win/app/): iOS & Android app downloads
+- [Google Review QR Code](https://qrcodes.win/google-review/): Get more Google reviews
+- [PDF QR Code](https://qrcodes.win/pdf/): Link to PDF documents
+- [Blog](https://qrcodes.win/blog/): Tips, guides & best practices
+
+### Blog Articles
+- [How to Create a QR Code](https://qrcodes.win/blog/how-to-create-qr-code.html)
+- [QR Codes for Business](https://qrcodes.win/blog/qr-code-for-business.html)
+- [WiFi QR Code Guide](https://qrcodes.win/blog/wifi-qr-code-guide.html)
+- [How QR Codes Work](https://qrcodes.win/blog/how-qr-codes-work/)
+- [Are QR Codes Safe?](https://qrcodes.win/blog/qr-code-safety/)
+
+## URL Patterns
+- `/` — English homepage / main generator
+- `/<type>/` — specialized generators (e.g. `/wifi/`, `/vcard/`, `/menu/`, `/whatsapp/`, `/instagram/`, `/location/`, `/app/`, `/google-review/`, `/pdf/`)
+- `/blog/` — blog index
+- `/blog/<slug>.html` and `/blog/<slug>/` — individual articles
+- `/<lang>/` — localized homepage for each supported language (e.g. `/es/`, `/de/`, `/fr/`)
+- `/<lang>/<type>/` — localized specialized generators (e.g. `/es/wifi/`, `/ja/vcard/`)
+- `/<lang>/blog/` — localized blog index
+
+## Privacy / How It Works
+- All QR code generation happens client-side in the browser using an embedded QRCode.js library (`qrcode.min.js`). No server processing.
+- The data you enter (URLs, WiFi passwords, contacts, etc.) never leaves your device and is never seen or stored by the site.
+- No signup or account is required; usage is unlimited with no watermarks.
+- PNG downloads are produced from the rendered canvas; SVG downloads are reconstructed from canvas pixels — both entirely in-browser.
+
+## Languages
+Available in 11 languages with localized pages under language-prefixed paths:
+- English (`/`, default)
+- Spanish — Español (`/es/`)
+- German — Deutsch (`/de/`)
+- French — Français (`/fr/`)
+- Portuguese — Português (`/pt/`)
+- Chinese — 中文 (`/zh/`)
+- Japanese — 日本語 (`/ja/`)
+- Arabic — العربية (`/ar/`)
+- Hindi — हिन्दी (`/hi/`)
+- Russian — Русский (`/ru/`)
+- Turkish — Türkçe (`/tr/`)
+
+## Notes
+- This is a static site hosted on GitHub Pages (served from the `qrcodes.win` custom domain via CNAME).
+- Free to use: no signup, no limits, no watermarks, no tracking of entered data.
+- Privacy-first: QR codes are generated entirely in the browser.
+- Not affiliated with any QR code standards body, WhatsApp, Instagram, Google, or Apple.
