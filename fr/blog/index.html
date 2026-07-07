@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://qrcodes.win/fr/blog/">
     <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
     <link rel="icon" href="../../favicon.ico" sizes="32x32">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/tailwind.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>* { font-family: 'Inter', sans-serif; }</style>
@@ -25,7 +25,22 @@
     <link rel="alternate" hreflang="tr" href="https://qrcodes.win/tr/blog/">
     <link rel="alternate" hreflang="zh" href="https://qrcodes.win/zh/blog/">
     <link rel="alternate" hreflang="x-default" href="https://qrcodes.win/blog/">
-  </head>
+      <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Blog QR Code",
+        "description": "Apprenez à créer et utiliser des QR codes. Guides pour WiFi, entreprise, menus et plus.",
+        "url": "https://qrcodes.win/fr/blog/",
+        "inLanguage": "fr",
+        "publisher": {
+            "@type": "Organization",
+            "name": "QRCodes.win",
+            "url": "https://qrcodes.win/"
+        }
+    }
+    </script>
+</head>
 <body class="bg-gray-50 text-gray-900">
     <header class="py-6 px-4 bg-indigo-600"><div class="max-w-4xl mx-auto flex items-center justify-between"><a href="../" class="flex items-center gap-2 text-white"><div class="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center"><i data-lucide="qr-code" class="w-6 h-6"></i></div><span class="text-xl font-bold">QRCodes.win</span></a><a href="../" class="text-white/80 hover:text-white text-sm">← Générateur</a><select onchange="window.location.href=this.value" class="bg-white/20 text-white text-sm rounded-lg px-3 py-2 outline-none cursor-pointer border border-white/30">
                 <option value="../../blog/" class="text-gray-800">English</option>

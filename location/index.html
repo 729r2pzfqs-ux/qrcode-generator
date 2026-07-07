@@ -15,7 +15,7 @@
     <meta property="og:description" content="Create QR codes that open Google Maps with directions to any location.">
     <meta property="og:url" content="https://qrcodes.win/location/">
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/tailwind.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="../qrcode.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,7 +38,28 @@
     <link rel="alternate" hreflang="tr" href="https://qrcodes.win/tr/location/">
     <link rel="alternate" hreflang="zh" href="https://qrcodes.win/zh/location/">
     <link rel="alternate" hreflang="x-default" href="https://qrcodes.win/location/">
-  </head>
+      <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Location QR Code Generator",
+        "description": "Create QR codes for locations and addresses. Opens Google Maps with directions. Perfect for event invitations, business locations, and meetups.",
+        "url": "https://qrcodes.win/location/",
+        "inLanguage": "en",
+        "mainEntity": {
+            "@type": "SoftwareApplication",
+            "name": "Location QR Code Generator",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Web Browser",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            }
+        }
+    }
+    </script>
+</head>
 <body class="text-gray-900">
     <header class="py-6 px-4">
         <div class="max-w-4xl mx-auto flex items-center justify-between">
