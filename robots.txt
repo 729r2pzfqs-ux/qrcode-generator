@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://qrcodes.win/sitemap.xml
-Sitemap: https://qrcodes.win/sitemap-index.xml

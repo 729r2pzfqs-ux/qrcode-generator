@@ -1,0 +1,4 @@
+node_modules/
+tailwindcss-macos-arm64
+.DS_Store
+*.log

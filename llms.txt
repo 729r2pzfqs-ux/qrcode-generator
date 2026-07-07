@@ -1,9 +1,9 @@
 # qrcodes.win
 
-> A free, privacy-first QR code generator that creates QR codes entirely in your browser — no signup, no tracking, no data collection.
+> A free, privacy-first QR code generator that creates QR codes entirely in your browser — no signup required, and the data you enter never leaves your browser.
 
 ## About
-QRCodes.win is a free, privacy-first QR code generator. Create QR codes for URLs, text, WiFi, contact cards, and more. No tracking, no data collection.
+QRCodes.win is a free, privacy-first QR code generator. Create QR codes for URLs, text, WiFi, contact cards, and more. The content you enter is never uploaded or stored — QR codes are generated locally in your browser. The site uses Google Analytics for anonymous, aggregate visit statistics only.
 
 ## Features / QR Code Types
 The main generator (homepage) supports these QR code types via tabs:
@@ -82,6 +82,6 @@ Available in 11 languages with localized pages under language-prefixed paths:
 
 ## Notes
 - This is a static site hosted on GitHub Pages (served from the `qrcodes.win` custom domain via CNAME).
-- Free to use: no signup, no limits, no watermarks, no tracking of entered data.
+- Free to use: no signup, no limits, no watermarks; entered data is never uploaded or stored.
 - Privacy-first: QR codes are generated entirely in the browser.
 - Not affiliated with any QR code standards body, WhatsApp, Instagram, Google, or Apple.
